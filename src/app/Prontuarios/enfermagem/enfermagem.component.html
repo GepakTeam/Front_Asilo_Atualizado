@@ -1,0 +1,719 @@
+<app-navbar></app-navbar>
+
+<div class="content">
+  <form method="post" #form="" class="row g-3">
+    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+      <mat-tab label="Exame fisico">
+        <fieldset class="border p-4">
+          <div class="container mt-2 ">
+            <h4 class="w-auto">Identificação</h4>
+            <div class="row g-3">
+                <div class="col-md-4">
+                  <label for="inputEmail4" class="form-label"> Nome </label>
+                  <input type="text" class="form-control" name="nome" />
+                </div>
+
+                <div class="col-md-4">
+                  <label for="dataNascimento">Data de Nascimento</label>
+                  <input type="date" class="form-control" name="dataNascimento" />
+                </div>
+                <script>
+                  $(document).ready(function () {
+                    $(".date").datepicker({
+                      language: "pt-BR", // Define a linguagem como Português do Brasil
+                      format: "dd/mm/yyyy", // Define o formato da data
+                      autoclose: true,
+                      todayHighlight: true,
+                    });
+                  });
+                </script>
+
+                <div class="col-md-4">
+                  <label>Data do exame</label>
+                  <input type="date" class="form-control" name="dataExame" />
+                </div>
+                <script>
+                  $(document).ready(function () {
+                    $(".date").datepicker({
+                      language: "pt-BR", // Define a linguagem como Português do Brasil
+                      format: "dd/mm/yyyy", // Define o formato da data
+                      autoclose: true,
+                      todayHighlight: true,
+                    });
+                  });
+                </script>
+
+                <div class="col-md-12">
+                  <h4 class="w-auto">Exame Fisico</h4>
+                </div>
+
+
+                <div class="col-md-6">
+                  <h5>Sistema Neurológico - Nível de consciência</h5>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input radio" type="radio" name="nivelConciencia" value="Consciente" />
+                      Consciente
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input radio" type="radio" name="nivelConciencia" value="Confuso" /> Confuso
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input radio" type="radio" name="nivelConciencia" value="Orientado" />
+                      Orientado
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input radio" type="radio" name="nivelConciencia" value="Inconsciente" />
+                      Inconsciente
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <h5>Pupilas</h5>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input radio" type="radio" name="pupilasSituacao" value="Isocôricas" />
+                      Isocôricas
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input radio" type="radio" name="pupilasSituacao" value="Anisocórica" />
+                      Anisocórica
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input radio" type="radio" name="pupilasSituacao" value="Discórica" />
+                      Discórica
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input radio" type="radio" name="pupilasSituacao" value="Midríase" />
+                      Midríase
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input radio" type="radio" name="pupilasSituacao" value="Miose" /> Miose
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <h5>Pupilas</h5>
+                  <div class="form-check form-check-inline">
+                    <label for="inputEmail4" class="form-label" style="padding-right: 4px;"> PD </label>
+                    <input type="text" class="form-control" name="pupilaPD" />
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label for="inputEmail4" class="form-label" style="padding-right: 4px;"> PE </label>
+                    <input type="text" class="form-control" name="pupilaPE" /> 
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <h5>Fotorreação:</h5>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input radio" type="radio" name="fotorreacao" /> +
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input radio" type="radio" name="fotorreacao" /> -
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <h5>Sistema Cardiocirculatório</h5>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input radio" type="radio" name="sistemaCardioCirculatorio"
+                        value="Normotenso" /> Normotenso
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input radio" type="radio" name="sistemaCardioCirculatorio"
+                        value="Hipotenso" /> Hipotenso
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input radio" type="radio" name="sistemaCardioCirculatorio"
+                        value="Hipertenso" /> Hipertenso
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input radio" type="radio" name="sistemaCardioCirculatorio"
+                        value="Normocárdico" /> Normocárdico
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input radio" type="radio" name="sistemaCardioCirculatorio"
+                        value="Bradicárdico" /> Bradicárdico
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input radio" type="radio" name="sistemaCardioCirculatorio"
+                        value="Taquicárdico" /> Taquicárdico
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input radio" type="radio" name="sistemaCardioCirculatorio"
+                        value="Ritmico" /> Ritmico
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input radio" type="radio" name="sistemaCardioCirculatorio"
+                        value="Arritmico" /> Arritmico
+                  </div>
+                </div>
+
+
+                <div class="col-md-12">
+                  <h5>Pulsos:</h5>
+                </div>
+
+                <div class="col-3" style="padding-left: 5%;">
+                  <h6 style="color: black; margin-top: -15px;">P: Presente</h6>
+                </div>
+                <div class="col-3" style="padding-left: 5%;">
+                  <h6 style="color: black;margin-top: -15px;">A: Ausente</h6>
+                </div>
+                <div class="col-3" style="padding-left: 5%;">
+                  <h6 style="color: black;margin-top: -15px;">C: Cheio</h6>
+                </div>
+                <div class="col-3" style="padding-left: 5%;">
+                  <h6 style="color: black;margin-top: -15px;">F: Filiforme</h6>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-check form-check-inline">
+                    <h5 for="carotideos">Carotídeos: </h5>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <h6 for="carotideosEsquerdo" style="padding-right: 4px;">Esquerdo</h6>
+                    <input type="text" class="form-control" name="carotideosEsquerdo" id="">
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <h6 for="carotideosDireito" style="padding-right: 25px; padding-left: 115px;">Direito</h6>
+                    <input type="text" class="form-control" name="carotideosDireito" id="">
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-check form-check-inline">
+                    <h5 for="braquiais">Braquiais:</h5>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <h6 for="braquiaisEsquerdo" style="padding-right: 4px;">Esquerdo</h6>
+                    <input type="text" class="form-control" name="braquiaisEsquerdo" id="">
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <h6 for="braquiaisEsquerdo" style="padding-right: 25px; padding-left: 101px;">Direito</h6>
+                    <input type="text" class="form-control" name="braquiaisDireito" id="">
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-check form-check-inline">
+                    <h5 for="radiais">Radiais:</h5>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <h6 for="radiaisEsquerdo" style="padding-right: 4px; padding-left: 32px;">Esquerdo</h6>
+                    <input type="text" class="form-control" name="radiaisEsquerdo" id="">
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <h6 for="radiaisEsquerdo" style="padding-right: 25px; padding-left: 115px;">Direito</h6>
+                    <input type="text" class="form-control" name="radiaisDireito" id="">
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-check form-check-inline">
+                    <h5 for="femorais">Femurais:</h5>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <h6 for="femoraisEsquerdo" style="padding-right: 4px;">Esquerdo</h6>
+                    <input type="text" class="form-control" name="femoraisEsquerdo" id="">
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <h6 for="femoraisEsquerdo" style="padding-right: 24px; padding-left: 101px;">Direito</h6>
+                    <input type="text" class="form-control" name="femoraisDireito" id="">
+                  </div>
+                </div>
+
+                <div class="col-md-6 ">
+                  <div class="form-check form-check-inline">
+                    <h5 for="pediosos">Pediosos:</h5>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <h6 for="pediososEsquerdo" style="padding-right: 4px; padding-left: 14px;">Esquerdo</h6>
+                    <input type="text" class="form-control" name="pediososEsquerdo" id="">
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <h6 for="pediososEsquerdo " style="padding-right: 25px; padding-left: 114px;">Direito</h6>
+                    <input type="text" class="form-control" name="pediososDireito" id="">
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-check form-check-inline">
+                    <h5 for="popliteos">Poplíteos:</h5>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <h6 for="popliteosEsquerdo" style="padding-right: 4px;">Esquerdo</h6>
+                    <input type="text" class="form-control" name="popliteosEsquerdo" id="">
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <h6 for="popliteosEsquerdo" style="padding-right: 24px; padding-left: 103px;">Direito</h6>
+                    <input type="text" class="form-control" name="popliteosDireito" id="">
+                  </div>
+                </div>
+
+
+                <div class="col-md-6">
+                  <h5>Perfusão Periférica</h5>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input radio" type="radio" name="perfusaoPeriferica" /> Normal
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input radio" type="radio" name="perfusaoPeriferica" />Vasoconstrito
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <h5>Edema</h5>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input radio" type="radio" name="edema" /> +
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input radio" type="radio" name="edema" /> ++
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input radio" type="radio" name="edema" /> +++
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input radio" type="radio" name="edema" /> ++++
+                  </div>
+                </div>
+            </div>
+          </div>
+        </fieldset>
+      </mat-tab>
+
+      <mat-tab label="Sistema Respiratório">
+        <fieldset class="border p-4">
+          <div class="container mt-2">
+            <div class="row g-3">
+              <h4>Sistema Respiratório</h4>
+
+              <div class="col-md-4">
+                <h5>Padrão</h5>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="padrao" value="Dispneico"/> Dispneico
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="padrao" value="Bradipneico"/> Bradipneico
+                </div>
+              </div>
+              <div class="col-md-4">
+                <h5>Murmúrio Vesicular</h5>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="murmurioVesicular" value="Dispneico"/> Diminuido
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <h5>Expansão do Tórax</h5>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="expansaoTorax" value="Sibilos"/> Sibilos
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="expansaoTorax" value="Roncos"/> Roncos
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <h5>Ruidos Adventicios</h5>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="ruidosAdventicios" value="Simétrico"/> Simétrico
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="ruidosAdventicios" value="Assimétrico"/> Assimétrico
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <h5>Aceitação da Dieta:</h5>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="aceitacaoDieta" value="Ótimo"/> Ótimo
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="aceitacaoDieta" value="Satisfatório"/> Satisfatório
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="aceitacaoDieta" value="Regular" /> Regular
+                </div>
+              </div>
+              
+              <div class="col-md-4">
+                <h5>Dentição:</h5>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="denticao" value="normal">  Normal
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="denticao" value="protese"> Uso de Prótese
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="denticao" value="ausencia"> Ausência de Dentes
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="denticao" value="caries"> Cáries
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="denticao" value="placas"> Presença de Placas
+                </div>
+              </div>           
+
+              <div class="col-md-10">
+                <h5>Abdome:</h5>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="abdome" value="plano">  Plano
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="abdome" value="escavado"> Escavado
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="abdome" value="ascitico"> Ascítico
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="abdome" value="distendido"> Distendido
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="abdome" value="flacido"> Flácido
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="abdome" value="globoso"> Globoso
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="abdome" value="semigloboso"> Semi Globoso
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="abdome" value="timpanico"> Timpânico
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <h5>RHA:</h5>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="rha" value="Ausente"> Ausente
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="rha" value="Diminuido">Diminuido
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <h5>Massa à Palpação:</h5>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="massa" value="sim"> Sim
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="massa" value="nao"> Não
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="massa" value="doloroso"> Doloroso
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="massa" value="indolor"> Indolor
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="massa" value="placas"> Presença de Placas
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <h5>Evacuação:</h5>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="evacuacao" value="normal"> Normal sem estímulos
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="evacuacao" value="estimulo"> Necessita de estímulos
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <h5>Gênito Urinário:</h5>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="genito" value="diurese"> Diurese Espontânea
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="genito" value="fralda"> Uso de Fralda
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h5>Aspecto da Urina:</h5>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="urina" value="limpida"> Limpida
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="urina" value="concentrada"> Concentrada
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="urina" value="fetida"> Fétida
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h5>Eliminação Vesical:</h5>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="vesical" value="normal"> Normal
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="vesical" value="dor"> Dor
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="vesical" value="prurido"> Prurido
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="vesical" value="ardor"> Ardor
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <h5>Integridade Cutânea e Mucosa:</h5>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="corado"> Corado
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="hipocorado"> Hipocorado
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="icterico"> Ictérico
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="integra"> Pele Íntegra
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="ressecada"> Pele Ressecada
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="ulceras"> Úlceras
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="escoriacoes"> Escoriações
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="prurido"> Prurido
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="hematomas"> Hematomas
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="hiperemia"> Hiperemia
+                </div>
+              </div>
+              
+              <div class="col-md-12">
+                <h5>Escala de Braden:</h5>
+                <table class="braden-scale">
+                  <tr>
+                    <th class="tabela">Pontos</th>
+                    <th class="tabela">03</th>
+                    <th class="tabela">02</th>
+                    <th class="tabela">03</th>
+                    <th class="tabela">04</th>
+                  </tr>
+                  <tr>
+                    <td class="tabela">Percepção Sensorial</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="sensorial" value="01"> Totalmente Limitado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="sensorial" value="02"> Muito Limitado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="sensorial" value="03"> Levemente Limitado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="sensorial" value="04"> Nenhuma Limitação</td>
+                  </tr>
+                  <tr>
+                    <td class="tabela">Umidade</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="umidade" value="01"> Completamente Molhado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="umidade" value="02"> Muito Molhado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="umidade" value="03"> Ocasionalmente Molhado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="umidade" value="04"> Raramente Molhado</td>
+                  </tr>
+                  <tr>
+                    <td class="tabela">Atividade</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="atividade" value="01"> Acamado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="atividade" value="02"> Confirmado à Cadeira</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="atividade" value="03"> Anda Ocasionalmente</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="atividade" value="04"> Anda Frequentemente</td>
+                  </tr>
+                  <tr>
+                    <td class="tabela">Mobilidade</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="mobilidade" value="01"> Totalmente Imóvel</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="mobilidade" value="02"> Bastante Limitado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="mobilidade" value="03"> Levemente Limitado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="mobilidade" value="04"> Não apresenta Limitações</td>
+                  </tr>
+                  <tr>
+                    <td class="tabela">Nutrição</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="nutricao" value="01"> Muito Pobre</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="nutricao" value="02"> Provavelmente Inadequado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="nutricao" value="03"> Adequado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="nutricao" value="04"> Excelente</td>
+                  </tr>
+                  <tr>
+                    <td class="tabela">Fricção Cisalhamento</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="friccao" value="01"> Problema</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="friccao" value="02"> Problema em Potencial</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="friccao" value="03"> Problema em Potencial</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="friccao" value="04"> Nenhum problema</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </mat-tab>
+
+      <mat-tab label="Saúde">
+        <fieldset class="border p-4">
+          <div class="container mt-2 ">
+            <div class="col-md-12">
+              <h3>Avaliação de Risco</h3>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Data</th>
+                    <th>Horários</th>
+                    <th>Pontos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Risco Alto &lt;12</td>
+                    <td>Risco Moderado - 13 à 15</td>
+                    <td>Risco Baixo &gt; 15</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        
+            <div class="row">
+              <div class="col-md-12">
+                <h3>Diagnósticos de Enfermagem</h3>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="higieneBanho" name="diagnosticosEnfermagem">
+                    <label class="form-check-label" for="higieneBanho">
+                      Déficit no auto cuidado para higiene/banho relacionado ao prejuízo cognitivo, prejuízo musculoesquelético, caracterizado pela incapacidade de lavar corpo.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="higieneIntima" name="diagnosticosEnfermagem">
+                    <label class="form-check-label" for="higieneIntima">
+                      Déficit no auto cuidado para higiene íntima relacionado ao prejuízo cognitivo e musculoesquelético caracterizado pela incapacidade de fazer uma higiene íntima apropriada.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="vestir" name="diagnosticosEnfermagem">
+                    <label class="form-check-label" for="vestir">
+                      Déficit no auto cuidado para vestir/ arrumar-se relacionado ao prejuízo cognitivo e prejuízo musculoesquelético caracterizado pela capacidade prejudicada de colocar itens do vestuário.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="arrancarUnhas" name="diagnosticosEnfermagem">
+                    <label class="form-check-label" for="arrancarUnhas">
+                      Automutilação relacionado ao estado psicótico, perturbação emocional caracterizado por morde-se e arrancar unhas.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="comunicacaoVerbal" name="diagnosticosEnfermagem">
+                    <label class="form-check-label" for="comunicacaoVerbal">
+                      Comunicação verbal prejudicada relacionado a barreira psicológica e caracterizado pela fala com dificuldade e a não verbalização.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="constipacaoAnticonvulsivantes" name="diagnosticosEnfermagem">
+                    <label class="form-check-label" for="constipacaoAnticonvulsivantes">
+                      Constipação relacionado a anticonvulsivantes antidepressivos e sedativos, ingestão insuficiente de fibras caracterizado pela mudança do padrão intestinal presença de sangue vivo nas fezes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="visaoPrejudicada" name="diagnosticosEnfermagem">
+                    <label class="form-check-label" for="visaoPrejudicada">
+                      Deambulação prejudicada relacionado a visão prejudicada, prejuízo neuromuscular, musculoesquelético, força muscular insuficiente caracterizado pela capacidade prejudicada de andar.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="dorAguda" name="diagnosticosEnfermagem">
+                    <label class="form-check-label" for="dorAguda">
+                      Dor aguda.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="debitoCardiaco" name="diagnosticosEnfermagem">
+                    <label class="form-check-label" for="debitoCardiaco">
+                      Débito cardíaco prejudicado.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="integridadePele" name="diagnosticosEnfermagem">
+                    <label class="form-check-label" for="integridadePele">
+                      Integridade da pele prejudicada.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="ansiedade" name="diagnosticosEnfermagem">
+                    <label class="form-check-label" for="ansiedade">
+                      Ansiedade relacionado ao ambiente, estresse, crises situacionais, hereditaredade, mudanças, conflito inconsciente quanto a valores essenciais da vida aos padrões de interação, caracterizado por agitação, insônia, nervosismo, observação atenta, movimento pouco comuns, olhar em torno pouco aflito, ansioso, nervoso, irritabilidade, excessivamente excitado, inquieto, tendência a culpar outros, esquecimento, preocupação, capacidade diminuída para aprender e capacidade diminuída de solucionar problemas.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="riscoAspiracao" name="diagnosticosEnfermagem">
+                    <label class="form-check-label" for="riscoAspiracao">
+                      Risco de aspiração, relacionado a administração de medicamentos, dentição prejudicada e esvaziamento gástrico retardada.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="riscoInfeccao" name="diagnosticosEnfermagem">
+                    <label class="form-check-label" for="riscoInfeccao">
+                      Risco de infecção.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="mobilidadeFisica" name="diagnosticosEnfermagem">
+                    <label class="form-check-label" for="mobilidadeFisica">
+                      Mobilidade física prejudicada.
+                    </label>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </mat-tab>
+
+      <mat-tab label="Saúde mental">
+        <fieldset class="border p-4">
+          <div class="container mt-2 ">
+          <h1>Controle de Sinais Vitais</h1>
+            <table>
+              <thead>
+                <tr>
+                  <th>Data</th>
+                  <th>Horário</th>
+                  <th>PA</th>
+                  <th>FC</th>
+                  <th>FR</th>
+                  <th>Temp</th>
+                  <th>PVC</th>
+                  <th>Glicemia</th>
+                  <th>Anotações de Enfermagem</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="date" name="controleSinaisVitaisData"></td>
+                  <td><input type="time" name="controleSinaisVitaisHorario"></td>
+                  <td><input type="text" name="controleSinaisVitaisPa"></td>
+                  <td><input type="text" name="controleSinaisVitaisFc"></td>
+                  <td><input type="text" name="controleSinaisVitaisFr"></td>
+                  <td><input type="text" name="controleSinaisVitaisTemp"></td>
+                  <td><input type="text" name="controleSinaisVitaisPvc"></td>
+                  <td><input type="text" name="controleSinaisVitaisGlicemia"></td>
+                  <td><textarea name="controleSinaisVitaisAnotacoes"></textarea></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="container mt-2">
+              <div class="row g-3">
+                <div class="btn form-check">
+                  <input class="enviar btn btn-success" type="submit" value="Enviar">
+                  <input class="limpar btn btn-danger" type="reset" value="Limpar">
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </mat-tab>
+    </mat-tab-group>
+  </form>
+</div>

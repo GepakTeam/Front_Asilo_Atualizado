@@ -1,0 +1,36 @@
+<section class="container">
+  <div class="login-container">
+    <div class="form-container">
+      <img
+        src="assets/img/idosos2_fundo.png"
+        alt="illustration2"
+        class="illustration2"
+      />
+      <!--<img src="assets/img/logoasilo_fundo.png" alt="illustration" class="illustration">-->
+
+      <h1 class="opacity">Login</h1>
+      <form>
+        <input type="text" placeholder="Usuário" />
+
+        <div class="example-container">
+          <input
+            matInput
+            [type]="hide ? 'password' : 'text'"
+            placeholder="Senha"
+          />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </div>
+
+        <button class="btn-entrar" routerLink="home">Entrar</button>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+.perfil-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.conteudo {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.foto {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.foto img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.info-idoso {
+    text-align: center;
+}

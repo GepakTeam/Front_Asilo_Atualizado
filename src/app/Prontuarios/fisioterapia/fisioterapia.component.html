@@ -1,0 +1,788 @@
+<app-navbar></app-navbar>
+
+<div class="content">
+    <form #form="" class="row g-3">
+        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+            <mat-tab label="Dados Pessoais">
+                <fieldset class="border p-4">
+                    <div class="container mt-2 ">
+                        <div class="row g-3">
+                            <h4 class=" col-md-12 w-auto">Avaliação Fisioterapeuta</h4>
+
+                            <div class="col-md-12">
+                                <label>Data Avaliação</label>
+                                <input type="date" class="form-control" name="dataAvaliacao" />
+                            </div>
+                            <script>
+                                $(document).ready(function () {
+                                    $(".date").datepicker({
+                                        language: "pt-BR", // Define a linguagem como Português do Brasil
+                                        format: "dd/mm/yyyy", // Define o formato da data
+                                        autoclose: true,
+                                        todayHighlight: true,
+                                    });
+                                });
+                            </script>
+
+                            <div class="col-md-12">
+                                <h5>Dados Pessoais</h5>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>Nome</label>
+                                <input type="text" class="form-control" name="nome" />
+                            </div>
+
+                            <div class="col-md-4">
+                                <label>Sexo</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio" type="radio" name="sexo" /> Feminino
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio" type="radio" name="sexo" /> Masculino
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <label>Idade</label>
+                                <input type="text" class="form-control" name="idade" />
+                            </div>
+
+                            <div class="col-md-4">
+                                <label>Data de Nascimento</label>
+                                <input type="date" class="form-control" name="dataNascimento" />
+                            </div>
+
+                            <script>
+                                $(document).ready(function () {
+                                    $(".date").datepicker({
+                                        language: "pt-BR", // Define a linguagem como Português do Brasil
+                                        format: "dd/mm/yyyy", // Define o formato da data
+                                        autoclose: true,
+                                        todayHighlight: true,
+                                    });
+                                });
+                            </script>
+
+                            <div class="col-md-4">
+                                <label>Estado Civil</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio" type="radio" name="estadoCivil" /> Solteiro
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio" type="radio" name="estadoCivil" /> Casado
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio" type="radio" name="estadoCivil" /> Separado
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio" type="radio" name="estadoCivil" /> Divorciado
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio" type="radio" name="estadoCivil" /> Viúvo
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h6 for="celular" class="form-label">Telefone</h6>
+                                <input type="text" class="form-control" id="celular" placeholder="(xx) xxxxx-xxxx"
+                                    maxlength="15" name="telefone" />
+                            </div>
+                            <script>
+                                // Adiciona a máscara ao campo de celular
+                                document
+                                    .getElementById("celular")
+                                    .addEventListener("input", function (e) {
+                                        var value = e.target.value.replace(/\D/g, "");
+                                        var formattedValue = "(" + value.substring(0, 2);
+                                        if (value.length > 2) {
+                                            formattedValue += ") " + value.substring(2, 5);
+                                        }
+                                        if (value.length > 6) {
+                                            formattedValue += "-" + value.substring(5, 9);
+                                        }
+                                        e.target.value = formattedValue;
+                                    });
+                            </script>
+
+                            <div class="col-md-12">
+                                <label>Endereço</label>
+                                <input type="text" class="form-control" name="endereco" />
+                            </div>
+
+                            <div class="col-md-4">
+                                <label>Exames Complementares</label>
+                                <input type="text" class="form-control" name="examesComplementares" />
+                            </div>
+
+                            <div class="col-md-4">
+                                <label>Medicamentos</label>
+                                <input type="text" class="form-control" name="medicamentos" />
+                            </div>
+
+                            <div class="col-md-4">
+                                <label>Diagnóstico Clínico-Patológico</label>
+                                <input type="text" class="form-control" name="diagnosticoClinicoPatologico" />
+                            </div>
+
+                            <div class="col-md-4">
+                                <label>Queixa Principal</label>
+                                <textarea cols="10" rows="4" wrap="hard" class="form-control"
+                                    name="queixaPrincipal"></textarea>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label>H.M.A</label>
+                                <textarea cols="10" rows="4" wrap="hard" class="form-control" name="hma"></textarea>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label>A.V.D</label>
+                                <textarea cols="10" rows="4" wrap="hard" class="form-control" name="avd"></textarea>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label>Aparelho Locomotor</label>
+                                <input type="text" class="form-control" name="aparelhoLocomotor" />
+                            </div>
+
+                            <div class="col-md-4">
+                                <label>Cardio-respiratório</label>
+                                <input type="text" class="form-control" name="aparelhoCardioRespiratorio" />
+                            </div>
+
+                            <div class="col-md-4">
+                                <label>Cardio-vascular</label>
+                                <input type="text" class="form-control" name="aparelhoCardioVascular" />
+                            </div>
+
+                            <div class="col-md-4">
+                                <label>Ginecológico</label>
+                                <input type="text" class="form-control" name="ginecologico" />
+                            </div>
+
+                            <div class="col-md-4">
+                                <label>Outros</label>
+                                <textarea cols="10" rows="4" wrap="hard" class="form-control" name="outros"></textarea>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label>Dificuldade De Comunicação</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio" type="radio" name="dificuldadeComunicacao" />
+                                    Sim
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio" type="radio" name="dificuldadeComunicacao" />
+                                    Não
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </mat-tab>
+            <mat-tab label="Medicamentos">
+                <fieldset class="border p-4">
+                    <div class="container mt-2 ">
+                        <h4 class="w-auto">Avaliação Fisioterapeuta</h4>
+                        <div class="row g-3">
+
+                            <div class="col-md-12">
+                                <h5>Medicamentos</h5>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>Tipo de medicamento usado</label>
+                                <input type="text" class="form-control" name="tipoMedicamento" />
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>Dosagem</label>
+                                <input type="text" class="form-control" name="dosagem" />
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>Frequência</label>
+                                <input type="text" class="form-control" name="frequencia" />
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>Remédio sem prescrição</label>
+                                <input type="text" class="form-control" name="remedioSemPrescricao" />
+                            </div>
+
+                            <div class="col-md-12">
+                                <label>Habilidade para manusear o medicamento</label>
+                                <input type="text" class="form-control" name="habilidadeManusear" />
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </mat-tab>
+            <mat-tab label="História Nutricional">
+                <fieldset class="border p-4">
+                    <div class="container mt-2 ">
+                        <h4 class="w-auto">Avaliação Fisioterapeuta</h4>
+                        <div class="row g-3">
+
+                            <div class="col-md-12">
+                                <h5>História Nutricional</h5>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>Frequência das Refeições</label>
+                                <input type="text" class="form-control" name="frequenciaRefeicoes" />
+                            </div>
+                            <div class="col-md-6">
+                                <label>Dieta especial</label>
+                                <input type="text" class="form-control" name="dietaEspecial" />
+                            </div>
+                            <div class="col-md-6">
+                                <label>Ingestão de ácool</label>
+                                <input type="text" class="form-control" name="ingestaoAlcool" />
+                            </div>
+                            <div class="col-md-6">
+                                <label>Ingestão hídrica</label>
+                                <input type="text" class="form-control" name="ingestaoHidrica" />
+                            </div>
+                            <div class="col-md-6">
+                                <label>Problemas Dentários - Usa prótese</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio" type="radio" name="usaProtese" /> Sim
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio" type="radio" name="usaProtese" /> Não
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Tem apetite</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio" type="radio" name="apetite" /> Sim
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio" type="radio" name="apetite" /> Não
+                                </div><br>
+                                <label>Por que</label>
+                                <input type="text" class="form-control" name="porqueApetite" />
+                            </div>
+
+                        </div>
+                    </div>
+                </fieldset>
+            </mat-tab>
+            <mat-tab label="História Psiquiátrica">
+                <fieldset class="border p-4">
+                    <div class="container mt-2 ">
+                        <h4 class="w-auto">Avaliação Fisioterapeuta</h4>
+                        <div class="row g-3">
+
+                            <div class="col-md-12">
+                                <h5>História Psiquiátrica:</h5>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label>Demência (Mini Teste do Estado Mental)</label>
+                                <input type="text" class="form-control" name="demencia" />
+                            </div>
+                            <div class="col-md-12">
+                                <label>Escala de depressão em Geriatria</label>
+                                <input type="text" class="form-control" name="escalaDepressao" />
+                            </div>
+                            <div class="col-md-12">
+                                <label>Estado Emocional</label>
+                                <input type="text" class="form-control" name="estadoEmocional" />
+                            </div>
+
+                        </div>
+                    </div>
+                </fieldset>
+            </mat-tab>
+            <mat-tab label="Sinais Vitais">
+                <fieldset class="border p-4">
+                    <div class="container mt-2 ">
+                        <h4 class="w-auto">Avaliação Fisioterapeuta</h4>
+                        <div class="row g-3">
+
+                            <div class="col-md-12">
+                                <h5>Sinais Vitais:</h5>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label>Peso</label>
+                                <input type="text" class="form-control" name="peso" />
+                            </div>
+                            <div class="col-md-4">
+                                <label>Altura</label>
+                                <input type="text" class="form-control" name="altura" />
+                            </div>
+                            <div class="col-md-4">
+                                <label>P.A</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input type="text" class="form-control" name="pa" />
+                                    <label for="inputEmail4" class="form-label" style="padding-left: 4px;"> mmHg
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Ausculta Cardíaca</label>
+                                <input type="text" class="form-control" name="auscultaCardiaca" />
+                            </div>
+                            <div class="col-md-4">
+                                <label>Frequência Cardíaca</label>
+                                <input type="text" class="form-control" name="frequenciaCardiaca" />
+                            </div>
+                            <div class="col-md-4">
+                                <label>Ausculta Pulmonar</label>
+                                <input type="text" class="form-control" name="auscultaPulmonar" />
+                            </div>
+                            <div class="col-md-6">
+                                <label>Frequência Respiratória</label>
+                                <input type="text" class="form-control" name="frequenciaRespiratoria" />
+                            </div>
+                            <div class="col-md-6">
+                                <label>Padrão Respiratório</label>
+                                <input type="text" class="form-control" name="padraoRespiratorio" />
+                            </div>
+
+                        </div>
+                    </div>
+                </fieldset>
+            </mat-tab>
+            <mat-tab label="Goniometria">
+                <fieldset class="border p-4">
+                    <div class="container mt-2 ">
+                        <h4 class="w-auto">Avaliação Fisioterapeuta</h4>
+                        <div class="row g-3">
+
+                            <div class="col-md-12">
+                                <h5>Goniometria:</h5>
+                            </div>
+
+                            <div class="col-md-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Articulação</th>
+                                            <th>Movimentos</th>
+                                            <th>VR*</th>
+                                            <th>ADM Direito</th>
+                                            <th>ADM Esquerdo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="6">Ombro</td>
+                                            <td>Flexão</td>
+                                            <td><input class="form-control" type="text" name="ombroFlexaoVR" id=""></td>
+                                            <td><input class="form-control" type="text" name="ombroFlexaoAdmDireito"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text" name="ombroFlexaoAdmEsquerdo"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Extensão</td>
+                                            <td><input class="form-control" type="text" name="ombroExtensaoVR" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="ombroExtensaAdmDireito"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text" name="ombroExtensaAdmEsquerdo"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Adução</td>
+                                            <td><input class="form-control" type="text" name="ombroAducaoVR" id=""></td>
+                                            <td><input class="form-control" type="text" name="ombroAducaoAdmDireito"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text" name="ombroAducaoAdmEsquerdo"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Abdução</td>
+                                            <td><input class="form-control" type="text" name="ombroAbducaoVR" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="ombroAbducaoAdmDireito"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text" name="ombroAbducaoAdmEsquerdo"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rot. Interna</td>
+                                            <td><input class="form-control" type="text" name="ombroRotInternaVR" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="ombroRotInternaAdmDireito"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="ombroRotInternaAdmEsquerdo" id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rot. Externa</td>
+                                            <td><input class="form-control" type="text" name="ombroRotExternaVR" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="ombroRotExternaAdmDireito"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="ombroRotExternaAdmEsquerdo" id=""></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="col-md-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Articulação</th>
+                                            <th>Movimentos</th>
+                                            <th>VR*</th>
+                                            <th>ADM Direito</th>
+                                            <th>ADM Esquerdo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="2">Cotovelo</td>
+                                            <td>Flexão</td>
+                                            <td><input class="form-control" type="text" name="cotoveloFlexaoVR" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="cotoveloFlexaoAdmDireito"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text" name="cotoveloFlexaoAdmEsquerdo"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Extensão</td>
+                                            <td><input class="form-control" type="text" name="cotoveloExtensaoVR" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text"
+                                                    name="cotoveloExtensaoAdmDireito" id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="cotoveloExtensaoAdmEsquerdo" id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="4">Punho</td>
+                                            <td>Extensão</td>
+                                            <td><input class="form-control" type="text" name="punhoExtensaoVR" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="punhoExtensaoAdmDireito"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text" name="punhoExtensaoAdmEsquerdo"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Flexão</td>
+                                            <td><input class="form-control" type="text" name="punhoFlexaoVR" id=""></td>
+                                            <td><input class="form-control" type="text" name="punhoFlexaoAdmDireito"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text" name="punhoFlexaoAdmEsquerdo"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Desvio Ulnar</td>
+                                            <td><input class="form-control" type="text" name="punhoDesvioUlnarVR" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text"
+                                                    name="punhoDesvioUlnarAdmDireito" id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="punhoDesvioUlnarAdmEsquerdo" id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Desvio Radial</td>
+                                            <td><input class="form-control" type="text" name="punhoDesvioRadialVR"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="punhoDesvioRadialAdmDireito" id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="punhoDesvioRadialAdmEsquerdo" id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="6">Quadril</td>
+                                            <td>Flexão</td>
+                                            <td><input class="form-control" type="text" name="quadrilFlexaoVR" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="quadrilFlexaoAdmDireito"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text" name="quadrilFlexaoAdmEsquerdo"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Extensão</td>
+                                            <td><input class="form-control" type="text" name="quadrilExtensaoVR" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="quadrilExtensaoAdmDireito"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="quadrilExtensaoAdmEsquerdo" id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Adução</td>
+                                            <td><input class="form-control" type="text" name="quadrilAducaoVR" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="quadrilAducaoAdmDireito"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text" name="quadrilAducaoAdmEsquerdo"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Abdução</td>
+                                            <td><input class="form-control" type="text" name="quadrilAbducaoVR" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="quadrilAbducaoAdmDireito"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text" name="quadrilAbducaoAdmEsquerdo"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rot. Interna</td>
+                                            <td><input class="form-control" type="text" name="quadrilRotInternaVR"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="quadrilRotInternaAdmDireito" id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="quadrilRotInternaAdmEsquerdo" id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rot. Externa</td>
+                                            <td><input class="form-control" type="text" name="quadrilRotExternaVR"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="quadrilRotExternaAdmDireito" id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="quadrilRotExternaAdmEsquerdo" id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">Joelho</td>
+                                            <td>Flexão</td>
+                                            <td><input class="form-control" type="text" name="joelhoFlexaoVR" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="joelhoFlexaoAdmDireito"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text" name="joelhoFlexaoAdmEsquerdo"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Extensão</td>
+                                            <td><input class="form-control" type="text" name="joelhoExtensaoVR" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="joelhoExtensaoAdmDireito"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text" name="joelhoExtensaoAdmEsquerdo"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="4">Tornozelo</td>
+                                            <td>Eversão</td>
+                                            <td><input class="form-control" type="text" name="tornozeloEversaoVR" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text"
+                                                    name="tornozeloEversaoAdmDireito" id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="tornozeloEversaoAdmEsquerdo" id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dorsiflexão</td>
+                                            <td><input class="form-control" type="text" name="tornozeloDorsiflexaoVR"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="tornozeloDorsiflexaoAdmDireito" id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="tornozeloDorsiflexaoAdmEsquerdo" id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Flexão Plantar</td>
+                                            <td><input class="form-control" type="text" name="tornozeloFlexaoPlantarVR"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="tornozeloFlexaoPlantarAdmDireito" id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="tornozeloFlexaoPlantarAdmEsquerdo" id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Inversão</td>
+                                            <td><input class="form-control" type="text" name="tornozeloInversaoVR"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="tornozeloInversaoAdmDireito" id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="tornozeloInversaoAdmEsquerdo" id=""></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </fieldset>
+            </mat-tab>
+            <mat-tab label="Quedas">
+                <fieldset class="border p-4">
+                    <div class="container mt-2 ">
+                        <h4 class="w-auto">Avaliação Fisioterapeuta</h4>
+                        <div class="row g-3">
+                            <div class="col-md-12">
+                                <h5>Quedas:</h5>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label>Tempo</label>
+                                <input type="text" class="form-control" name="tempoQuedas">
+                            </div>
+                            <div class="col-md-12">
+                                <label>Frequência</label>
+                                <input type="text" class="form-control" name="frequenciaQuedas">
+                            </div>
+                            <div class="col-md-12">
+                                <label>Local</label>
+                                <input type="text" class="form-control" name="localQuedas">
+                            </div>
+
+
+                        </div>
+                    </div>
+                </fieldset>
+            </mat-tab>
+            <mat-tab label="Sistema Neurológico">
+                <fieldset class="border p-4">
+                    <div class="container mt-2 ">
+                        <h4 class="w-auto">Avaliação Fisioterapeuta</h4>
+                        <div class="row g-3">
+                            <div class="col-md-12">
+                                <h5>Avaliação do Sistema Neurológico</h5>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label>Reflexo</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio" type="checkbox" name="reflexo" /> Biciptal
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio" type="checkbox" name="reflexo" /> Triciptal
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio" type="checkbox" name="reflexo" /> Patelar
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio" type="checkbox" name="reflexo" /> Aquileu
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label>Equílibrio Corporal</label><br>
+                                <label>Sentado</label>
+                                <input class="form-control" type="text" name="equilibrioSentado">
+                                <label>Em pé</label>
+                                <input class="form-control" type="text" name="equilibrioEmPe">
+                                <label>Sinal de Rosemberg</label>
+                                <input class="form-control" type="text" name="equilibrioSinalRosemberg">
+                            </div>
+
+                            <div class="col-md-12">
+                                <h5>Atividade de Vida Diária</h5>
+                                <textarea class="form-control" name="atividadeVidaDiaria" id="" cols="10"
+                                    rows="5"></textarea>
+                            </div>
+
+                            <div class="col-md-12">
+                                <h5>Escala Visual de Dor</h5>
+
+                                <div class="example-label-container">
+                                    <label class="example-value-label">{{slider.value}}</label>
+                                </div>
+                                <mat-slider class="example-margin" [max]="max" [min]="min">
+                                    <input matSliderThumb #slider  name="escalaDor">
+                                </mat-slider><br>
+
+                                <label>Região da Dor</label>
+                                <input class="form-control" type="text" name="regiaoDor">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </mat-tab>
+            <mat-tab label="Postural">
+                <fieldset class="border p-4">
+                    <div class="container mt-2 ">
+                        <h4 class="w-auto">Avaliação Fisioterapeuta</h4>
+                        <div class="row g-3">
+                            <div class="col-md-12">
+                                <h5>Avaliação Postural</h5>
+                            </div>
+
+                            <div class="col-md-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Região</th>
+                                            <th>Sagital</th>
+                                            <th>Frontal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Pé</td>
+                                            <td><input class="form-control" type="text" name="peSagital" id=""></td>
+                                            <td><input class="form-control" type="text" name="peFrontal" id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Joelho</td>
+                                            <td><input class="form-control" type="text" name="joelhoSagital" id=""></td>
+                                            <td><input class="form-control" type="text" name="joelhoFrontal" id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cintura Pélvica</td>
+                                            <td><input class="form-control" type="text" name="cinturaPelvicaSagital"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text" name="cinturaPelvicaFrontal"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Coluna</td>
+                                            <td><input class="form-control" type="text" name="colunaSagital" id=""></td>
+                                            <td><input class="form-control" type="text" name="colunaFrontal" id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cintura escapular</td>
+                                            <td><input class="form-control" type="text" name="cinturaEscapularSagital"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text" name="cinturaEscapularFrontal"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cabeça</td>
+                                            <td><input class="form-control" type="text" name="cabecaSagital" id=""></td>
+                                            <td><input class="form-control" type="text" name="cabecaFrontal" id=""></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="textSection">Avaliação da Marcha:</label>
+                                <textarea rows="4" class="form-control " name="avaliacaoMarcha"></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="textSection">Observações:</label>
+                                <textarea rows="4" class="form-control " name="observacoes"></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="textSection">Diagnóstico Funcional:</label>
+                                <textarea rows="6" class="form-control " name="diagnosticoFuncional"></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="textSection">Objetivos Fisioterápicos:</label>
+                                <textarea rows="6" class="form-control " name="objetivosFisioterapicos"></textarea>
+                            </div>
+
+                            <div class="container mt-2">
+                                <div class="row g-3">
+                                  <div class="btn form-check">
+                                    <input class="enviar btn btn-success" type="submit" value="Enviar">
+                                    <input class="limpar btn btn-danger" type="reset" value="Limpar">
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </mat-tab>
+        </mat-tab-group>
+    </form>
+</div>

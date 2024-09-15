@@ -1,0 +1,595 @@
+<app-navbar></app-navbar>
+
+<div class="content">
+  <form method="post" #form="ngForm" (ngSubmit)="onFormSubmit()" class="row g-3">
+    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+      <mat-tab label="Informações do Idoso">
+        <fieldset class="border p-4">
+          <div class="container mt-2">
+            <div class="row g-3">
+              <h4>Dados do Idoso</h4>
+              <div class="col-md-12">
+                <h6 for="inputEmail4" class="form-label">Nome Completo</h6>
+                <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="model.nome" />
+              </div>
+
+              <div class="col-md-4">
+                <h6 for="dataNascimento">Data de Nascimento</h6>
+                <input type="date" class="form-control" name="dataNascimento" [(ngModel)]="model.dataNascimento">
+              </div>
+              <script>
+                $(document).ready(function () {
+                  $(".date").datepicker({
+                    language: "pt-BR",
+                    format: "dd/mm/yyyy",
+                    autoclose: true,
+                    todayHighlight: true,
+                  });
+                });
+              </script>
+
+              <div class="col-md-4">
+                <h6 for="inputAge" class="form-label">Idade</h6>
+                <input type="text" class="form-control" name="idade" [(ngModel)]="model.idade" />
+              </div>
+
+              <div class="col-md-4">
+                <h6 for="inputBirthplace" class="form-label">Local de nascimento</h6>
+                <input type="text" class="form-control" name="localNascimento" [(ngModel)]="model.localNascimento" />
+              </div>
+
+              <div class="col-md-4">
+                <h6 for="inputSex" class="form-label">Sexo</h6><br />
+                <div class="form-check form-check-inline">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="sexo" value="Feminino"
+                      [(ngModel)]="model.sexo" />
+                    Feminino
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="sexo" value="Masculino"
+                      [(ngModel)]="model.sexo" />
+                    Masculino
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <h6 for="inputRaca" class="form-label">Raça</h6><br>
+                <div class="form-check form-check-inline">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="raca" value="Branca"
+                      [(ngModel)]="model.dataNascimento" />
+                    Branca
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="raca" value="Preta"
+                      [(ngModel)]="model.raca" />
+                    Preta
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="raca" value="Parda"
+                      [(ngModel)]="model.raca" />
+                    Parda
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="raca" value="Amarela"
+                      [(ngModel)]="model.raca" />
+                    Amarela
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <h6 for="celular" class="form-label">Telefone</h6>
+                <input type="text" class="form-control" id="celular" placeholder="(xx) xxxxx-xxxx" maxlength="15"
+                  name="telefone" [(ngModel)]="model.telefone" />
+              </div>
+              <script>
+                // Adiciona a máscara ao campo de celular
+                document
+                  .getElementById("celular")
+                  .addEventListener("input", function (e) {
+                    var value = e.target.value.replace(/\D/g, "");
+                    var formattedValue = "(" + value.substring(0, 2);
+                    if (value.length > 2) {
+                      formattedValue += ") " + value.substring(2, 5);
+                    }
+                    if (value.length > 6) {
+                      formattedValue += "-" + value.substring(5, 9);
+                    }
+                    e.target.value = formattedValue;
+                  });
+              </script>
+
+              <div class="col-md-4">
+                <h6 for="inputMotherName" class="form-label">Nome da mãe</h6>
+                <input type="text" class="form-control" id="nomeMae" name="nomeMae" [(ngModel)]="model.nomeMae" />
+              </div>
+
+              <div class="col-md-4">
+                <h6 for="inputFatherName" class="form-label">Nome do pai</h6>
+                <input type="text" class="form-control" id="nomePai" name="nomePai" [(ngModel)]="model.nomePai" />
+              </div>
+
+              <div class="col-md-4">
+                <h6 for="inputGuardianName" class="form-label">Nome do responsável</h6>
+                <input type="text" class="form-control" id="nomeResponsavel" name="nomeResponsavel"
+                  [(ngModel)]="model.nomeResponsavel" />
+              </div>
+
+              <div class="col-md-6">
+                <h6 for="inputAddress" class="form-label">Endereço</h6>
+                <input type="text" class="form-control" placeholder="Rua Principal, 123" name="endereco"
+                  [(ngModel)]="model.endereco" />
+              </div>
+
+              <div class="col-md-2">
+                <h6 for="inputCEP" class="form-label">CEP</h6>
+                <input type="text" class="form-control" name="cep" [(ngModel)]="model.cep" />
+              </div>
+
+              <div class="col-md-4">
+                <h6 for="inputReference" class="form-label">Ponto de referência</h6>
+                <input type="text" class="form-control" name="pontoReferencia" [(ngModel)]="model.pontoReferencia" />
+              </div>
+
+
+
+              <h4>Documentação do Idoso</h4>
+              <div class="col-md-4">
+                <h6 class="form-check-label">RG</h6>
+                <input type="text" class="form-control" name="rg" [(ngModel)]="model.rg" />
+              </div>
+              <div class="col-md-4">
+                <h6 class="form-check-label">CPF</h6>
+                <input type="text" class="form-control" name="cpf" [(ngModel)]="model.cpf" />
+              </div>
+              <div class="col-md-4">
+                <h6 class="form-check-label">Carteira de trabalho</h6>
+                <input type="text" class="form-control" name="carteiraTrabalho" [(ngModel)]="model.carteiraTrabalho" />
+              </div>
+              <div class="col-md-4">
+                <h6 class="form-check-label">Título eleitoral</h6>
+                <input type="text" class="form-control" name="tituloEleitoral" [(ngModel)]="model.tituloEleitoral" />
+              </div>
+              <div class="col-md-4">
+                <h6 class="form-check-label">Certidão de nascimento</h6>
+                <input type="text" class="form-control" name="certidaoNascimento"
+                  [(ngModel)]="model.certidaoNascimento" />
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </mat-tab>
+
+      <mat-tab label="Situação familiar">
+        <fieldset class="border p-4">
+          <div class="container mt-2">
+            <div class="row g-3">
+              <h4>Situação Socioeconômica</h4>
+              <h5>Relação familiar</h5>
+              <div class="col-md-4">
+                <h6 class="form-label" for="amigavelCheckbox">Amigável</h6>
+                <input type="text" class="form-control" placeholder="Com quem" name="relacaoAmigavel"
+                  [(ngModel)]="model.relacaoAmigavel" />
+              </div>
+
+              <div class="col-md-4">
+                <h6 class="form-label"> Distanciados </h6>
+                <input type="text" class="form-control" placeholder="Com quem" name="relacaoDistanciados"
+                  [(ngModel)]="model.relacaoDistanciados" />
+              </div>
+
+              <div class="col-md-4">
+                <h6 class="form-label"> Conflituosa </h6>
+                <input type="text" class="form-control" placeholder="Com quem" name="relacaoConflituosa"
+                  [(ngModel)]="model.relacaoConflituosa" />
+              </div>
+
+              <h5>Residência</h5>
+              <div class="col-md-12">
+                <h6 class="form-label"> Quem residiam na casa </h6>
+                <input type="text" class="form-control" name="quemResideCasa" [(ngModel)]="model.quemResideCasa" />
+              </div>
+
+              <h5>Tem filhos?</h5>
+              <div class="col-md-12">
+                <div class="form-check form-check-inline">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="filho" value="Sim"
+                      [(ngModel)]="model.filho" />
+                    Sim
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="filho" value="Não"
+                      [(ngModel)]="model.filho" />
+                    Não
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h6>Quantos filhos?</h6>
+                <input type="text" class="form-control" name="qntFilho" [(ngModel)]="model.qntFilho" />
+              </div>
+
+              <div class="col-md-6">
+                <h6>Com quem moram seus filhos?</h6>
+                <input type="text" class="form-control" name="comQuemMoraFilhos"
+                  [(ngModel)]="model.comQuemMoraFilhos" />
+              </div>
+
+              <h5>Condições habitacionais</h5>
+              <div class="col-md-2">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="moradia" value="CasaPrópria"
+                      [(ngModel)]="model.moradia" />
+                    Casa própria
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="moradia" value="Alugada"
+                      [(ngModel)]="model.moradia" />
+                    Alugada
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="moradia" value="Cedida"
+                      [(ngModel)]="model.moradia" />
+                    Cedida
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="moradia" value="Doada"
+                      [(ngModel)]="model.moradia" />
+                    Doada
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="moradia" value="Sem moradia"
+                      [(ngModel)]="model.moradia" />
+                    Sem moradia
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </mat-tab>
+
+      <mat-tab label="Saúde">
+        <fieldset class="border p-4">
+          <div class="container mt-2">
+            <div class="row g-3">
+              <h4>Saúde</h4>
+              <h5>Possui alguma doenças pregresas?</h5>
+              <div class="col-md-12">
+                <input type="text" class="form-control" name="doenca" [(ngModel)]="model.doenca" />
+              </div>
+
+              <h5>Possui alguma deficiência?</h5><br>
+              <div class="col-md-12">
+                <div class="col-md-1 form-check form-check-inline">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="deficiencia" value="Sim"
+                      [(ngModel)]="model.deficiencia" />
+                    Sim
+                  </label>
+                </div>
+                <div class="col-md-1 form-check form-check-inline">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="deficiencia" value="Não"
+                      [(ngModel)]="model.deficiencia" />
+                    Não
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <h6>Se SIM qual deficiência possui? </h6>
+                <input type="text" class="form-control" name="quaisDeficiencias"
+                  [(ngModel)]="model.quaisDeficiencias" />
+              </div>
+
+              <h5>Como você descreve a saúde:</h5>
+              <div class="col-md-3">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="saude" value="MuitoBoa"
+                      [(ngModel)]="model.saude" />
+                    Muito boa
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="saude" value="Boa"
+                      [(ngModel)]="model.saude" />
+                    Boa
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="saude" value="Ruim"
+                      [(ngModel)]="model.saude" />
+                    Ruim
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="saude" value="Péssimo"
+                      [(ngModel)]="model.saude" />
+                    Péssimo
+                  </label>
+                </div>
+              </div>
+
+              <h5>Atividades de Lazer:</h5>
+              <div class="col-md-2">
+                <h5 class="form-check-label"> Ler </h5>
+              </div>
+              <div class="col-md-2">
+                <h5 class="form-check-label"> Jogar bola </h5>
+              </div>
+              <div class="col-md-2">
+                <h5 class="form-check-label"> Videogame </h5>
+              </div>
+              <div class="col-md-2">
+                <h5 class="form-check-label">Bicicleta</h5>
+              </div>
+              <div class="col-md-2">
+                <h5 class="form-check-label">Yoga</h5>
+              </div>
+              <div class="col-md-2">
+                <h5 class="form-check-label">Ginástica Funcional</h5>
+              </div>
+
+              <div class="col-md-12">
+                <h6>Entre as opções de atividades de lazer apresentadas, você pratica alguma? Caso não pratique nenhuma
+                  destas, por favor, informe outras atividades que realiza no campo abaixo.</h6>
+                <input type="text" class="form-control mt-2" id="outrasCondicoes" name="atividadesLazer"
+                  [(ngModel)]="model.atividadesLazer" />
+              </div>
+
+              <h5>Tem parceira(o)?</h5>
+              <div class="col-md-1">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="parceiros" value="Sim"
+                      [(ngModel)]="model.parceiros" />
+                    Sim
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-1">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="parceiros" value="Não"
+                      [(ngModel)]="model.parceiros" />
+                    Não
+                  </label>
+                </div>
+              </div>
+
+              <h5>Está tendo acompanhamento médico?</h5>
+              <div class="col-md-1">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="acompanhamento" value="Sim"
+                      [(ngModel)]="model.acompanhamento" />
+                    Sim
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-1">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="acompanhamento" value="Não"
+                      [(ngModel)]="model.acompanhamento" />
+                    Não
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <h6>Qual medicação está sendo usada?</h6>
+                <input type="text" class="form-control" name="qualMedicacao" [(ngModel)]="model.qualMedicacao" />
+              </div>
+
+              <h5>Você tem algum plano de saúde?</h5>
+              <div class="col-md-1">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="planoSaude" value="Sim"
+                      [(ngModel)]="model.planoSaude" />
+                    Sim
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-1">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="planoSaude" value="Não"
+                      [(ngModel)]="model.planoSaude" />
+                    Não
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <h6>Qual o plano de saúde?</h6>
+                <input type="text" class="form-control" name="qualPlanoSaude" [(ngModel)]="model.qualPlanoSaude" />
+              </div>
+
+              <h5>Já fez uso de alguma droga?</h5>
+              <div class="col-md-1">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="usoDroga" value="Sim"
+                      [(ngModel)]="model.usoDroga" />
+                    Sim
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-1">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="usoDroga" value="Não"
+                      [(ngModel)]="model.usoDroga" />
+                    Não
+                  </label>
+                </div>
+              </div>
+
+              <h5>Drogas:</h5>
+              <div class="col-md-3">
+                <h6 class="form-check-label"> Maconha </h6>
+              </div>
+              <div class="col-md-3">
+                <h6 class="form-check-label"> Crack </h6>
+              </div>
+              <div class="col-md-3">
+                <h6 class="form-check-label"> Cola </h6>
+              </div>
+              <div class="col-md-3">
+                <h6 class="form-check-label">Álcool</h6>
+              </div>
+              <div class="col-md-3">
+                <h6 class="form-check-label">Cocaína</h6>
+              </div>
+              <div class="col-md-3">
+                <h6 class="form-check-label">Cigarro</h6>
+              </div>
+              <div class="col-md-3">
+                <h6 class="form-check-label">Solvente</h6>
+              </div>
+              <div class="col-md-3">
+                <h6 class="form-check-label">Heroína</h6>
+              </div>
+
+              <div class="col-md-12">
+                <h5>Entre as opções de drogas apresentadas, você já vez uso alguma?</h5>
+                <input type="text" class="form-control mt-2" id="distanciadosComQuem" name="quaisDrogasUsou"
+                  [(ngModel)]="model.quaisDrogasUsou" />
+              </div>
+
+              <div class="col-md-12">
+                <h5>Histórico de uso:</h5>
+                <input type="text" class="form-control mt-2" id="distanciadosComQuem" name="historicoUso"
+                  [(ngModel)]="model.historicoUso" />
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </mat-tab>
+
+      <mat-tab label="Saúde mental">
+        <fieldset class="border p-4">
+          <div class="container mt-2">
+            <div class="row g-3">
+              <h4>Saúde mental</h4>
+              <h5>Já recebeu atendimento psicologico?</h5>
+              <div class="col-md-1">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="atendimentoPsicologico" value="Sim"
+                      [(ngModel)]="model.atendimentoPsicologico" />
+                    Sim
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-1">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="atendimentoPsicologico" value="Não"
+                      [(ngModel)]="model.atendimentoPsicologico" />
+                    Não
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <h6>Em qual local você recebeu este atendimento?</h6>
+                <input type="text" class="form-control" name="localAtendimentoPsicologico"
+                  [(ngModel)]="model.localAtendimentoPsicologico" />
+              </div>
+
+              <h5>Já recebeu tratamento psiquiátrico?</h5>
+              <div class="col-md-1">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="tratamentoPsiquiatrico" value="Sim"
+                      [(ngModel)]="model.localTratamentoPsiquiatrico" />
+                    Sim
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-1">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="tratamentoPsiquiatrico" value="Não"
+                      [(ngModel)]="model.localTratamentoPsiquiatrico" />
+                    Não
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <h6>Em qual local você recebeu este tratamento?</h6>
+                <input type="text" class="form-control" name="localTratamentoPsiquiatrico"
+                  [(ngModel)]="model.localTratamentoPsiquiatrico" />
+              </div>
+
+              <div class="col-md-12">
+                <h5>Toma algum tipo de medicamento?</h5>
+                <input type="text" class="form-control mt-2" name="tomaAlgumTipoMedicamento"
+                  [(ngModel)]="model.tomaAlgumTipoMedicamento" />
+              </div>
+
+              <div class="col-md-12">
+                <h5>Motivo do encaminhamento psicológo?</h5>
+                <input type="text" class="form-control mt-2" name="motivoEncaminhamentoPsicologico"
+                  [(ngModel)]="model.motivoEncaminhamentoPsicologico" />
+              </div>
+            </div>
+          </div><br>
+
+          <div class="container mt-2">
+            <div class="row g-3">
+              <div class="btn form-check">
+                <input class="enviar btn btn-success" type="submit" value="Enviar">
+                <input class="limpar btn btn-danger" type="reset" value="Limpar">
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+      </mat-tab>
+    </mat-tab-group>
+  </form>
+</div>

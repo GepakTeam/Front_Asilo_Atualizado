@@ -1,0 +1,156 @@
+
+.sidebar .nav-link,
+.sidebar .dropdown-item {
+  color: #ffffff;
+}
+.sidebar .dropdown-toggle::after {
+  color: #ffffff;
+}
+.content {
+  margin-left: 170px;
+  margin-right: 160px;
+  padding: 25px;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+}
+
+.braden-scale {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.braden-scale th,
+.braden-scale td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.braden-scale th {
+  background-color: #f2f2f2;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+thead th {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+tbody td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+:host {
+    display: block;
+    
+  }
+
+h4 {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: red;
+}
+h5 {
+  color: DarkRed;
+}
+.btn {
+  text-align: center;
+  border: 0;
+}
+.enviar {
+  width: 535px;
+  margin-right: 1%;
+}
+.limpar {
+  width: 535px;
+}
+
+label,
+input {
+  font-size: 17px;
+}
+
+.form-check{
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.tabela{
+  text-align: justify;
+  font-size: 15.6px;
+}
+
+.table-bordered {
+  text-align: justify;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  color: black;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  color: black;
+  background-color: #f2f2f2;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 5px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  resize: none;
+}
+.textSection{
+  margin-top: 8px;
+}

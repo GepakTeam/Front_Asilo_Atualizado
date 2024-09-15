@@ -1,0 +1,41 @@
+.container-fluid{
+    text-align: center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.btn {
+    width: 100%;
+    align-items: center;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.foto {
+    width: 100px; /* Exemplo de largura fixa para a foto */
+    height: 100px;
+    background-color: #ccc; /* Simulação de imagem */
+}
+
+.nome {
+    position: relative; /* Necessário para o posicionamento do botão */
+}
+
+.nome button {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding: 4px 8px;
+    background-color: #b1bbb1;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.nome button:hover {
+    background-color: #595c59;
+}
