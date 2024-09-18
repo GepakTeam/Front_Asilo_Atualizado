@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 
 <div class="content">
-  <form method="post" #form="ngForm" (ngSubmit)="onFormSubmit()" class="row g-3">
+  <form #form="ngForm" (ngSubmit)="onFormSubmit()" class="row g-3">
     <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
       <mat-tab label="Informações do Idoso">
         <fieldset class="border p-4">
@@ -582,7 +582,7 @@
           <div class="container mt-2">
             <div class="row g-3">
               <div class="btn form-check">
-                <input class="enviar btn btn-success" type="submit" value="Enviar">
+                <input class="enviar btn btn-success" type="submit">
                 <input class="limpar btn btn-danger" type="reset" value="Limpar">
               </div>
             </div>

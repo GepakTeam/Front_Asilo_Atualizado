@@ -13,7 +13,7 @@ export class IndividualService {
     throw new Error('Method not implemented.');
   }
 
-  prontuariosUrl = 'http://localhost:5133/api/Prontuarios';
+  prontuariosUrl = 'https://localhost:7292/api/Prontuarios';
 
   constructor(private http:HttpClient) { }
 
@@ -23,6 +23,8 @@ export class IndividualService {
 
     salvarProntuarios(individualRequest: IndividualRequest): Observable<IndividualRequest>
     {
+      console.log("Services");
+      console.log(individualRequest);
       return this.http.post<IndividualRequest>(this.prontuariosUrl, individualRequest);
     }
 

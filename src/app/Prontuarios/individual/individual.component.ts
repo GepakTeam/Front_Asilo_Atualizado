@@ -114,6 +114,8 @@ export class IndividualComponent {
         next:(response)=>
           this.router.navigateByUrl('http://localhost:5133/api/Prontuarios')
       });
-    }
+     }
+
+    
 
 }
