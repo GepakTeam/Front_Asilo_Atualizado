@@ -8,6 +8,7 @@ import { FisioterapiaComponent } from './Prontuarios/fisioterapia/fisioterapia.c
 import { IndividualListaComponent } from './Lista/individual-lista/individual-lista.component';
 import { ListaIndComponent } from './Lista/lista-ind/lista-ind.component';
 import { HomeComponent } from './home/home.component';
+import { ListaEnfComponent } from './Lista/lista-enf/lista-enf.component';
 
 export const routes: Routes =[
     {
@@ -29,6 +30,10 @@ export const routes: Routes =[
     {
         path: 'enfermagem',
         component: EnfermagemComponent
+    },
+    {
+        path: 'listaEnfermagem',
+        component: ListaEnfComponent
     },
     {
         path: 'psicologa',
