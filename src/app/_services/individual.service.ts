@@ -27,6 +27,4 @@ export class IndividualService {
       console.log(individualRequest);
       return this.http.post<IndividualRequest>(this.prontuariosUrl, individualRequest);
     }
-
 }
-

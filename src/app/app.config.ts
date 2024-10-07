@@ -8,11 +8,32 @@ import { LoginComponent } from './login/login.component';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ListaIndComponent } from './Lista/lista-ind/lista-ind.component';
+import { PsicologaComponent } from './Prontuarios/psicologa/psicologa.component';
+import { FisioterapiaComponent } from './Prontuarios/fisioterapia/fisioterapia.component';
+import { NutricionistaComponent } from './Prontuarios/nutricionista/nutricionista.component';
+import { EnfermagemComponent } from './Prontuarios/enfermagem/enfermagem.component';
+import { ListaPsicComponent } from './Lista/lista-psic/lista-psic.component';
+import { ListaFisioComponent } from './Lista/lista-fisio/lista-fisio.component';
+import { ListaEnfComponent } from './Lista/lista-enf/lista-enf.component';
 
 
 
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideClientHydration(), IndividualComponent, LoginComponent, ListaIndComponent, HttpClient, provideHttpClient(), provideAnimationsAsync(), provideAnimationsAsync()]
-  
+  providers: [provideRouter(routes),
+     provideClientHydration(),
+      LoginComponent, 
+      IndividualComponent, 
+      ListaIndComponent, 
+      PsicologaComponent, 
+      ListaPsicComponent, 
+      FisioterapiaComponent,
+      ListaFisioComponent,
+      NutricionistaComponent, 
+      EnfermagemComponent, 
+      ListaEnfComponent, 
+      HttpClient, 
+      provideHttpClient(), 
+      provideAnimationsAsync(), 
+      provideAnimationsAsync()]
 };

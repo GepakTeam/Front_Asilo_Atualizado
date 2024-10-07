@@ -18,5 +18,6 @@ import { NavbarComponent } from '../../Core/NavBar/navbar.component';
   styleUrl: './nutricionista.component.css'
 })
 export class NutricionistaComponent {
+  
 
 }

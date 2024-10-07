@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, model } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Psicologa } from '../Models/psicologa';
+import { PsicologaRequest } from '../Models/PsicologaRequest';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class PsicologaService {
-  onFormSubmit(model: Psicologa) {
+  onFormSubmit(model: PsicologaRequest) {
     throw new Error('Method not implemented.');
   }
 
@@ -20,11 +21,11 @@ export class PsicologaService {
       return this.http.get<Psicologa[]>(this.prontuariosUrl);
     }
 
-    salvarProntuarios(psicologa: Psicologa): Observable<Psicologa>
+    salvarProntuarios(psicologaRequest: PsicologaRequest): Observable<PsicologaRequest>
     {
       console.log("Services");
-      console.log(psicologa);
-      return this.http.post<Psicologa>(this.prontuariosUrl, psicologa);
+      console.log(psicologaRequest);
+      return this.http.post<PsicologaRequest>(this.prontuariosUrl, psicologaRequest);
     }
 
 }

@@ -112,10 +112,13 @@ export class IndividualComponent {
       this.individualService.salvarProntuarios(this.model)
       .subscribe({
         next:(response)=>
-          this.router.navigateByUrl('http://localhost:5133/api/Prontuarios')
+          this.router.navigateByUrl('https://localhost:7292/api/Prontuarios')
       });
+
+      this.router.navigate(['/listaIndividual']);
      }
 
+     
     
 
 }

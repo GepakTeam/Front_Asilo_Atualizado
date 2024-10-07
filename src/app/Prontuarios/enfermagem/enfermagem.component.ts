@@ -40,10 +40,10 @@ export const MY_DATE_FORMATS: MatDateFormats = {
 })
 
 export class EnfermagemComponent {
-  model : Enfermagem;
+  enfermagem : Enfermagem;
 
   constructor(private enfermagemlService: EnfermagemService, private router: Router){
-    this.model={
+    this.enfermagem={
       nome: '',
       dataNascimento: new Date(),
       dataExame: new Date(),
@@ -96,16 +96,16 @@ export class EnfermagemComponent {
       controleSinaisVitaisTemp: '',
       controleSinaisVitaisPvc: '',
       controleSinaisVitaisGlicemia: '',
-      controleSinaisVitaisAnotacoes: ''
+      controleSinaisVitaisAnotacoes: '',
     }
   }
 
-  onFormSubmit(){
-    console.log(this.model)
-    this.enfermagemlService.salvarProntuarios(this.model)
+  enviarEnfermagem(){
+    console.log(this.enfermagem)
+    this.enfermagemlService.salvarProntuarios(this.enfermagem)
     .subscribe({
      next:(response)=>
-        this.router.navigateByUrl('http://localhost:5133/api/ProntuarioEnfermagem')
+        this.router.navigateByUrl('https://localhost:7292/api/ProntuarioEnfermagem')
     });
    }
 

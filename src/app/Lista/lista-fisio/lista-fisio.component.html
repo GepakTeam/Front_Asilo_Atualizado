@@ -1,20 +1,19 @@
 <app-navbar></app-navbar>
 <div class="container">
-    <h1>Lista Idosos</h1>
-    <table class="table" *ngIf="enfermagem">
+    <table class="table" *ngIf="fisioterapia">
         <thead>
             <tr class="table">
                 <th scope="col">Nome</th>
-                <th scope="col">Data Nascimento</th>
-                <th scope="col">Data Exame</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Idade</th>
                 <th scope="col">Mais Informações</th>
             </tr>
         </thead>
         <tbody>
-            <tr class="table" *ngFor="let enf of enfermagem">
-                <td class="nome">{{ enf.nome }}</td>
-                <td class="nome">{{ enf.dataNascimento }}</td>
-                <td class="nome">{{ enf.dataExame }}</td>
+            <tr class="table" *ngFor="let fisio of fisioterapia">
+                <td class="nome">{{ fisio.nome }}</td>
+                <td class="nome">{{ fisio.sexo }}</td>
+                <td class="nome">{{ fisio.idade }}</td>
                 <td class="detalhes">
                     <button type="button" class="btn btn-info" value="Detalhes" href="./listaCompleta">Detalhes</button>
                 </td>  
