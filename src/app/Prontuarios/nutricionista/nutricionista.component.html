@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 
 <div class="content">
-  <form #form="" class="row g-3">
+  <form #form="ngForm" (ngSubmit)="onFormSubmit()" class="row g-3">
     <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
       <mat-tab label="Dados Pessoais">
         <fieldset class="border p-4">
@@ -11,7 +11,7 @@
 
               <div class="col-md-10">
                 <label>Data Avaliação</label>
-                <input type="date" class="form-control" name="dataAvaliacao" />
+                <input type="date" class="form-control" name="dataAvaliacao" [(ngModel)]="model" />
               </div>
               <script>
                 $(document).ready(function () {
@@ -30,38 +30,38 @@
 
               <div class="col-md-6">
                 <label>Nome</label>
-                <input type="text" class="form-control" name="nome" />
+                <input type="text" class="form-control" name="nome" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-2">
                 <label>Idade</label>
-                <input type="text" class="form-control" name="idade" />
+                <input type="text" class="form-control" name="idade" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-4">
                 <label>Data de Nascimento</label>
-                <input type="date" class="form-control" name="dataNascimento" />
+                <input type="date" class="form-control" name="dataNascimento" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-4">
                 <label>Motivo da consulta </label>
-                <textarea cols="10" rows="4" wrap="hard" class="form-control" name="queixaPrincipal"></textarea>
+                <textarea cols="10" rows="4" wrap="hard" class="form-control" name="motivoConsulta" [(ngModel)]="model"></textarea>
               </div>
 
               <div class="col-md-4">
                 <label>Encaminhado por:</label>
-                <input type="text" class="form-control" name="nome" />
+                <input type="text" class="form-control" name="encaminhadoPor" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-4">
                 <label>Convênio</label>
-                <input type="text" class="form-control" name="nome" />
+                <input type="text" class="form-control" name="convenio" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-6">
                 <h6 for="celular" class="form-label">Telefone</h6>
                 <input type="text" class="form-control" id="celular" placeholder="(xx) xxxxx-xxxx" maxlength="15"
-                  name="telefone" />
+                  name="telefone" [(ngModel)]="model"/>
               </div>
               <script>
                 // Adiciona a máscara ao campo de celular
@@ -82,7 +82,7 @@
 
               <div class="col-md-6">
                 <label>Endereço</label>
-                <input type="text" class="form-control" name="endereco" />
+                <input type="text" class="form-control" name="endereco" [(ngModel)]="model"/>
               </div>
 
 
@@ -98,45 +98,45 @@
 
               <div class="col-md-6">
                 <label>Escolaridade</label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="escolaridade" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-6">
                 <label>Profissão</label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="profissao" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-4">
                 <label>Número de pessoas que moram na casa</label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="numeroPessoasCasa" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-4">
                 <label>N° Adultos</label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="numeroAdulto" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-4">
                 <label>N° Crianças (0 - 14 anos)</label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="numeroCrianca" [(ngModel)]="model" />
               </div>
 
               <div class="col-md-12">
                 <label>Estado Civil</label><br>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="estadoCivil" /> Solteiro
+                  <input class="form-check-input radio" type="radio" name="estadoCivil" [(ngModel)]="model"/> Solteiro
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="estadoCivil" /> Casado
+                  <input class="form-check-input radio" type="radio" name="estadoCivil" [(ngModel)]="model"/> Casado
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="estadoCivil" /> Separado
+                  <input class="form-check-input radio" type="radio" name="estadoCivil" [(ngModel)]="model"/> Separado
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="estadoCivil" /> Divorciado
+                  <input class="form-check-input radio" type="radio" name="estadoCivil" [(ngModel)]="model"/> Divorciado
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="estadoCivil" /> Viúvo
+                  <input class="form-check-input radio" type="radio" name="estadoCivil" [(ngModel)]="model"/> Viúvo
                 </div>
               </div>
             </div>
@@ -151,22 +151,22 @@
 
               <div class="col-md-6">
                 <label>Apresenta algum problema de saúde </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control"  name="problemaSaude" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-6">
                 <label>Qual</label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="qual" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-3">
                 <label>Diabetes</label><br>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="diabetes" />
+                  <input class="form-check-input radio" type="radio" name="diabetes" [(ngModel)]="model"/>
                   Sim
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="diabetes" />
+                  <input class="form-check-input radio" type="radio" name="diabetes" [(ngModel)]="model"/>
                   Não
                 </div>
               </div>
@@ -174,11 +174,11 @@
               <div class="col-md-3">
                 <label>Hipertensão</label><br>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="hipertensao" />
+                  <input class="form-check-input radio" type="radio" name="hipertensao" [(ngModel)]="model"/>
                   Sim
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="hipertensao" />
+                  <input class="form-check-input radio" type="radio" name="hipertensao" [(ngModel)]="model"/>
                   Não
                 </div>
               </div>
@@ -186,11 +186,11 @@
               <div class="col-md-3">
                 <label>Obesidade</label><br>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="obesidade" />
+                  <input class="form-check-input radio" type="radio" name="obesidade" [(ngModel)]="model"/>
                   Sim
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="obesidade" />
+                  <input class="form-check-input radio" type="radio" name="obesidade" [(ngModel)]="model"/>
                   Não
                 </div>
               </div>
@@ -198,18 +198,18 @@
               <div class="col-md-3">
                 <label>Dislipidemia</label><br>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="dislipidemia" />
+                  <input class="form-check-input radio" type="radio" name="dislipidemia" [(ngModel)]="model"/>
                   Sim
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="dislipidemia" />
+                  <input class="form-check-input radio" type="radio" name="dislipidemia" [(ngModel)]="model"/>
                   Não
                 </div>
               </div>
 
               <div class="col-md-12">
                 <label>Outros </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="outros" [(ngModel)]="model"/>
               </div>
 
             </div>
@@ -225,11 +225,11 @@
               <div class="col-md-3">
                 <label>Diabetes</label><br>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="diabetes" />
+                  <input class="form-check-input radio" type="radio" name="diabetes" [(ngModel)]="model"/>
                   Sim
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="diabetes" />
+                  <input class="form-check-input radio" type="radio" name="diabetes" [(ngModel)]="model"/>
                   Não
                 </div>
               </div>
@@ -237,11 +237,11 @@
               <div class="col-md-3">
                 <label>Hipertensão</label><br>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="hipertensao" />
+                  <input class="form-check-input radio" type="radio" name="hipertensao" [(ngModel)]="model"/>
                   Sim
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="hipertensao" />
+                  <input class="form-check-input radio" type="radio" name="hipertensao" [(ngModel)]="model"/>
                   Não
                 </div>
               </div>
@@ -249,11 +249,11 @@
               <div class="col-md-3">
                 <label>Obesidade</label><br>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="obesidade" />
+                  <input class="form-check-input radio" type="radio" name="obesidade" [(ngModel)]="model"/>
                   Sim
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="obesidade" />
+                  <input class="form-check-input radio" type="radio" name="obesidade" [(ngModel)]="model"/>
                   Não
                 </div>
               </div>
@@ -261,103 +261,103 @@
               <div class="col-md-3">
                 <label>Dislipidemia</label><br>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="dislipidemia" />
+                  <input class="form-check-input radio" type="radio" name="dislipidemia" [(ngModel)]="model"/>
                   Sim
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="dislipidemia" />
+                  <input class="form-check-input radio" type="radio" name="dislipidemia" [(ngModel)]="model"/>
                   Não
                 </div>
               </div>
 
               <div class="col-md-12">
                 <label>Outros </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="outros" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-6">
                 <label>Hábito intestinal </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="habitoIntestinal" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-6">
                 <label>Características das fezes </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="caracteristicaFezes" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-6">
-                <label>Hábito unnário </label>
-                <input type="text" class="form-control" />
+                <label>Hábito urinário</label>
+                <input type="text" class="form-control" name="habitoUrinario" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-6">
                 <label>Horas de sono </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="horaSono" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-6">
                 <label>Atividade fisica</label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="atividadeFisica" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-6">
                 <label>Frequência </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="frequencia" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-4">
                 <label>Fuma </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="fuma" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-4">
                 <label>Quanto </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="quanto" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-4">
                 <label>Há quanto tempo </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="haQuantoTempo" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-4">
                 <label>Faz uso de bebida alcoólica </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control"  name="fazUsoBebidaAlcoolica" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-4">
                 <label>Tipo </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="tipo" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-4">
                 <label>Há quanto tempo </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="haQuantoTempoBebida" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-6">
                 <label>Faz uso de laxantes </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="fazUsoLaxante" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-6">
                 <label>Por quanto tempo </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="porQuantoTempo" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-4">
                 <label>Faz uso de medicamento</label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="fazUsoMedicamento" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-4">
                 <label>Há quanto tempo </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="haQuantoTempoMedicamento" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-4">
                 <label>Quais </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="quaisMedicamento" [(ngModel)]="model"/>
               </div>
 
 
@@ -374,33 +374,122 @@
 
               <div class="col-md-6">
                 <label>Apresenta intolerância ou aversão alimentar? Qual? </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="intoleranciaOuAversaoAlimentar" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-6">
                 <label>Há quanto tempo </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="haQuantoTempoAlimentacao" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-12">
                 <label>Faz ou fez algum controle de alimentação? Qual? </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="controleAlimentacao" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-6">
                 <label>Apresentou alteração de peso? </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="alteracaoPeso" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-6">
                 <label>Em quanto tempo?</label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" name="emQuantoTempo" [(ngModel)]="model"/>
               </div>
 
               <div class="col-md-6">
-                <label>Faz uso de laxantes </label>
-                <input type="text" class="form-control" />
+                <label>Consumo de água </label>
+                <input type="text" class="form-control" name="consumoAgua" [(ngModel)]="model"/>
               </div>
+
+              <div class="col-md-6">
+                <label>Consumo de Café </label>
+                <input type="text" class="form-control" name="consumoCafe" [(ngModel)]="model"/>
+              </div>
+
+              <div class="col-md-4">
+                <label>Consumo mensal de sal</label>
+                <input type="text" class="form-control" name="consumoMensalSal" [(ngModel)]="model"/>
+              </div>
+
+              <div class="col-md-4">
+                <label>Consumo de açúcar </label>
+                <input type="text" class="form-control" name="consumoAcucar" [(ngModel)]="model"/>
+              </div>
+
+              <div class="col-md-4">
+                <label>Consumo de óleo/banha </label>
+                <input type="text" class="form-control" name="consumoOleoBanha" [(ngModel)]="model"/>
+              </div>
+
+              <div class="col-md-6">
+                <label>Onde faz as refeições?</label>
+                <input type="text" class="form-control" name="ondeFazRefeicoes" [(ngModel)]="model"/>
+              </div>
+
+              <div class="col-md-6">
+                <label>Quem prepara </label>
+                <input type="text" class="form-control" name="quemPrepara"  [(ngModel)]="model"/>
+              </div>
+
+              <label>Mastigação</label>
+              <div class="col-md-4">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="rapida" [(ngModel)]="model"/>
+                    Rápida
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="moderada" [(ngModel)]="model"/>
+                    Moderada
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="devagar" [(ngModel)]="model"/>
+                    Devagar
+                  </label>
+                </div>
+              </div>
+                
+              <label>Costuma comer</label>
+              <div class="col-md-6">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="acompanhado" [(ngModel)]="model"/>
+                    Acompanhado
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-check">
+                  <label>
+                    <input class="form-check-input radio" type="radio" name="sozinho" [(ngModel)]="model"/>
+                    Sozinho
+                  </label>
+                </div>
+              </div>
+
+
+                <div class="col-md-6">
+                  <label>Preferências </label>
+                  <input type="text" class="form-control" name="preferencias" [(ngModel)]="model"/>
+                </div>
+
+                <div class="col-md-6">
+                  <label>Restrições alimentares (vegetariano, naturalista, etc)</label>
+                  <input type="text" class="form-control" name="restricoesAlimentares" [(ngModel)]="model"/>
+                </div>
+
 
               <div class="container mt-2">
                 <div class="row g-3">
