@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 
 <div class="content">
-  <form #form="ngForm" (ngSubmit)="enviarEnfermagem()"  class="row g-3">
+  <form #form="ngForm" (ngSubmit)="ProntEnfermagem()"  class="row g-3">
     <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
       <mat-tab label="Exame fisico">
         <fieldset class="border p-4">
@@ -10,12 +10,12 @@
             <div class="row g-3">
                 <div class="col-md-4">
                   <label for="inputEmail4" class="form-label"> Nome </label>
-                  <input type="text" class="form-control" name="nome"   required   [(ngModel)]="enfermagem.nome"/>
+                  <input type="text" class="form-control" name="nome"   required   [(ngModel)]="model.nome"/>
                 </div>
 
                 <div class="col-md-4">
                   <label for="dataNascimento">Data de Nascimento</label>
-                  <input type="date" class="form-control" name="dataNascimento"   required   [(ngModel)]="enfermagem.dataNascimento"/>
+                  <input type="date" class="form-control" name="dataNascimento"   required   [(ngModel)]="model.dataNascimento"/>
                 </div>
                 <script>
                   $(document).ready(function () {
@@ -30,7 +30,7 @@
 
                 <div class="col-md-4">
                   <label>Data do exame</label>
-                  <input type="date" class="form-control" name="dataExame"   required   [(ngModel)]="enfermagem.dataExame"/>
+                  <input type="date" class="form-control" name="dataExame"   required   [(ngModel)]="model.dataExame"/>
                 </div>
                 <script>
                   $(document).ready(function () {
@@ -51,18 +51,18 @@
                 <div class="col-md-6">
                   <h5>Sistema Neurológico - Nível de consciência</h5>
                   <div class="form-check form-check-inline">
-                      <input class="form-check-input radio" type="radio" name="nivelConciencia" value="Consciente"    required   [(ngModel)]="enfermagem.nivelConciencia"/>
+                      <input class="form-check-input radio" type="radio" name="nivelConciencia" value="Consciente"    required   [(ngModel)]="model.nivelConciencia"/>
                       Consciente
                   </div>
                   <div class="form-check form-check-inline">
-                      <input class="form-check-input radio" type="radio" name="nivelConciencia" value="Confuso"  required   [(ngModel)]="enfermagem.nivelConciencia"/> Confuso
+                      <input class="form-check-input radio" type="radio" name="nivelConciencia" value="Confuso"  required   [(ngModel)]="model.nivelConciencia"/> Confuso
                   </div>
                   <div class="form-check form-check-inline">
-                      <input class="form-check-input radio" type="radio" name="nivelConciencia" value="Orientado"   required   [(ngModel)]="enfermagem.nivelConciencia"/>
+                      <input class="form-check-input radio" type="radio" name="nivelConciencia" value="Orientado"   required   [(ngModel)]="model.nivelConciencia"/>
                       Orientado
                   </div>
                   <div class="form-check form-check-inline">
-                      <input class="form-check-input radio" type="radio" name="nivelConciencia" value="Inconsciente"  required   [(ngModel)]="enfermagem.nivelConciencia" />
+                      <input class="form-check-input radio" type="radio" name="nivelConciencia" value="Inconsciente"  required   [(ngModel)]="model.nivelConciencia" />
                       Inconsciente
                   </div>
                 </div>
@@ -70,23 +70,23 @@
                 <div class="col-md-6">
                   <h5>Pupilas</h5>
                   <div class="form-check form-check-inline">
-                      <input class="form-check-input radio" type="radio" name="pupilasSituacao" value="Isocôricas"   required   [(ngModel)]="enfermagem.pupilasSituacao"/>
+                      <input class="form-check-input radio" type="radio" name="pupilasSituacao" value="Isocôricas"   required   [(ngModel)]="model.pupilasSituacao"/>
                       Isocôricas
                   </div>
                   <div class="form-check form-check-inline">
-                      <input class="form-check-input radio" type="radio" name="pupilasSituacao" value="Anisocórica"   required   [(ngModel)]="enfermagem.pupilasSituacao"/>
+                      <input class="form-check-input radio" type="radio" name="pupilasSituacao" value="Anisocórica"   required   [(ngModel)]="model.pupilasSituacao"/>
                       Anisocórica
                   </div>
                   <div class="form-check form-check-inline">
-                      <input class="form-check-input radio" type="radio" name="pupilasSituacao" value="Discórica"   required   [(ngModel)]="enfermagem.pupilasSituacao"/>
+                      <input class="form-check-input radio" type="radio" name="pupilasSituacao" value="Discórica"   required   [(ngModel)]="model.pupilasSituacao"/>
                       Discórica
                   </div>
                   <div class="form-check form-check-inline">
-                      <input class="form-check-input radio" type="radio" name="pupilasSituacao" value="Midríase"   required   [(ngModel)]="enfermagem.pupilasSituacao"/>
+                      <input class="form-check-input radio" type="radio" name="pupilasSituacao" value="Midríase"   required   [(ngModel)]="model.pupilasSituacao"/>
                       Midríase
                   </div>
                   <div class="form-check form-check-inline">
-                      <input class="form-check-input radio" type="radio" name="pupilasSituacao" value="Miose"   required   [(ngModel)]="enfermagem.pupilasSituacao"/> Miose
+                      <input class="form-check-input radio" type="radio" name="pupilasSituacao" value="Miose"   required   [(ngModel)]="model.pupilasSituacao"/> Miose
                   </div>
                 </div>
 
@@ -94,21 +94,21 @@
                   <h5>Pupilas</h5>
                   <div class="form-check form-check-inline">
                     <label for="inputEmail4" class="form-label" style="padding-right: 4px;"> PD </label>
-                    <input type="text" class="form-control" name="pupilaPD"   required   [(ngModel)]="enfermagem.pupilaPD"/>
+                    <input type="text" class="form-control" name="pupilaPD"   required   [(ngModel)]="model.pupilaPD"/>
                   </div>
                   <div class="form-check form-check-inline">
                     <label for="inputEmail4" class="form-label" style="padding-right: 4px;"> PE </label>
-                    <input type="text" class="form-control" name="pupilaPE"   required   [(ngModel)]="enfermagem.pupilaPE"/> 
+                    <input type="text" class="form-control" name="pupilaPE"   required   [(ngModel)]="model.pupilaPE"/> 
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <h5>Fotorreação:</h5>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input radio" type="radio" name="fotorreacao"   required   [(ngModel)]="enfermagem.fotorreacao"/> +
+                    <input class="form-check-input radio" type="radio" name="fotorreacao"   required   [(ngModel)]="model.fotorreacao"/> +
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input radio" type="radio" name="fotorreacao"   required   [(ngModel)]="enfermagem.fotorreacao"/> -
+                    <input class="form-check-input radio" type="radio" name="fotorreacao"   required   [(ngModel)]="model.fotorreacao"/> -
                   </div>
                 </div>
 
@@ -116,35 +116,35 @@
                   <h5>Sistema Cardiocirculatório</h5>
                   <div class="form-check form-check-inline">
                       <input class="form-check-input radio" type="radio" name="sistemaCardioCirculatorio"
-                        value="Normotenso"   required   [(ngModel)]="enfermagem.sistemaCardioCirculatorio"/> Normotenso
+                        value="Normotenso"   required   [(ngModel)]="model.sistemaCardioCirculatorio"/> Normotenso
                   </div>
                   <div class="form-check form-check-inline">
                       <input class="form-check-input radio" type="radio" name="sistemaCardioCirculatorio"
-                        value="Hipotenso"   required   [(ngModel)]="enfermagem.sistemaCardioCirculatorio"/> Hipotenso
+                        value="Hipotenso"   required   [(ngModel)]="model.sistemaCardioCirculatorio"/> Hipotenso
                   </div>
                   <div class="form-check form-check-inline">
                       <input class="form-check-input radio" type="radio" name="sistemaCardioCirculatorio"
-                        value="Hipertenso"   required   [(ngModel)]="enfermagem.sistemaCardioCirculatorio"/> Hipertenso
+                        value="Hipertenso"   required   [(ngModel)]="model.sistemaCardioCirculatorio"/> Hipertenso
                   </div>
                   <div class="form-check form-check-inline">
                       <input class="form-check-input radio" type="radio" name="sistemaCardioCirculatorio"
-                        value="Normocárdico"   required   [(ngModel)]="enfermagem.sistemaCardioCirculatorio"/> Normocárdico
+                        value="Normocárdico"   required   [(ngModel)]="model.sistemaCardioCirculatorio"/> Normocárdico
                   </div>
                   <div class="form-check form-check-inline">
                       <input class="form-check-input radio" type="radio" name="sistemaCardioCirculatorio"
-                        value="Bradicárdico"   required   [(ngModel)]="enfermagem.sistemaCardioCirculatorio"/> Bradicárdico
+                        value="Bradicárdico"   required   [(ngModel)]="model.sistemaCardioCirculatorio"/> Bradicárdico
                   </div>
                   <div class="form-check form-check-inline">
                       <input class="form-check-input radio" type="radio" name="sistemaCardioCirculatorio"
-                        value="Taquicárdico"   required   [(ngModel)]="enfermagem.sistemaCardioCirculatorio"/> Taquicárdico
+                        value="Taquicárdico"   required   [(ngModel)]="model.sistemaCardioCirculatorio"/> Taquicárdico
                   </div>
                   <div class="form-check form-check-inline">
                       <input class="form-check-input radio" type="radio" name="sistemaCardioCirculatorio"
-                        value="Ritmico"   required   [(ngModel)]="enfermagem.sistemaCardioCirculatorio"/> Ritmico
+                        value="Ritmico"   required   [(ngModel)]="model.sistemaCardioCirculatorio"/> Ritmico
                   </div>
                   <div class="form-check form-check-inline">
                       <input class="form-check-input radio" type="radio" name="sistemaCardioCirculatorio"
-                        value="Arritmico"   required   [(ngModel)]="enfermagem.sistemaCardioCirculatorio"/> Arritmico
+                        value="Arritmico"   required   [(ngModel)]="model.sistemaCardioCirculatorio"/> Arritmico
                   </div>
                 </div>
 
@@ -172,11 +172,11 @@
                   </div>
                   <div class="form-check form-check-inline">
                     <h6 for="carotideosEsquerdo" style="padding-right: 4px;">Esquerdo</h6>
-                    <input type="text" class="form-control" name="carotideosEsquerdo" id=""   required   [(ngModel)]="enfermagem.carotideosEsquerdo">
+                    <input type="text" class="form-control" name="carotideosEsquerdo" id=""   required   [(ngModel)]="model.carotideosEsquerdo">
                   </div>
                   <div class="form-check form-check-inline">
                     <h6 for="carotideosDireito" style="padding-right: 25px; padding-left: 115px;">Direito</h6>
-                    <input type="text" class="form-control" name="carotideosDireito" id=""   required   [(ngModel)]="enfermagem.carotideosDireito">
+                    <input type="text" class="form-control" name="carotideosDireito" id=""   required   [(ngModel)]="model.carotideosDireito">
                   </div>
                 </div>
 
@@ -186,11 +186,11 @@
                   </div>
                   <div class="form-check form-check-inline">
                     <h6 for="braquiaisEsquerdo" style="padding-right: 4px;">Esquerdo</h6>
-                    <input type="text" class="form-control" name="braquiaisEsquerdo" id=""  required   [(ngModel)]="enfermagem.braquiaisEsquerdo">
+                    <input type="text" class="form-control" name="braquiaisEsquerdo" id=""  required   [(ngModel)]="model.braquiaisEsquerdo">
                   </div>
                   <div class="form-check form-check-inline">
                     <h6 for="braquiaisEsquerdo" style="padding-right: 25px; padding-left: 101px;">Direito</h6>
-                    <input type="text" class="form-control" name="braquiaisDireito" id=""  required   [(ngModel)]="enfermagem.braquiaisDireito">
+                    <input type="text" class="form-control" name="braquiaisDireito" id=""  required   [(ngModel)]="model.braquiaisDireito">
                   </div>
                 </div>
 
@@ -200,11 +200,11 @@
                   </div>
                   <div class="form-check form-check-inline">
                     <h6 for="radiaisEsquerdo" style="padding-right: 4px; padding-left: 32px;">Esquerdo</h6>
-                    <input type="text" class="form-control" name="radiaisEsquerdo" id=""  required   [(ngModel)]="enfermagem.radiaisEsquerdo">
+                    <input type="text" class="form-control" name="radiaisEsquerdo" id=""  required   [(ngModel)]="model.radiaisEsquerdo">
                   </div>
                   <div class="form-check form-check-inline">
                     <h6 for="radiaisEsquerdo" style="padding-right: 25px; padding-left: 115px;">Direito</h6>
-                    <input type="text" class="form-control" name="radiaisDireito" id=""  required   [(ngModel)]="enfermagem.radiaisDireito">
+                    <input type="text" class="form-control" name="radiaisDireito" id=""  required   [(ngModel)]="model.radiaisDireito">
                   </div>
                 </div>
 
@@ -214,11 +214,11 @@
                   </div>
                   <div class="form-check form-check-inline">
                     <h6 for="femoraisEsquerdo" style="padding-right: 4px;">Esquerdo</h6>
-                    <input type="text" class="form-control" name="femoraisEsquerdo" id=""  required   [(ngModel)]="enfermagem.femoraisEsquerdo">
+                    <input type="text" class="form-control" name="femoraisEsquerdo" id=""  required   [(ngModel)]="model.femoraisEsquerdo">
                   </div>
                   <div class="form-check form-check-inline">
                     <h6 for="femoraisEsquerdo" style="padding-right: 24px; padding-left: 101px;">Direito</h6>
-                    <input type="text" class="form-control" name="femoraisDireito" id=""  required   [(ngModel)]="enfermagem.femoraisDireito">
+                    <input type="text" class="form-control" name="femoraisDireito" id=""  required   [(ngModel)]="model.femoraisDireito">
                   </div>
                 </div>
 
@@ -228,11 +228,11 @@
                   </div>
                   <div class="form-check form-check-inline">
                     <h6 for="pediososEsquerdo" style="padding-right: 4px; padding-left: 14px;">Esquerdo</h6>
-                    <input type="text" class="form-control" name="pediososEsquerdo" id=""  required   [(ngModel)]="enfermagem.pediososEsquerdo">
+                    <input type="text" class="form-control" name="pediososEsquerdo" id=""  required   [(ngModel)]="model.pediososEsquerdo">
                   </div>
                   <div class="form-check form-check-inline">
                     <h6 for="pediososEsquerdo " style="padding-right: 25px; padding-left: 114px;">Direito</h6>
-                    <input type="text" class="form-control" name="pediososDireito" id=""  required   [(ngModel)]="enfermagem.pediososDireito">
+                    <input type="text" class="form-control" name="pediososDireito" id=""  required   [(ngModel)]="model.pediososDireito">
                   </div>
                 </div>
 
@@ -242,11 +242,11 @@
                   </div>
                   <div class="form-check form-check-inline">
                     <h6 for="popliteosEsquerdo" style="padding-right: 4px;">Esquerdo</h6>
-                    <input type="text" class="form-control" name="popliteosEsquerdo" id=""  required   [(ngModel)]="enfermagem.popliteosEsquerdo">
+                    <input type="text" class="form-control" name="popliteosEsquerdo" id=""  required   [(ngModel)]="model.popliteosEsquerdo">
                   </div>
                   <div class="form-check form-check-inline">
                     <h6 for="popliteosEsquerdo" style="padding-right: 24px; padding-left: 103px;">Direito</h6>
-                    <input type="text" class="form-control" name="popliteosDireito" id=""  required   [(ngModel)]="enfermagem.popliteosDireito">
+                    <input type="text" class="form-control" name="popliteosDireito" id=""  required   [(ngModel)]="model.popliteosDireito">
                   </div>
                 </div>
 
@@ -254,26 +254,26 @@
                 <div class="col-md-6">
                   <h5>Perfusão Periférica</h5>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input radio" type="radio" name="perfusaoPeriferica"   required   [(ngModel)]="enfermagem.perfusaoPeriferica"/> Normal
+                    <input class="form-check-input radio" type="radio" name="perfusaoPeriferica"   required   [(ngModel)]="model.perfusaoPeriferica"/> Normal
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input radio" type="radio" name="perfusaoPeriferica"   required   [(ngModel)]="enfermagem.perfusaoPeriferica"/>Vasoconstrito
+                    <input class="form-check-input radio" type="radio" name="perfusaoPeriferica"   required   [(ngModel)]="model.perfusaoPeriferica"/>Vasoconstrito
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <h5>Edema</h5>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input radio" type="radio" name="edema"   required   [(ngModel)]="enfermagem.edema"/> +
+                    <input class="form-check-input radio" type="radio" name="edema"   required   [(ngModel)]="model.edema"/> +
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input radio" type="radio" name="edema"   required   [(ngModel)]="enfermagem.edema"/> ++
+                    <input class="form-check-input radio" type="radio" name="edema"   required   [(ngModel)]="model.edema"/> ++
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input radio" type="radio" name="edema"   required   [(ngModel)]="enfermagem.edema"/> +++
+                    <input class="form-check-input radio" type="radio" name="edema"   required   [(ngModel)]="model.edema"/> +++
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input radio" type="radio" name="edema"   required   [(ngModel)]="enfermagem.edema"/> ++++
+                    <input class="form-check-input radio" type="radio" name="edema"   required   [(ngModel)]="model.edema"/> ++++
                   </div>
                 </div>
             </div>
@@ -290,208 +290,208 @@
               <div class="col-md-4">
                 <h5>Padrão</h5>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="padrao" value="Dispneico"   required   [(ngModel)]="enfermagem.padrao"/> Dispneico
+                  <input class="form-check-input radio" type="radio" name="padrao" value="Dispneico"   required   [(ngModel)]="model.padrao"/> Dispneico
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="padrao" value="Bradipneico"  required   [(ngModel)]="enfermagem.padrao"/> Bradipneico
+                  <input class="form-check-input radio" type="radio" name="padrao" value="Bradipneico"  required   [(ngModel)]="model.padrao"/> Bradipneico
                 </div>
               </div>
               <div class="col-md-4">
                 <h5>Murmúrio Vesicular</h5>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="murmurioVesicular" value="Dispneico"  required   [(ngModel)]="enfermagem.murmurioVesicular"/> Diminuido
+                  <input class="form-check-input radio" type="radio" name="murmurioVesicular" value="Dispneico"  required   [(ngModel)]="model.murmurioVesicular"/> Diminuido
                 </div>
               </div>
 
               <div class="col-md-4">
                 <h5>Expansão do Tórax</h5>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="expansaoTorax" value="Sibilos"   required   [(ngModel)]="enfermagem.expansaoTorax"/> Sibilos
+                  <input class="form-check-input radio" type="radio" name="expansaoTorax" value="Sibilos"   required   [(ngModel)]="model.expansaoTorax"/> Sibilos
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="expansaoTorax" value="Roncos"   required   [(ngModel)]="enfermagem.expansaoTorax"/> Roncos
+                  <input class="form-check-input radio" type="radio" name="expansaoTorax" value="Roncos"   required   [(ngModel)]="model.expansaoTorax"/> Roncos
                 </div>
               </div>
 
               <div class="col-md-4">
                 <h5>Ruidos Adventicios</h5>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="ruidosAdventicios" value="Simétrico"   required   [(ngModel)]="enfermagem.ruidosAdventicios"/> Simétrico
+                  <input class="form-check-input radio" type="radio" name="ruidosAdventicios" value="Simétrico"   required   [(ngModel)]="model.ruidosAdventicios"/> Simétrico
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="ruidosAdventicios" value="Assimétrico"   required   [(ngModel)]="enfermagem.ruidosAdventicios"/> Assimétrico
+                  <input class="form-check-input radio" type="radio" name="ruidosAdventicios" value="Assimétrico"   required   [(ngModel)]="model.ruidosAdventicios"/> Assimétrico
                 </div>
               </div>
 
               <div class="col-md-4">
                 <h5>Aceitação da Dieta:</h5>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="aceitacaoDieta" value="Ótimo"   required   [(ngModel)]="enfermagem.aceitacaoDieta"/> Ótimo
+                  <input class="form-check-input radio" type="radio" name="aceitacaoDieta" value="Ótimo"   required   [(ngModel)]="model.aceitacaoDieta"/> Ótimo
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="aceitacaoDieta" value="Satisfatório"   required   [(ngModel)]="enfermagem.aceitacaoDieta"/> Satisfatório
+                  <input class="form-check-input radio" type="radio" name="aceitacaoDieta" value="Satisfatório"   required   [(ngModel)]="model.aceitacaoDieta"/> Satisfatório
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="aceitacaoDieta" value="Regular"   required   [(ngModel)]="enfermagem.aceitacaoDieta"/> Regular
+                  <input class="form-check-input radio" type="radio" name="aceitacaoDieta" value="Regular"   required   [(ngModel)]="model.aceitacaoDieta"/> Regular
                 </div>
               </div>
               
               <div class="col-md-4">
                 <h5>Dentição:</h5>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="denticao" value="normal"   required   [(ngModel)]="enfermagem.denticao">  Normal
+                  <input class="form-check-input radio" type="radio" name="denticao" value="normal"   required   [(ngModel)]="model.denticao">  Normal
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="denticao" value="protese"  required   [(ngModel)]="enfermagem.denticao"> Uso de Prótese
+                  <input class="form-check-input radio" type="radio" name="denticao" value="protese"  required   [(ngModel)]="model.denticao"> Uso de Prótese
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="denticao" value="ausencia"  required   [(ngModel)]="enfermagem.denticao"> Ausência de Dentes
+                  <input class="form-check-input radio" type="radio" name="denticao" value="ausencia"  required   [(ngModel)]="model.denticao"> Ausência de Dentes
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="denticao" value="caries"  required   [(ngModel)]="enfermagem.denticao"> Cáries
+                  <input class="form-check-input radio" type="radio" name="denticao" value="caries"  required   [(ngModel)]="model.denticao"> Cáries
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="denticao" value="placas"  required   [(ngModel)]="enfermagem.denticao"> Presença de Placas
+                  <input class="form-check-input radio" type="radio" name="denticao" value="placas"  required   [(ngModel)]="model.denticao"> Presença de Placas
                 </div>
               </div>           
 
               <div class="col-md-10">
                 <h5>Abdome:</h5>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="abdome" value="plano"   required   [(ngModel)]="enfermagem.abdome">  Plano
+                  <input class="form-check-input radio" type="radio" name="abdome" value="plano"   required   [(ngModel)]="model.abdome">  Plano
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="abdome" value="escavado"  required   [(ngModel)]="enfermagem.abdome"> Escavado
+                  <input class="form-check-input radio" type="radio" name="abdome" value="escavado"  required   [(ngModel)]="model.abdome"> Escavado
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="abdome" value="ascitico"  required   [(ngModel)]="enfermagem.abdome"> Ascítico
+                  <input class="form-check-input radio" type="radio" name="abdome" value="ascitico"  required   [(ngModel)]="model.abdome"> Ascítico
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="abdome" value="distendido"  required   [(ngModel)]="enfermagem.abdome"> Distendido
+                  <input class="form-check-input radio" type="radio" name="abdome" value="distendido"  required   [(ngModel)]="model.abdome"> Distendido
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="abdome" value="flacido"  required   [(ngModel)]="enfermagem.abdome"> Flácido
+                  <input class="form-check-input radio" type="radio" name="abdome" value="flacido"  required   [(ngModel)]="model.abdome"> Flácido
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="abdome" value="globoso"  required   [(ngModel)]="enfermagem.abdome"> Globoso
+                  <input class="form-check-input radio" type="radio" name="abdome" value="globoso"  required   [(ngModel)]="model.abdome"> Globoso
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="abdome" value="semigloboso"  required   [(ngModel)]="enfermagem.abdome"> Semi Globoso
+                  <input class="form-check-input radio" type="radio" name="abdome" value="semigloboso"  required   [(ngModel)]="model.abdome"> Semi Globoso
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="abdome" value="timpanico"  required   [(ngModel)]="enfermagem.abdome"> Timpânico
+                  <input class="form-check-input radio" type="radio" name="abdome" value="timpanico"  required   [(ngModel)]="model.abdome"> Timpânico
                 </div>
               </div>
 
               <div class="col-md-2">
                 <h5>RHA:</h5>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="rha" value="Ausente"  required   [(ngModel)]="enfermagem.rha"> Ausente
+                  <input class="form-check-input radio" type="radio" name="rha" value="Ausente"  required   [(ngModel)]="model.rha"> Ausente
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="rha" value="Diminuido"  required   [(ngModel)]="enfermagem.rha">Diminuido
+                  <input class="form-check-input radio" type="radio" name="rha" value="Diminuido"  required   [(ngModel)]="model.rha">Diminuido
                 </div>
               </div>
 
               <div class="col-md-4">
                 <h5>Massa à Palpação:</h5>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="massa" value="sim"   required   [(ngModel)]="enfermagem.massa"> Sim
+                  <input class="form-check-input radio" type="radio" name="massa" value="sim"   required   [(ngModel)]="model.massa"> Sim
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="massa" value="nao"  required   [(ngModel)]="enfermagem.massa"> Não
+                  <input class="form-check-input radio" type="radio" name="massa" value="nao"  required   [(ngModel)]="model.massa"> Não
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="massa" value="doloroso"  required   [(ngModel)]="enfermagem.massa"> Doloroso
+                  <input class="form-check-input radio" type="radio" name="massa" value="doloroso"  required   [(ngModel)]="model.massa"> Doloroso
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="massa" value="indolor"  required   [(ngModel)]="enfermagem.massa"> Indolor
+                  <input class="form-check-input radio" type="radio" name="massa" value="indolor"  required   [(ngModel)]="model.massa"> Indolor
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="massa" value="placas"  required   [(ngModel)]="enfermagem.massa"> Presença de Placas
+                  <input class="form-check-input radio" type="radio" name="massa" value="placas"  required   [(ngModel)]="model.massa"> Presença de Placas
                 </div>
               </div>
 
               <div class="col-md-4">
                 <h5>Evacuação:</h5>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="evacuacao" value="normal"  required   [(ngModel)]="enfermagem.evacuacao"> Normal sem estímulos
+                  <input class="form-check-input radio" type="radio" name="evacuacao" value="normal"  required   [(ngModel)]="model.evacuacao"> Normal sem estímulos
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="evacuacao" value="estimulo"  required   [(ngModel)]="enfermagem.evacuacao"> Necessita de estímulos
+                  <input class="form-check-input radio" type="radio" name="evacuacao" value="estimulo"  required   [(ngModel)]="model.evacuacao"> Necessita de estímulos
                 </div>
               </div>
 
               <div class="col-md-3">
                 <h5>Gênito Urinário:</h5>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="genito" value="diurese"  required   [(ngModel)]="enfermagem.genito"> Diurese Espontânea
+                  <input class="form-check-input radio" type="radio" name="genito" value="diurese"  required   [(ngModel)]="model.genito"> Diurese Espontânea
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="genito" value="fralda"  required   [(ngModel)]="enfermagem.genito"> Uso de Fralda
+                  <input class="form-check-input radio" type="radio" name="genito" value="fralda"  required   [(ngModel)]="model.genito"> Uso de Fralda
                 </div>
               </div>
 
               <div class="col-md-6">
                 <h5>Aspecto da Urina:</h5>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="urina" value="limpida"   required   [(ngModel)]="enfermagem.urina"> Limpida
+                  <input class="form-check-input radio" type="radio" name="urina" value="limpida"   required   [(ngModel)]="model.urina"> Limpida
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="urina" value="concentrada"  required   [(ngModel)]="enfermagem.urina"> Concentrada
+                  <input class="form-check-input radio" type="radio" name="urina" value="concentrada"  required   [(ngModel)]="model.urina"> Concentrada
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="urina" value="fetida"  required   [(ngModel)]="enfermagem.urina"> Fétida
+                  <input class="form-check-input radio" type="radio" name="urina" value="fetida"  required   [(ngModel)]="model.urina"> Fétida
                 </div>
               </div>
 
               <div class="col-md-6">
                 <h5>Eliminação Vesical:</h5>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="vesical" value="normal"  required   [(ngModel)]="enfermagem.vesical"> Normal
+                  <input class="form-check-input radio" type="radio" name="vesical" value="normal"  required   [(ngModel)]="model.vesical"> Normal
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="vesical" value="dor"  required   [(ngModel)]="enfermagem.vesical"> Dor
+                  <input class="form-check-input radio" type="radio" name="vesical" value="dor"  required   [(ngModel)]="model.vesical"> Dor
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="vesical" value="prurido"  required   [(ngModel)]="enfermagem.vesical"> Prurido
+                  <input class="form-check-input radio" type="radio" name="vesical" value="prurido"  required   [(ngModel)]="model.vesical"> Prurido
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="vesical" value="ardor"  required   [(ngModel)]="enfermagem.vesical"> Ardor
+                  <input class="form-check-input radio" type="radio" name="vesical" value="ardor"  required   [(ngModel)]="model.vesical"> Ardor
                 </div>
               </div>
 
               <div class="col-md-12">
                 <h5>Integridade Cutânea e Mucosa:</h5>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="cutanea" value="corado"  required   [(ngModel)]="enfermagem.cutanea"> Corado
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="corado"  required   [(ngModel)]="model.cutanea"> Corado
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="cutanea" value="hipocorado"  required   [(ngModel)]="enfermagem.cutanea"> Hipocorado
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="hipocorado"  required   [(ngModel)]="model.cutanea"> Hipocorado
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="cutanea" value="icterico"  required   [(ngModel)]="enfermagem.cutanea"> Ictérico
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="icterico"  required   [(ngModel)]="model.cutanea"> Ictérico
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="cutanea" value="integra"  required   [(ngModel)]="enfermagem.cutanea"> Pele Íntegra
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="integra"  required   [(ngModel)]="model.cutanea"> Pele Íntegra
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="cutanea" value="ressecada"  required   [(ngModel)]="enfermagem.cutanea"> Pele Ressecada
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="ressecada"  required   [(ngModel)]="model.cutanea"> Pele Ressecada
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="cutanea" value="ulceras"  required   [(ngModel)]="enfermagem.cutanea"> Úlceras
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="ulceras"  required   [(ngModel)]="model.cutanea"> Úlceras
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="cutanea" value="escoriacoes"  required   [(ngModel)]="enfermagem.cutanea"> Escoriações
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="escoriacoes"  required   [(ngModel)]="model.cutanea"> Escoriações
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="cutanea" value="prurido"  required   [(ngModel)]="enfermagem.cutanea"> Prurido
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="prurido"  required   [(ngModel)]="model.cutanea"> Prurido
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="cutanea" value="hematomas"  required   [(ngModel)]="enfermagem.cutanea"> Hematomas
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="hematomas"  required   [(ngModel)]="model.cutanea"> Hematomas
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input radio" type="radio" name="cutanea" value="hiperemia"  required   [(ngModel)]="enfermagem.cutanea"> Hiperemia
+                  <input class="form-check-input radio" type="radio" name="cutanea" value="hiperemia"  required   [(ngModel)]="model.cutanea"> Hiperemia
                 </div>
               </div>
               
@@ -507,45 +507,45 @@
                   </tr>
                   <tr>
                     <td class="tabela">Percepção Sensorial</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="sensorial" value="01"  required   [(ngModel)]="enfermagem.sensorial"> Totalmente Limitado</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="sensorial" value="02"  required   [(ngModel)]="enfermagem.sensorial"> Muito Limitado</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="sensorial" value="03"  required   [(ngModel)]="enfermagem.sensorial"> Levemente Limitado</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="sensorial" value="04"  required   [(ngModel)]="enfermagem.sensorial"> Nenhuma Limitação</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="sensorial" value="01"  required   [(ngModel)]="model.sensorial"> Totalmente Limitado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="sensorial" value="02"  required   [(ngModel)]="model.sensorial"> Muito Limitado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="sensorial" value="03"  required   [(ngModel)]="model.sensorial"> Levemente Limitado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="sensorial" value="04"  required   [(ngModel)]="model.sensorial"> Nenhuma Limitação</td>
                   </tr>
                   <tr>
                     <td class="tabela">Umidade</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="umidade" value="01"  required   [(ngModel)]="enfermagem.umidade"> Completamente Molhado</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="umidade" value="02"  required   [(ngModel)]="enfermagem.umidade"> Muito Molhado</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="umidade" value="03"  required   [(ngModel)]="enfermagem.umidade"> Ocasionalmente Molhado</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="umidade" value="04"  required   [(ngModel)]="enfermagem.umidade"> Raramente Molhado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="umidade" value="01"  required   [(ngModel)]="model.umidade"> Completamente Molhado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="umidade" value="02"  required   [(ngModel)]="model.umidade"> Muito Molhado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="umidade" value="03"  required   [(ngModel)]="model.umidade"> Ocasionalmente Molhado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="umidade" value="04"  required   [(ngModel)]="model.umidade"> Raramente Molhado</td>
                   </tr>
                   <tr>
                     <td class="tabela">Atividade</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="atividade" value="01"  required   [(ngModel)]="enfermagem.atividade"> Acamado</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="atividade" value="02"  required   [(ngModel)]="enfermagem.atividade"> Confirmado à Cadeira</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="atividade" value="03"  required   [(ngModel)]="enfermagem.atividade"> Anda Ocasionalmente</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="atividade" value="04"  required   [(ngModel)]="enfermagem.atividade"> Anda Frequentemente</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="atividade" value="01"  required   [(ngModel)]="model.atividade"> Acamado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="atividade" value="02"  required   [(ngModel)]="model.atividade"> Confirmado à Cadeira</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="atividade" value="03"  required   [(ngModel)]="model.atividade"> Anda Ocasionalmente</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="atividade" value="04"  required   [(ngModel)]="model.atividade"> Anda Frequentemente</td>
                   </tr>
                   <tr>
                     <td class="tabela">Mobilidade</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="mobilidade" value="01"  required   [(ngModel)]="enfermagem.mobilidade"> Totalmente Imóvel</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="mobilidade" value="02"  required   [(ngModel)]="enfermagem.mobilidade"> Bastante Limitado</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="mobilidade" value="03"  required   [(ngModel)]="enfermagem.mobilidade"> Levemente Limitado</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="mobilidade" value="04"  required   [(ngModel)]="enfermagem.mobilidade"> Não apresenta Limitações</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="mobilidade" value="01"  required   [(ngModel)]="model.mobilidade"> Totalmente Imóvel</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="mobilidade" value="02"  required   [(ngModel)]="model.mobilidade"> Bastante Limitado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="mobilidade" value="03"  required   [(ngModel)]="model.mobilidade"> Levemente Limitado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="mobilidade" value="04"  required   [(ngModel)]="model.mobilidade"> Não apresenta Limitações</td>
                   </tr>
                   <tr>
                     <td class="tabela">Nutrição</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="nutricao" value="01"  required   [(ngModel)]="enfermagem.nutricao"> Muito Pobre</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="nutricao" value="02"  required   [(ngModel)]="enfermagem.nutricao"> Provavelmente Inadequado</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="nutricao" value="03"  required   [(ngModel)]="enfermagem.nutricao"> Adequado</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="nutricao" value="04"  required   [(ngModel)]="enfermagem.nutricao"> Excelente</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="nutricao" value="01"  required   [(ngModel)]="model.nutricao"> Muito Pobre</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="nutricao" value="02"  required   [(ngModel)]="model.nutricao"> Provavelmente Inadequado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="nutricao" value="03"  required   [(ngModel)]="model.nutricao"> Adequado</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="nutricao" value="04"  required   [(ngModel)]="model.nutricao"> Excelente</td>
                   </tr>
                   <tr>
                     <td class="tabela">Fricção Cisalhamento</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="friccao" value="01"  required   [(ngModel)]="enfermagem.friccao"> Problema</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="friccao" value="02"  required   [(ngModel)]="enfermagem.friccao"> Problema em Potencial</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="friccao" value="03"  required   [(ngModel)]="enfermagem.friccao"> Problema em Potencial</td>
-                    <td class="tabela"><input type="radio" class="form-check-input radio" name="friccao" value="04"  required   [(ngModel)]="enfermagem.friccao"> Nenhum problema</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="friccao" value="01"  required   [(ngModel)]="model.friccao"> Problema</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="friccao" value="02"  required   [(ngModel)]="model.friccao"> Problema em Potencial</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="friccao" value="03"  required   [(ngModel)]="model.friccao"> Problema em Potencial</td>
+                    <td class="tabela"><input type="radio" class="form-check-input radio" name="friccao" value="04"  required   [(ngModel)]="model.friccao"> Nenhum problema</td>
                   </tr>
                 </table>
               </div>
@@ -581,85 +581,85 @@
               <div class="col-md-12">
                 <h3>Diagnósticos de Enfermagem</h3>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="higieneBanho" name="diagnosticosEnfermagem"   required   [(ngModel)]="enfermagem.diagnosticosEnfermagem">
+                    <input class="form-check-input" type="checkbox" value="" id="higieneBanho" name="diagnosticosEnfermagem"   required   [(ngModel)]="model.diagnosticosEnfermagem">
                     <label class="form-check-label" for="higieneBanho">
                       Déficit no auto cuidado para higiene/banho relacionado ao prejuízo cognitivo, prejuízo musculoesquelético, caracterizado pela incapacidade de lavar corpo.
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="higieneIntima" name="diagnosticosEnfermagem"   required   [(ngModel)]="enfermagem.diagnosticosEnfermagem">
+                    <input class="form-check-input" type="checkbox" value="" id="higieneIntima" name="diagnosticosEnfermagem"   required   [(ngModel)]="model.diagnosticosEnfermagem">
                     <label class="form-check-label" for="higieneIntima">
                       Déficit no auto cuidado para higiene íntima relacionado ao prejuízo cognitivo e musculoesquelético caracterizado pela incapacidade de fazer uma higiene íntima apropriada.
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="vestir" name="diagnosticosEnfermagem"   required   [(ngModel)]="enfermagem.diagnosticosEnfermagem">
+                    <input class="form-check-input" type="checkbox" value="" id="vestir" name="diagnosticosEnfermagem"   required   [(ngModel)]="model.diagnosticosEnfermagem">
                     <label class="form-check-label" for="vestir">
                       Déficit no auto cuidado para vestir/ arrumar-se relacionado ao prejuízo cognitivo e prejuízo musculoesquelético caracterizado pela capacidade prejudicada de colocar itens do vestuário.
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="arrancarUnhas" name="diagnosticosEnfermagem"  required   [(ngModel)]="enfermagem.diagnosticosEnfermagem">
+                    <input class="form-check-input" type="checkbox" value="" id="arrancarUnhas" name="diagnosticosEnfermagem"  required   [(ngModel)]="model.diagnosticosEnfermagem">
                     <label class="form-check-label" for="arrancarUnhas">
                       Automutilação relacionado ao estado psicótico, perturbação emocional caracterizado por morde-se e arrancar unhas.
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="comunicacaoVerbal" name="diagnosticosEnfermagem"  required   [(ngModel)]="enfermagem.diagnosticosEnfermagem">
+                    <input class="form-check-input" type="checkbox" value="" id="comunicacaoVerbal" name="diagnosticosEnfermagem"  required   [(ngModel)]="model.diagnosticosEnfermagem">
                     <label class="form-check-label" for="comunicacaoVerbal">
                       Comunicação verbal prejudicada relacionado a barreira psicológica e caracterizado pela fala com dificuldade e a não verbalização.
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="constipacaoAnticonvulsivantes" name="diagnosticosEnfermagem"  required   [(ngModel)]="enfermagem.diagnosticosEnfermagem">
+                    <input class="form-check-input" type="checkbox" value="" id="constipacaoAnticonvulsivantes" name="diagnosticosEnfermagem"  required   [(ngModel)]="model.diagnosticosEnfermagem">
                     <label class="form-check-label" for="constipacaoAnticonvulsivantes">
                       Constipação relacionado a anticonvulsivantes antidepressivos e sedativos, ingestão insuficiente de fibras caracterizado pela mudança do padrão intestinal presença de sangue vivo nas fezes.
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="visaoPrejudicada" name="diagnosticosEnfermagem"  required   [(ngModel)]="enfermagem.diagnosticosEnfermagem">
+                    <input class="form-check-input" type="checkbox" value="" id="visaoPrejudicada" name="diagnosticosEnfermagem"  required   [(ngModel)]="model.diagnosticosEnfermagem">
                     <label class="form-check-label" for="visaoPrejudicada">
                       Deambulação prejudicada relacionado a visão prejudicada, prejuízo neuromuscular, musculoesquelético, força muscular insuficiente caracterizado pela capacidade prejudicada de andar.
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="dorAguda" name="diagnosticosEnfermagem"  required   [(ngModel)]="enfermagem.diagnosticosEnfermagem">
+                    <input class="form-check-input" type="checkbox" value="" id="dorAguda" name="diagnosticosEnfermagem"  required   [(ngModel)]="model.diagnosticosEnfermagem">
                     <label class="form-check-label" for="dorAguda">
                       Dor aguda.
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="debitoCardiaco" name="diagnosticosEnfermagem"  required   [(ngModel)]="enfermagem.diagnosticosEnfermagem">
+                    <input class="form-check-input" type="checkbox" value="" id="debitoCardiaco" name="diagnosticosEnfermagem"  required   [(ngModel)]="model.diagnosticosEnfermagem">
                     <label class="form-check-label" for="debitoCardiaco">
                       Débito cardíaco prejudicado.
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="integridadePele" name="diagnosticosEnfermagem"  required   [(ngModel)]="enfermagem.diagnosticosEnfermagem">
+                    <input class="form-check-input" type="checkbox" value="" id="integridadePele" name="diagnosticosEnfermagem"  required   [(ngModel)]="model.diagnosticosEnfermagem">
                     <label class="form-check-label" for="integridadePele">
                       Integridade da pele prejudicada.
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="ansiedade" name="diagnosticosEnfermagem"  required   [(ngModel)]="enfermagem.diagnosticosEnfermagem">
+                    <input class="form-check-input" type="checkbox" value="" id="ansiedade" name="diagnosticosEnfermagem"  required   [(ngModel)]="model.diagnosticosEnfermagem">
                     <label class="form-check-label" for="ansiedade">
                       Ansiedade relacionado ao ambiente, estresse, crises situacionais, hereditaredade, mudanças, conflito inconsciente quanto a valores essenciais da vida aos padrões de interação, caracterizado por agitação, insônia, nervosismo, observação atenta, movimento pouco comuns, olhar em torno pouco aflito, ansioso, nervoso, irritabilidade, excessivamente excitado, inquieto, tendência a culpar outros, esquecimento, preocupação, capacidade diminuída para aprender e capacidade diminuída de solucionar problemas.
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="riscoAspiracao" name="diagnosticosEnfermagem"  required   [(ngModel)]="enfermagem.diagnosticosEnfermagem">
+                    <input class="form-check-input" type="checkbox" value="" id="riscoAspiracao" name="diagnosticosEnfermagem"  required   [(ngModel)]="model.diagnosticosEnfermagem">
                     <label class="form-check-label" for="riscoAspiracao">
                       Risco de aspiração, relacionado a administração de medicamentos, dentição prejudicada e esvaziamento gástrico retardada.
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="riscoInfeccao" name="diagnosticosEnfermagem"  required   [(ngModel)]="enfermagem.diagnosticosEnfermagem">
+                    <input class="form-check-input" type="checkbox" value="" id="riscoInfeccao" name="diagnosticosEnfermagem"  required   [(ngModel)]="model.diagnosticosEnfermagem">
                     <label class="form-check-label" for="riscoInfeccao">
                       Risco de infecção.
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="mobilidadeFisica" name="diagnosticosEnfermagem"  required   [(ngModel)]="enfermagem.diagnosticosEnfermagem">
+                    <input class="form-check-input" type="checkbox" value="" id="mobilidadeFisica" name="diagnosticosEnfermagem"  required   [(ngModel)]="model.diagnosticosEnfermagem">
                     <label class="form-check-label" for="mobilidadeFisica">
                       Mobilidade física prejudicada.
                     </label>
@@ -690,15 +690,15 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><input type="date" name="controleSinaisVitaisData"   required   [(ngModel)]="enfermagem.controleSinaisVitaisData"></td>
-                  <td><input type="time" name="controleSinaisVitaisHorario"  required   [(ngModel)]="enfermagem.controleSinaisVitaisHorario"></td>
-                  <td><input type="text" name="controleSinaisVitaisPa"  required   [(ngModel)]="enfermagem.controleSinaisVitaisPa"></td>
-                  <td><input type="text" name="controleSinaisVitaisFc"  required   [(ngModel)]="enfermagem.controleSinaisVitaisFc"></td>
-                  <td><input type="text" name="controleSinaisVitaisFr"  required   [(ngModel)]="enfermagem.controleSinaisVitaisFr"></td>
-                  <td><input type="text" name="controleSinaisVitaisTemp"  required   [(ngModel)]="enfermagem.controleSinaisVitaisTemp"></td>
-                  <td><input type="text" name="controleSinaisVitaisPvc"  required   [(ngModel)]="enfermagem.controleSinaisVitaisPvc"></td>
-                  <td><input type="text" name="controleSinaisVitaisGlicemia"  required   [(ngModel)]="enfermagem.controleSinaisVitaisGlicemia"></td>
-                  <td><textarea name="controleSinaisVitaisAnotacoes"  required   [(ngModel)]="enfermagem.controleSinaisVitaisAnotacoes"></textarea></td>
+                  <td><input type="date" name="controleSinaisVitaisData"   required   [(ngModel)]="model.controleSinaisVitaisData"></td>
+                  <td><input type="time" name="controleSinaisVitaisHorario"  required   [(ngModel)]="model.controleSinaisVitaisHorario"></td>
+                  <td><input type="text" name="controleSinaisVitaisPa"  required   [(ngModel)]="model.controleSinaisVitaisPa"></td>
+                  <td><input type="text" name="controleSinaisVitaisFc"  required   [(ngModel)]="model.controleSinaisVitaisFc"></td>
+                  <td><input type="text" name="controleSinaisVitaisFr"  required   [(ngModel)]="model.controleSinaisVitaisFr"></td>
+                  <td><input type="text" name="controleSinaisVitaisTemp"  required   [(ngModel)]="model.controleSinaisVitaisTemp"></td>
+                  <td><input type="text" name="controleSinaisVitaisPvc"  required   [(ngModel)]="model.controleSinaisVitaisPvc"></td>
+                  <td><input type="text" name="controleSinaisVitaisGlicemia"  required   [(ngModel)]="model.controleSinaisVitaisGlicemia"></td>
+                  <td><textarea name="controleSinaisVitaisAnotacoes"  required   [(ngModel)]="model.controleSinaisVitaisAnotacoes"></textarea></td>
                 </tr>
               </tbody>
             </table>
@@ -706,7 +706,7 @@
             <div class="container mt-2">
               <div class="row g-3">
                 <div class="btn form-check">
-                  <input class="enviar btn btn-success" type="submit">
+                  <input class="enviar btn btn-success" type="submit" (click)="routerEnf()">
                   <input class="limpar btn btn-danger" type="reset" value="Limpar">
                 </div>
               </div>

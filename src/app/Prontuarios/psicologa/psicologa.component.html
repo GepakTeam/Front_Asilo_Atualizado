@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 
 <div class="content">
-<form class="row g-3" #form="ngForm" (ngSubmit)="onFormSubmit()" >
+<form class="row g-3" #form="ngForm" (ngSubmit)="ProntPsicologa()" >
   <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
     <mat-tab label="Formulário de Registro">
       <fieldset class="border p-4">
@@ -89,7 +89,7 @@
               </div>
 
               <div class="col-md-12">
-                <button type="submit" class="submit-btn">Enviar</button>
+                <button type="submit" class="submit-btn" (click)="routerPsic()">Enviar</button>
               </div>
             </div>
         </div>

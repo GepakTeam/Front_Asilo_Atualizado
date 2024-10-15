@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 
 <div class="container">
-    <form #form="ngForm" (ngSubmit)="fisioterapia()" class="row g-3">
+    <form #form="ngForm" (ngSubmit)="ProntFisioterapia()" class="row g-3">
         <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
             <mat-tab label="Dados Pessoais">
                 <fieldset class="border p-4">
@@ -10,11 +10,11 @@
                             <h4 class=" col-md-12 w-auto">Avaliação Fisioterapeuta</h4>
                             <!-- <div class="col-md-6">
                                 <label>Prontuario</label>
-                            <input type="text" class="form-control" name="prontuario" [(ngModel)]="fisio.prontuario"/>
+                            <input type="text" class="form-control" name="prontuario" [(ngModel)]="model.prontuario"/>
                             </div> -->
                             <div class="col-md-6">
                                 <label>Data Avaliação</label>
-                                <input type="date" class="form-control" name="dataAvaliacao" [(ngModel)]="fisio.dataAvaliacao"/>
+                                <input type="date" class="form-control" name="dataAvaliacao" [(ngModel)]="model.dataAvaliacao"/>
                             </div>
                             <script>
                                 $(document).ready(function () {
@@ -33,7 +33,7 @@
 
                             <div class="col-md-6">
                                 <label>Nome</label>
-                                <input type="text" class="form-control" name="nome" [(ngModel)]="fisio.nome"/>
+                                <input type="text" class="form-control" name="nome" [(ngModel)]="model.nome"/>
                             </div>
 
                             <div class="col-md-4">
@@ -41,14 +41,14 @@
                                 <div class="form-check form-check-inline">
                                   <label>
                                     <input class="form-check-input radio" type="radio" value="1" name="sexo" value="Feminino"
-                                      [(ngModel)]="fisio.sexo" />
+                                      [(ngModel)]="model.sexo" />
                                     Feminino
                                   </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                   <label>
                                     <input class="form-check-input radio" type="radio" value="2" name="sexo" value="Masculino"
-                                      [(ngModel)]="fisio.sexo" />
+                                      [(ngModel)]="model.sexo" />
                                     Masculino
                                   </label>
                                 </div>
@@ -56,12 +56,12 @@
 
                             <div class="col-md-2">
                                 <label>Idade</label>
-                                <input type="text" class="form-control" name="idade" [(ngModel)]="fisio.idade"/>
+                                <input type="text" class="form-control" name="idade" [(ngModel)]="model.idade"/>
                             </div>
 
                             <div class="col-md-2">
                                 <label>Data de Nascimento</label>
-                                <input type="date" class="form-control" name="dataNascimento" [(ngModel)]="fisio.dataNascimento"/>
+                                <input type="date" class="form-control" name="dataNascimento" [(ngModel)]="model.dataNascimento"/>
                             </div>
 
                             <script>
@@ -79,27 +79,27 @@
                                 <h6 for="inputSex" class="form-label">Estado Civil</h6><br />
                                 <div class="form-check form-check-inline">
                                     <label>
-                                        <input class="form-check-input radio" type="radio" value="1" name="estadoCivil" [(ngModel)]="fisio.estadoCivil"/> Solteiro
+                                        <input class="form-check-input radio" type="radio" value="1" name="estadoCivil" [(ngModel)]="model.estadoCivil"/> Solteiro
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <label>
-                                        <input class="form-check-input radio" type="radio" value="2" name="estadoCivil" [(ngModel)]="fisio.estadoCivil"/> Casado
+                                        <input class="form-check-input radio" type="radio" value="2" name="estadoCivil" [(ngModel)]="model.estadoCivil"/> Casado
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <label>
-                                        <input class="form-check-input radio" type="radio" value="3" name="estadoCivil" [(ngModel)]="fisio.estadoCivil"/> Separado
+                                        <input class="form-check-input radio" type="radio" value="3" name="estadoCivil" [(ngModel)]="model.estadoCivil"/> Separado
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <label>
-                                        <input class="form-check-input radio" type="radio" value="4" name="estadoCivil" [(ngModel)]="fisio.estadoCivil"/> Divorciado
+                                        <input class="form-check-input radio" type="radio" value="4" name="estadoCivil" [(ngModel)]="model.estadoCivil"/> Divorciado
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <label>
-                                        <input class="form-check-input radio" type="radio" value="5" name="estadoCivil" [(ngModel)]="fisio.estadoCivil"/> Viúvo
+                                        <input class="form-check-input radio" type="radio" value="5" name="estadoCivil" [(ngModel)]="model.estadoCivil"/> Viúvo
                                     </label>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@
                             <div class="col-md-3">
                                 <h6 for="celular" class="form-label">Telefone</h6>
                                 <input type="text" class="form-control" placeholder="(xx) xxxxx-xxxx"
-                                    maxlength="15" name="telefone"  [(ngModel)]="fisio.telefone"/>
+                                    maxlength="15" name="telefone"  [(ngModel)]="model.telefone"/>
                             </div>
                             <script>
                                 // Adiciona a máscara ao campo de celular
@@ -128,73 +128,73 @@
 
                             <div class="col-md-12">
                                 <label>Endereço</label>
-                                <input type="text" class="form-control" name="endereco" [(ngModel)]="fisio.endereco"/>
+                                <input type="text" class="form-control" name="endereco" [(ngModel)]="model.endereco"/>
                             </div>
 
                             <div class="col-md-4">
                                 <label>Exames Complementares</label>
-                                <input type="text" class="form-control" name="examesComplementares" [(ngModel)]="fisio.examesComplementares"/>
+                                <input type="text" class="form-control" name="examesComplementares" [(ngModel)]="model.examesComplementares"/>
                             </div>
 
                             <div class="col-md-4">
                                 <label>Medicamentos</label>
-                                <input type="text" class="form-control" name="medicamentos" [(ngModel)]="fisio.medicamentos"/>
+                                <input type="text" class="form-control" name="medicamentos" [(ngModel)]="model.medicamentos"/>
                             </div>
 
                             <div class="col-md-4">
                                 <label>Diagnóstico Clínico-Patológico</label>
-                                <input type="text" class="form-control" name="diagnosticoClinicoPatologico" [(ngModel)]="fisio.diagnosticoClinicoPatologico"/>
+                                <input type="text" class="form-control" name="diagnosticoClinicoPatologico" [(ngModel)]="model.diagnosticoClinicoPatologico"/>
                             </div>
 
                             <div class="col-md-4">
                                 <label>Queixa Principal</label>
                                 <textarea cols="10" rows="4" wrap="hard" class="form-control"
-                                    name="queixaPrincipal" [(ngModel)]="fisio.queixaPrincipal"></textarea>
+                                    name="queixaPrincipal" [(ngModel)]="model.queixaPrincipal"></textarea>
                             </div>
 
                             <div class="col-md-4">
                                 <label>H.M.A</label>
-                                <textarea cols="10" rows="4" wrap="hard" class="form-control" name="hma" [(ngModel)]="fisio.hma"></textarea>
+                                <textarea cols="10" rows="4" wrap="hard" class="form-control" name="hma" [(ngModel)]="model.hma"></textarea>
                             </div>
 
                             <div class="col-md-4">
                                 <label>A.V.D</label>
-                                <textarea cols="10" rows="4" wrap="hard" class="form-control" name="avd" [(ngModel)]="fisio.avd"></textarea>
+                                <textarea cols="10" rows="4" wrap="hard" class="form-control" name="avd" [(ngModel)]="model.avd"></textarea>
                             </div>
 
                             <div class="col-md-4">
                                 <label>Aparelho Locomotor</label>
-                                <input type="text" class="form-control" name="aparelhoLocomotor" [(ngModel)]="fisio.aparelhoLocomotor"/>
+                                <input type="text" class="form-control" name="aparelhoLocomotor" [(ngModel)]="model.aparelhoLocomotor"/>
                             </div>
 
                             <div class="col-md-4">
                                 <label>Cardio-respiratório</label>
-                                <input type="text" class="form-control" name="aparelhoCardioRespiratorio" [(ngModel)]="fisio.aparelhoCardioRespiratorio"/>
+                                <input type="text" class="form-control" name="aparelhoCardioRespiratorio" [(ngModel)]="model.aparelhoCardioRespiratorio"/>
                             </div>
 
                             <div class="col-md-4">
                                 <label>Cardio-vascular</label>
-                                <input type="text" class="form-control" name="aparelhoCardioVascular" [(ngModel)]="fisio.aparelhoCardioVascular"/>
+                                <input type="text" class="form-control" name="aparelhoCardioVascular" [(ngModel)]="model.aparelhoCardioVascular"/>
                             </div>
 
                             <div class="col-md-4">
                                 <label>Ginecológico</label>
-                                <input type="text" class="form-control" name="ginecologico" [(ngModel)]="fisio.ginecologico"/>
+                                <input type="text" class="form-control" name="ginecologico" [(ngModel)]="model.ginecologico"/>
                             </div>
 
                             <div class="col-md-4">
                                 <label>Outros</label>
-                                <textarea cols="10" rows="4" wrap="hard" class="form-control" name="outros" [(ngModel)]="fisio.outros"></textarea>
+                                <textarea cols="10" rows="4" wrap="hard" class="form-control" name="outros" [(ngModel)]="model.outros"></textarea>
                             </div>
 
                             <div class="col-md-4">
                                 <label>Dificuldade De Comunicação</label><br>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input radio" type="radio" value="1" name="dificuldadeComunicacao" [(ngModel)]="fisio.dificuldadeComunicacao"/>
+                                    <input class="form-check-input radio" type="radio" value="1" name="dificuldadeComunicacao" [(ngModel)]="model.dificuldadeComunicacao"/>
                                     Sim
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input radio" type="radio" value="2" name="dificuldadeComunicacao" [(ngModel)]="fisio.dificuldadeComunicacao"/>
+                                    <input class="form-check-input radio" type="radio" value="2" name="dificuldadeComunicacao" [(ngModel)]="model.dificuldadeComunicacao"/>
                                     Não
                                 </div>
                             </div>
@@ -214,27 +214,27 @@
 
                             <div class="col-md-6">
                                 <label>Tipo de medicamento usado</label>
-                                <input type="text" class="form-control" name="tipoMedicamento" [(ngModel)]="fisio.tipoMedicamento"/>
+                                <input type="text" class="form-control" name="tipoMedicamento" [(ngModel)]="model.tipoMedicamento"/>
                             </div>
 
                             <div class="col-md-6">
                                 <label>Dosagem</label>
-                                <input type="text" class="form-control" name="dosagem" [(ngModel)]="fisio.dosagem"/>
+                                <input type="text" class="form-control" name="dosagem" [(ngModel)]="model.dosagem"/>
                             </div>
 
                             <div class="col-md-6">
                                 <label>Frequência</label>
-                                <input type="text" class="form-control" name="frequencia" [(ngModel)]="fisio.frequencia"/>
+                                <input type="text" class="form-control" name="frequencia" [(ngModel)]="model.frequencia"/>
                             </div>
 
                             <div class="col-md-6">
                                 <label>Remédio sem prescrição</label>
-                                <input type="text" class="form-control" name="remedioSemPrescricao" [(ngModel)]="fisio.remedioSemPrescricao"/>
+                                <input type="text" class="form-control" name="remedioSemPrescricao" [(ngModel)]="model.remedioSemPrescricao"/>
                             </div>
 
                             <div class="col-md-12">
                                 <label>Habilidade para manusear o medicamento</label>
-                                <input type="text" class="form-control" name="habilidadeManusear" [(ngModel)]="fisio.habilidadeManusear"/>
+                                <input type="text" class="form-control" name="habilidadeManusear" [(ngModel)]="model.habilidadeManusear"/>
                             </div>
                         </div>
                     </div>
@@ -252,43 +252,43 @@
 
                             <div class="col-md-6">
                                 <label>Frequência das Refeições</label>
-                                <input type="text" class="form-control" name="frequenciaRefeicoes" [(ngModel)]="fisio.frequenciaRefeicoes"/>
+                                <input type="text" class="form-control" name="frequenciaRefeicoes" [(ngModel)]="model.frequenciaRefeicoes"/>
                             </div>
                             <div class="col-md-6">
                                 <label>Dieta especial</label>
-                                <input type="text" class="form-control" name="dietaEspecial" [(ngModel)]="fisio.dietaEspecial" />
+                                <input type="text" class="form-control" name="dietaEspecial" [(ngModel)]="model.dietaEspecial" />
                             </div>
                             <div class="col-md-6">
                                 <label>Ingestão de ácool</label>
-                                <input type="text" class="form-control" name="ingestaoAlcool" [(ngModel)]="fisio.ingestaoAlcool"/>
+                                <input type="text" class="form-control" name="ingestaoAlcool" [(ngModel)]="model.ingestaoAlcool"/>
                             </div>
                             <div class="col-md-6">
                                 <label>Ingestão hídrica</label>
-                                <input type="text" class="form-control" name="ingestaoHidrica" [(ngModel)]="fisio.ingestaoHidrica"/>
+                                <input type="text" class="form-control" name="ingestaoHidrica" [(ngModel)]="model.ingestaoHidrica"/>
                             </div>
                             <div class="col-md-6">
                                 <label>Problemas Dentários - Usa prótese</label><br>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input radio" type="radio" value="1" name="usaProtese" [(ngModel)]="fisio.usaProtese"/> Sim
+                                    <input class="form-check-input radio" type="radio" value="1" name="usaProtese" [(ngModel)]="model.usaProtese"/> Sim
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input radio" type="radio" value="2" name="usaProtese" [(ngModel)]="fisio.usaProtese"/> Não
+                                    <input class="form-check-input radio" type="radio" value="2" name="usaProtese" [(ngModel)]="model.usaProtese"/> Não
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <h6 for="inputSex" class="form-label">Tem apetite</h6><br />
                                 <div class="form-check form-check-inline">
                                   <label>
-                                    <input class="form-check-input radio" type="radio" value="1" name="apetite" [(ngModel)]="fisio.apetite"/> Sim
+                                    <input class="form-check-input radio" type="radio" value="1" name="apetite" [(ngModel)]="model.apetite"/> Sim
                                   </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                   <label>
-                                    <input class="form-check-input radio" type="radio" value="2" name="apetite" [(ngModel)]="fisio.apetite"/> Não
+                                    <input class="form-check-input radio" type="radio" value="2" name="apetite" [(ngModel)]="model.apetite"/> Não
                                   </label>
                                 </div><br>
                                 <label>Por que</label>
-                                <input type="text" class="form-control" name="porqueApetite" [(ngModel)]="fisio.porqueApetite"/>
+                                <input type="text" class="form-control" name="porqueApetite" [(ngModel)]="model.porqueApetite"/>
                             </div>
                         </div>
                     </div>
@@ -306,15 +306,15 @@
 
                             <div class="col-md-12">
                                 <label>Demência (Mini Teste do Estado Mental)</label>
-                                <input type="text" class="form-control" name="demencia" [(ngModel)]="fisio.demencia"/>
+                                <input type="text" class="form-control" name="demencia" [(ngModel)]="model.demencia"/>
                             </div>
                             <div class="col-md-12">
                                 <label>Escala de depressão em Geriatria</label>
-                                <input type="text" class="form-control" name="escalaDepressao" [(ngModel)]="fisio.escalaDepressao"/>
+                                <input type="text" class="form-control" name="escalaDepressao" [(ngModel)]="model.escalaDepressao"/>
                             </div>
                             <div class="col-md-12">
                                 <label>Estado Emocional</label>
-                                <input type="text" class="form-control" name="estadoEmocional" [(ngModel)]="fisio.estadoEmocional"/>
+                                <input type="text" class="form-control" name="estadoEmocional" [(ngModel)]="model.estadoEmocional"/>
                             </div>
 
                         </div>
@@ -333,39 +333,39 @@
 
                             <div class="col-md-4">
                                 <label>Peso</label>
-                                <input type="text" class="form-control" name="peso" [(ngModel)]="fisio.peso"/>
+                                <input type="text" class="form-control" name="peso" [(ngModel)]="model.peso"/>
                             </div>
                             <div class="col-md-4">
                                 <label>Altura</label>
-                                <input type="text" class="form-control" name="altura" [(ngModel)]="fisio.altura"/>
+                                <input type="text" class="form-control" name="altura" [(ngModel)]="model.altura"/>
                             </div>
                             <div class="col-md-4">
                                 <label>P.A</label><br>
                                 <div class="form-check form-check-inline">
-                                    <input type="text" class="form-control" name="pa" [(ngModel)]="fisio.pa"/>
+                                    <input type="text" class="form-control" name="pa" [(ngModel)]="model.pa"/>
                                     <label for="inputEmail4" class="form-label" style="padding-left: 4px;"> mmHg
                                     </label>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <label>Ausculta Cardíaca</label>
-                                <input type="text" class="form-control" name="auscultaCardiaca" [(ngModel)]="fisio.auscultaCardiaca"/>
+                                <input type="text" class="form-control" name="auscultaCardiaca" [(ngModel)]="model.auscultaCardiaca"/>
                             </div>
                             <div class="col-md-4">
                                 <label>Frequência Cardíaca</label>
-                                <input type="text" class="form-control" name="frequenciaCardiaca" [(ngModel)]="fisio.frequenciaCardiaca"/>
+                                <input type="text" class="form-control" name="frequenciaCardiaca" [(ngModel)]="model.frequenciaCardiaca"/>
                             </div>
                             <div class="col-md-4">
                                 <label>Ausculta Pulmonar</label>
-                                <input type="text" class="form-control" name="auscultaPulmonar" [(ngModel)]="fisio.auscultaPulmonar"/>
+                                <input type="text" class="form-control" name="auscultaPulmonar" [(ngModel)]="model.auscultaPulmonar"/>
                             </div>
                             <div class="col-md-6">
                                 <label>Frequência Respiratória</label>
-                                <input type="text" class="form-control" name="frequenciaRespiratoria" [(ngModel)]="fisio.frequenciaRespiratoria"/>
+                                <input type="text" class="form-control" name="frequenciaRespiratoria" [(ngModel)]="model.frequenciaRespiratoria"/>
                             </div>
                             <div class="col-md-6">
                                 <label>Padrão Respiratório</label>
-                                <input type="text" class="form-control" name="padraoRespiratorio" [(ngModel)]="fisio.padraoRespiratorio"/>
+                                <input type="text" class="form-control" name="padraoRespiratorio" [(ngModel)]="model.padraoRespiratorio"/>
                             </div>
 
                         </div>
@@ -397,53 +397,53 @@
                                         <tr>
                                             <td rowspan="6">Ombro</td>
                                             <td>Flexão</td>
-                                            <td><input class="form-control" type="text" name="ombroFlexaoVR" id="" [(ngModel)]="fisio.ombroFlexaoVR"></td>
-                                            <td><input class="form-control" type="text" name="ombroFlexaoAdmDireito" [(ngModel)]="fisio.ombroFlexaoAdmDireito"
+                                            <td><input class="form-control" type="text" name="ombroFlexaoVR" id="" [(ngModel)]="model.ombroFlexaoVR"></td>
+                                            <td><input class="form-control" type="text" name="ombroFlexaoAdmDireito" [(ngModel)]="model.ombroFlexaoAdmDireito"
                                                     id=""></td>
-                                            <td><input class="form-control" type="text" name="ombroFlexaoAdmEsquerdo" [(ngModel)]="fisio.ombroFlexaoAdmEsquerdo"
+                                            <td><input class="form-control" type="text" name="ombroFlexaoAdmEsquerdo" [(ngModel)]="model.ombroFlexaoAdmEsquerdo"
                                                     id=""></td>
                                         </tr>
                                         <tr>
                                             <td>Extensão</td>
-                                            <td><input class="form-control" type="text" name="ombroExtensaoVR" [(ngModel)]="fisio.ombroExtensaoVR" id="">
+                                            <td><input class="form-control" type="text" name="ombroExtensaoVR" [(ngModel)]="model.ombroExtensaoVR" id="">
                                             </td>
-                                            <td><input class="form-control" type="text" name="ombroExtensaAdmDireito" [(ngModel)]="fisio.ombroExtensaAdmDireito"
+                                            <td><input class="form-control" type="text" name="ombroExtensaAdmDireito" [(ngModel)]="model.ombroExtensaAdmDireito"
                                                     id=""></td>
-                                            <td><input class="form-control" type="text" name="ombroExtensaAdmEsquerdo" [(ngModel)]="fisio.ombroExtensaAdmEsquerdo"
+                                            <td><input class="form-control" type="text" name="ombroExtensaAdmEsquerdo" [(ngModel)]="model.ombroExtensaAdmEsquerdo"
                                                     id=""></td>
                                         </tr>
                                         <tr>
                                             <td>Adução</td>
-                                            <td><input class="form-control" type="text" name="ombroAducaoVR" [(ngModel)]="fisio.ombroAducaoVR" id=""></td>
-                                            <td><input class="form-control" type="text" name="ombroAducaoAdmDireito" [(ngModel)]="fisio.ombroAducaoAdmDireito"
+                                            <td><input class="form-control" type="text" name="ombroAducaoVR" [(ngModel)]="model.ombroAducaoVR" id=""></td>
+                                            <td><input class="form-control" type="text" name="ombroAducaoAdmDireito" [(ngModel)]="model.ombroAducaoAdmDireito"
                                                     id=""></td>
-                                            <td><input class="form-control" type="text" name="ombroAducaoAdmEsquerdo" [(ngModel)]="fisio.ombroAducaoAdmEsquerdo"
+                                            <td><input class="form-control" type="text" name="ombroAducaoAdmEsquerdo" [(ngModel)]="model.ombroAducaoAdmEsquerdo"
                                                     id=""></td>
                                         </tr>
                                         <tr>
                                             <td>Abdução</td>
-                                            <td><input class="form-control" type="text" name="ombroAbducaoVR" [(ngModel)]="fisio.ombroAbducaoVR" id="">
+                                            <td><input class="form-control" type="text" name="ombroAbducaoVR" [(ngModel)]="model.ombroAbducaoVR" id="">
                                             </td>
-                                            <td><input class="form-control" type="text" name="ombroAbducaoAdmDireito" [(ngModel)]="fisio.ombroAbducaoAdmDireito"
+                                            <td><input class="form-control" type="text" name="ombroAbducaoAdmDireito" [(ngModel)]="model.ombroAbducaoAdmDireito"
                                                     id=""></td>
-                                            <td><input class="form-control" type="text" name="ombroAbducaoAdmEsquerdo" [(ngModel)]="fisio.ombroAbducaoAdmEsquerdo"
+                                            <td><input class="form-control" type="text" name="ombroAbducaoAdmEsquerdo" [(ngModel)]="model.ombroAbducaoAdmEsquerdo"
                                                     id=""></td>
                                         </tr>
                                         <tr>
                                             <td>Rot. Interna</td>
-                                            <td><input class="form-control" type="text" name="ombroRotInternaVR" [(ngModel)]="fisio.ombroRotInternaVR" id="">
+                                            <td><input class="form-control" type="text" name="ombroRotInternaVR" [(ngModel)]="model.ombroRotInternaVR" id="">
                                             </td>
-                                            <td><input class="form-control" type="text" name="ombroRotInternaAdmDireito" [(ngModel)]="fisio.ombroRotInternaAdmDireito"
+                                            <td><input class="form-control" type="text" name="ombroRotInternaAdmDireito" [(ngModel)]="model.ombroRotInternaAdmDireito"
                                                     id=""></td>
-                                            <td><input class="form-control" type="text" name="ombroRotInternaAdmEsquerdo" [(ngModel)]="fisio.ombroRotInternaAdmEsquerdo" id=""></td>
+                                            <td><input class="form-control" type="text" name="ombroRotInternaAdmEsquerdo" [(ngModel)]="model.ombroRotInternaAdmEsquerdo" id=""></td>
                                         </tr>
                                         <tr>
                                             <td>Rot. Externa</td>
-                                            <td><input class="form-control" type="text" name="ombroRotExternaVR" [(ngModel)]="fisio.ombroRotExternaVR" id="">
+                                            <td><input class="form-control" type="text" name="ombroRotExternaVR" [(ngModel)]="model.ombroRotExternaVR" id="">
                                             </td>
-                                            <td><input class="form-control" type="text" name="ombroRotExternaAdmDireito" [(ngModel)]="fisio.ombroRotExternaAdmDireito"
+                                            <td><input class="form-control" type="text" name="ombroRotExternaAdmDireito" [(ngModel)]="model.ombroRotExternaAdmDireito"
                                                     id=""></td>
-                                            <td><input class="form-control" type="text" name="ombroRotExternaAdmEsquerdo" [(ngModel)]="fisio.ombroRotExternaAdmEsquerdo" id=""></td>
+                                            <td><input class="form-control" type="text" name="ombroRotExternaAdmEsquerdo" [(ngModel)]="model.ombroRotExternaAdmEsquerdo" id=""></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -464,133 +464,133 @@
                                         <tr>
                                             <td rowspan="2">Cotovelo</td>
                                             <td>Flexão</td>
-                                            <td><input class="form-control" type="text" name="cotoveloFlexaoVR" [(ngModel)]="fisio.cotoveloFlexaoVR"id="">
+                                            <td><input class="form-control" type="text" name="cotoveloFlexaoVR" [(ngModel)]="model.cotoveloFlexaoVR"id="">
                                             </td>
-                                            <td><input class="form-control" type="text" name="cotoveloFlexaoAdmDireito" [(ngModel)]="fisio.cotoveloFlexaoAdmDireito"
+                                            <td><input class="form-control" type="text" name="cotoveloFlexaoAdmDireito" [(ngModel)]="model.cotoveloFlexaoAdmDireito"
                                                     id=""></td>
-                                            <td><input class="form-control" type="text" name="cotoveloFlexaoAdmEsquerdo" [(ngModel)]="fisio.cotoveloFlexaoAdmEsquerdo"
+                                            <td><input class="form-control" type="text" name="cotoveloFlexaoAdmEsquerdo" [(ngModel)]="model.cotoveloFlexaoAdmEsquerdo"
                                                     id=""></td>
                                         </tr>
                                         <tr>
                                             <td>Extensão</td>
-                                            <td><input class="form-control" type="text" name="cotoveloExtensaoVR" [(ngModel)]="fisio.cotoveloExtensaoVR" id="">
+                                            <td><input class="form-control" type="text" name="cotoveloExtensaoVR" [(ngModel)]="model.cotoveloExtensaoVR" id="">
                                             </td>
-                                            <td><input class="form-control" type="text" name="cotoveloExtensaoAdmDireito" [(ngModel)]="fisio.cotoveloExtensaoAdmDireito" id=""></td>
-                                            <td><input class="form-control" type="text" name="cotoveloExtensaoAdmEsquerdo"[(ngModel)]="fisio.cotoveloExtensaoAdmEsquerdo"  id=""></td>
+                                            <td><input class="form-control" type="text" name="cotoveloExtensaoAdmDireito" [(ngModel)]="model.cotoveloExtensaoAdmDireito" id=""></td>
+                                            <td><input class="form-control" type="text" name="cotoveloExtensaoAdmEsquerdo"[(ngModel)]="model.cotoveloExtensaoAdmEsquerdo"  id=""></td>
                                         </tr>
                                         <tr>
                                             <td rowspan="4">Punho</td>
                                             <td>Extensão</td>
-                                            <td><input class="form-control" type="text" name="punhoExtensaoVR" [(ngModel)]="fisio.punhoExtensaoVR"id="">
+                                            <td><input class="form-control" type="text" name="punhoExtensaoVR" [(ngModel)]="model.punhoExtensaoVR"id="">
                                             </td>
-                                            <td><input class="form-control" type="text" name="punhoExtensaoAdmDireito"[(ngModel)]="fisio.punhoExtensaoAdmDireito"
+                                            <td><input class="form-control" type="text" name="punhoExtensaoAdmDireito"[(ngModel)]="model.punhoExtensaoAdmDireito"
                                                     id=""></td>
-                                            <td><input class="form-control" type="text" name="punhoExtensaoAdmEsquerdo"[(ngModel)]="fisio.punhoExtensaoAdmEsquerdo"
+                                            <td><input class="form-control" type="text" name="punhoExtensaoAdmEsquerdo"[(ngModel)]="model.punhoExtensaoAdmEsquerdo"
                                                     id=""></td>
                                         </tr>
                                         <tr>
                                             <td>Flexão</td>
-                                            <td><input class="form-control" type="text" name="punhoFlexaoVR"[(ngModel)]="fisio.punhoFlexaoVR" id=""></td>
-                                            <td><input class="form-control" type="text" name="punhoFlexaoAdmDireito"[(ngModel)]="fisio.punhoFlexaoAdmDireito"
+                                            <td><input class="form-control" type="text" name="punhoFlexaoVR"[(ngModel)]="model.punhoFlexaoVR" id=""></td>
+                                            <td><input class="form-control" type="text" name="punhoFlexaoAdmDireito"[(ngModel)]="model.punhoFlexaoAdmDireito"
                                                     id=""></td>
-                                            <td><input class="form-control" type="text" name="punhoFlexaoAdmEsquerdo"[(ngModel)]="fisio.punhoFlexaoAdmEsquerdo"
+                                            <td><input class="form-control" type="text" name="punhoFlexaoAdmEsquerdo"[(ngModel)]="model.punhoFlexaoAdmEsquerdo"
                                                     id=""></td>
                                         </tr>
                                         <tr>
                                             <td>Desvio Ulnar</td>
-                                            <td><input class="form-control" type="text" name="punhoDesvioUlnarVR" [(ngModel)]="fisio.punhoDesvioUlnarVR"id="">
+                                            <td><input class="form-control" type="text" name="punhoDesvioUlnarVR" [(ngModel)]="model.punhoDesvioUlnarVR"id="">
                                             </td>
-                                            <td><input class="form-control" type="text" name="punhoDesvioUlnarAdmDireito" [(ngModel)]="fisio.punhoDesvioUlnarAdmDireito"id=""></td>
-                                            <td><input class="form-control" type="text" name="punhoDesvioUlnarAdmEsquerdo"[(ngModel)]="fisio.punhoDesvioUlnarAdmEsquerdo" id=""></td>
+                                            <td><input class="form-control" type="text" name="punhoDesvioUlnarAdmDireito" [(ngModel)]="model.punhoDesvioUlnarAdmDireito"id=""></td>
+                                            <td><input class="form-control" type="text" name="punhoDesvioUlnarAdmEsquerdo"[(ngModel)]="model.punhoDesvioUlnarAdmEsquerdo" id=""></td>
                                         </tr>
                                         <tr>
                                             <td>Desvio Radial</td>
-                                            <td><input class="form-control" type="text" name="punhoDesvioRadialVR" [(ngModel)]="fisio.punhoDesvioRadialVR"
+                                            <td><input class="form-control" type="text" name="punhoDesvioRadialVR" [(ngModel)]="model.punhoDesvioRadialVR"
                                                     id=""></td>
-                                            <td><input class="form-control" type="text" name="punhoDesvioRadialAdmDireito" [(ngModel)]="fisio.punhoDesvioRadialAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="punhoDesvioRadialAdmEsquerdo" [(ngModel)]="fisio.punhoDesvioRadialAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="punhoDesvioRadialAdmDireito" [(ngModel)]="model.punhoDesvioRadialAdmDireito"></td>
+                                            <td><input class="form-control" type="text" name="punhoDesvioRadialAdmEsquerdo" [(ngModel)]="model.punhoDesvioRadialAdmEsquerdo"></td>
                                         </tr>
                                         <tr>
                                             <td rowspan="6">Quadril</td>
                                             <td>Flexão</td>
-                                            <td><input class="form-control" type="text" name="quadrilFlexaoVR" [(ngModel)]="fisio.quadrilFlexaoVR">
+                                            <td><input class="form-control" type="text" name="quadrilFlexaoVR" [(ngModel)]="model.quadrilFlexaoVR">
                                             </td>
-                                            <td><input class="form-control" type="text" name="quadrilFlexaoAdmDireito" [(ngModel)]="fisio.quadrilFlexaoAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="quadrilFlexaoAdmEsquerdo" [(ngModel)]="fisio.quadrilFlexaoAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="quadrilFlexaoAdmDireito" [(ngModel)]="model.quadrilFlexaoAdmDireito"></td>
+                                            <td><input class="form-control" type="text" name="quadrilFlexaoAdmEsquerdo" [(ngModel)]="model.quadrilFlexaoAdmEsquerdo"></td>
                                         </tr>
                                         <tr>
                                             <td>Extensão</td>
-                                            <td><input class="form-control" type="text" name="quadrilExtensaoVR" [(ngModel)]="fisio.quadrilExtensaoVR">
+                                            <td><input class="form-control" type="text" name="quadrilExtensaoVR" [(ngModel)]="model.quadrilExtensaoVR">
                                             </td>
-                                            <td><input class="form-control" type="text" name="quadrilExtensaoAdmDireito" [(ngModel)]="fisio.quadrilExtensaoAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="quadrilExtensaoAdmEsquerdo" [(ngModel)]="fisio.quadrilExtensaoAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="quadrilExtensaoAdmDireito" [(ngModel)]="model.quadrilExtensaoAdmDireito"></td>
+                                            <td><input class="form-control" type="text" name="quadrilExtensaoAdmEsquerdo" [(ngModel)]="model.quadrilExtensaoAdmEsquerdo"></td>
                                         </tr>
                                         <tr>
                                             <td>Adução</td>
-                                            <td><input class="form-control" type="text" name="quadrilAducaoVR" [(ngModel)]="fisio.quadrilAducaoVR">
+                                            <td><input class="form-control" type="text" name="quadrilAducaoVR" [(ngModel)]="model.quadrilAducaoVR">
                                             </td>
-                                            <td><input class="form-control" type="text" name="quadrilAducaoAdmDireito" [(ngModel)]="fisio.quadrilAducaoAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="quadrilAducaoAdmEsquerdo" [(ngModel)]="fisio.quadrilAducaoAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="quadrilAducaoAdmDireito" [(ngModel)]="model.quadrilAducaoAdmDireito"></td>
+                                            <td><input class="form-control" type="text" name="quadrilAducaoAdmEsquerdo" [(ngModel)]="model.quadrilAducaoAdmEsquerdo"></td>
                                         </tr>
                                         <tr>
                                             <td>Abdução</td>
-                                            <td><input class="form-control" type="text" name="quadrilAbducaoVR" [(ngModel)]="fisio.quadrilAbducaoVR">
+                                            <td><input class="form-control" type="text" name="quadrilAbducaoVR" [(ngModel)]="model.quadrilAbducaoVR">
                                             </td>
-                                            <td><input class="form-control" type="text" name="quadrilAbducaoAdmDireito" [(ngModel)]="fisio.quadrilAbducaoAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="quadrilAbducaoAdmEsquerdo" [(ngModel)]="fisio.quadrilAbducaoAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="quadrilAbducaoAdmDireito" [(ngModel)]="model.quadrilAbducaoAdmDireito"></td>
+                                            <td><input class="form-control" type="text" name="quadrilAbducaoAdmEsquerdo" [(ngModel)]="model.quadrilAbducaoAdmEsquerdo"></td>
                                         </tr>
                                         <tr>
                                             <td>Rot. Interna</td>
-                                            <td><input class="form-control" type="text" name="quadrilRotInternaVR" [(ngModel)]="fisio.quadrilRotInternaVR"></td>
-                                            <td><input class="form-control" type="text" name="quadrilRotInternaAdmDireito" [(ngModel)]="fisio.quadrilRotInternaAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="quadrilRotInternaAdmEsquerdo" [(ngModel)]="fisio.quadrilRotInternaAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="quadrilRotInternaVR" [(ngModel)]="model.quadrilRotInternaVR"></td>
+                                            <td><input class="form-control" type="text" name="quadrilRotInternaAdmDireito" [(ngModel)]="model.quadrilRotInternaAdmDireito"></td>
+                                            <td><input class="form-control" type="text" name="quadrilRotInternaAdmEsquerdo" [(ngModel)]="model.quadrilRotInternaAdmEsquerdo"></td>
                                         </tr>
                                         <tr>
                                             <td>Rot. Externa</td>
-                                            <td><input class="form-control" type="text" name="quadrilRotExternaVR" [(ngModel)]="fisio.quadrilRotExternaVR"></td>
-                                            <td><input class="form-control" type="text" name="quadrilRotExternaAdmDireito" [(ngModel)]="fisio.quadrilRotExternaAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="quadrilRotExternaAdmEsquerdo" [(ngModel)]="fisio.quadrilRotExternaAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="quadrilRotExternaVR" [(ngModel)]="model.quadrilRotExternaVR"></td>
+                                            <td><input class="form-control" type="text" name="quadrilRotExternaAdmDireito" [(ngModel)]="model.quadrilRotExternaAdmDireito"></td>
+                                            <td><input class="form-control" type="text" name="quadrilRotExternaAdmEsquerdo" [(ngModel)]="model.quadrilRotExternaAdmEsquerdo"></td>
                                         </tr>
                                         <tr>
                                             <td rowspan="2">Joelho</td>
                                             <td>Flexão</td>
-                                            <td><input class="form-control" type="text" name="joelhoFlexaoVR" [(ngModel)]="fisio.joelhoFlexaoVR">
+                                            <td><input class="form-control" type="text" name="joelhoFlexaoVR" [(ngModel)]="model.joelhoFlexaoVR">
                                             </td>
-                                            <td><input class="form-control" type="text" name="joelhoFlexaoAdmDireito" [(ngModel)]="fisio.joelhoFlexaoAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="joelhoFlexaoAdmEsquerdo" [(ngModel)]="fisio.joelhoFlexaoAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="joelhoFlexaoAdmDireito" [(ngModel)]="model.joelhoFlexaoAdmDireito"></td>
+                                            <td><input class="form-control" type="text" name="joelhoFlexaoAdmEsquerdo" [(ngModel)]="model.joelhoFlexaoAdmEsquerdo"></td>
                                         </tr>
                                         <tr>
                                             <td>Extensão</td>
-                                            <td><input class="form-control" type="text" name="joelhoExtensaoVR" [(ngModel)]="fisio.joelhoExtensaoVR">
+                                            <td><input class="form-control" type="text" name="joelhoExtensaoVR" [(ngModel)]="model.joelhoExtensaoVR">
                                             </td>
-                                            <td><input class="form-control" type="text" name="joelhoExtensaoAdmDireito" [(ngModel)]="fisio.joelhoExtensaoAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="joelhoExtensaoAdmEsquerdo" [(ngModel)]="fisio.joelhoExtensaoAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="joelhoExtensaoAdmDireito" [(ngModel)]="model.joelhoExtensaoAdmDireito"></td>
+                                            <td><input class="form-control" type="text" name="joelhoExtensaoAdmEsquerdo" [(ngModel)]="model.joelhoExtensaoAdmEsquerdo"></td>
                                         </tr>
                                         <tr>
                                             <td rowspan="4">Tornozelo</td>
                                             <td>Eversão</td>
-                                            <td><input class="form-control" type="text" name="tornozeloEversaoVR" [(ngModel)]="fisio.tornozeloEversaoVR">
+                                            <td><input class="form-control" type="text" name="tornozeloEversaoVR" [(ngModel)]="model.tornozeloEversaoVR">
                                             </td>
-                                            <td><input class="form-control" type="text" name="tornozeloEversaoAdmDireito" [(ngModel)]="fisio.tornozeloEversaoAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="tornozeloEversaoAdmEsquerdo" [(ngModel)]="fisio.tornozeloEversaoAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="tornozeloEversaoAdmDireito" [(ngModel)]="model.tornozeloEversaoAdmDireito"></td>
+                                            <td><input class="form-control" type="text" name="tornozeloEversaoAdmEsquerdo" [(ngModel)]="model.tornozeloEversaoAdmEsquerdo"></td>
                                         </tr>
                                         <tr>
                                             <td>Dorsiflexão</td>
-                                            <td><input class="form-control" type="text" name="tornozeloDorsiflexaoVR" [(ngModel)]="fisio.tornozeloDorsiflexaoVR"></td>
-                                            <td><input class="form-control" type="text" name="tornozeloDorsiflexaoAdmDireito" [(ngModel)]="fisio.tornozeloDorsiflexaoAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="tornozeloDorsiflexaoAdmEsquerdo" [(ngModel)]="fisio.tornozeloDorsiflexaoAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="tornozeloDorsiflexaoVR" [(ngModel)]="model.tornozeloDorsiflexaoVR"></td>
+                                            <td><input class="form-control" type="text" name="tornozeloDorsiflexaoAdmDireito" [(ngModel)]="model.tornozeloDorsiflexaoAdmDireito"></td>
+                                            <td><input class="form-control" type="text" name="tornozeloDorsiflexaoAdmEsquerdo" [(ngModel)]="model.tornozeloDorsiflexaoAdmEsquerdo"></td>
                                         </tr>
                                         <tr>
                                             <td>Flexão Plantar</td>
-                                            <td><input class="form-control" type="text" name="tornozeloFlexaoPlantarVR" [(ngModel)]="fisio.tornozeloFlexaoPlantarVR"></td>
-                                            <td><input class="form-control" type="text" name="tornozeloFlexaoPlantarAdmDireito" [(ngModel)]="fisio.tornozeloFlexaoPlantarAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="tornozeloFlexaoPlantarAdmEsquerdo" [(ngModel)]="fisio.tornozeloFlexaoPlantarAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="tornozeloFlexaoPlantarVR" [(ngModel)]="model.tornozeloFlexaoPlantarVR"></td>
+                                            <td><input class="form-control" type="text" name="tornozeloFlexaoPlantarAdmDireito" [(ngModel)]="model.tornozeloFlexaoPlantarAdmDireito"></td>
+                                            <td><input class="form-control" type="text" name="tornozeloFlexaoPlantarAdmEsquerdo" [(ngModel)]="model.tornozeloFlexaoPlantarAdmEsquerdo"></td>
                                         </tr>
                                         <tr>
                                             <td>Inversão</td>
-                                            <td><input class="form-control" type="text" name="tornozeloInversaoVR" [(ngModel)]="fisio.tornozeloInversaoVR"></td>
-                                            <td><input class="form-control" type="text" name="tornozeloInversaoAdmDireito" [(ngModel)]="fisio.tornozeloInversaoAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="tornozeloInversaoAdmEsquerdo" [(ngModel)]="fisio.tornozeloInversaoAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="tornozeloInversaoVR" [(ngModel)]="model.tornozeloInversaoVR"></td>
+                                            <td><input class="form-control" type="text" name="tornozeloInversaoAdmDireito" [(ngModel)]="model.tornozeloInversaoAdmDireito"></td>
+                                            <td><input class="form-control" type="text" name="tornozeloInversaoAdmEsquerdo" [(ngModel)]="model.tornozeloInversaoAdmEsquerdo"></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -611,15 +611,15 @@
 
                             <div class="col-md-12">
                                 <label>Tempo</label>
-                                <input type="text" class="form-control" name="tempoQuedas" [(ngModel)]="fisio.tempoQuedas">
+                                <input type="text" class="form-control" name="tempoQuedas" [(ngModel)]="model.tempoQuedas">
                             </div>
                             <div class="col-md-12">
                                 <label>Frequência</label>
-                                <input type="text" class="form-control" name="frequenciaQuedas" [(ngModel)]="fisio.frequenciaQuedas">
+                                <input type="text" class="form-control" name="frequenciaQuedas" [(ngModel)]="model.frequenciaQuedas">
                             </div>
                             <div class="col-md-12">
                                 <label>Local</label>
-                                <input type="text" class="form-control" name="localQuedas" [(ngModel)]="fisio.localQuedas">
+                                <input type="text" class="form-control" name="localQuedas" [(ngModel)]="model.localQuedas">
                             </div>
 
 
@@ -640,22 +640,22 @@
                                 <h6 for="inputSex" class="form-label">Reflexo</h6><br />
                                 <div class="form-check form-check-inline">
                                   <label>
-                                    <input class="form-check-input radio" type="checkbox" value="1" name="reflexo" [(ngModel)]="fisio.reflexo"/> Biciptal
+                                    <input class="form-check-input radio" type="checkbox" value="1" name="reflexo" [(ngModel)]="model.reflexo"/> Biciptal
                                   </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                   <label>
-                                    <input class="form-check-input radio" type="checkbox" value="2" name="reflexo" [(ngModel)]="fisio.reflexo"/> Triciptal
+                                    <input class="form-check-input radio" type="checkbox" value="2" name="reflexo" [(ngModel)]="model.reflexo"/> Triciptal
                                   </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <label>
-                                    <input class="form-check-input radio" type="checkbox" value="3" name="reflexo" [(ngModel)]="fisio.reflexo"/> Patelar
+                                    <input class="form-check-input radio" type="checkbox" value="3" name="reflexo" [(ngModel)]="model.reflexo"/> Patelar
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <label>
-                                        <input class="form-check-input radio" type="checkbox" value="4" name="reflexo" [(ngModel)]="fisio.reflexo"/> Aquileu
+                                        <input class="form-check-input radio" type="checkbox" value="4" name="reflexo" [(ngModel)]="model.reflexo"/> Aquileu
                                     </label>
                                 </div>
                             </div>
@@ -663,16 +663,16 @@
                             <div class="col-md-12">
                                 <label>Equílibrio Corporal</label><br>
                                 <label>Sentado</label>
-                                <input class="form-control" type="text" name="equilibrioSentado"[(ngModel)]="fisio.equilibrioSentado">
+                                <input class="form-control" type="text" name="equilibrioSentado"[(ngModel)]="model.equilibrioSentado">
                                 <label>Em pé</label>
-                                <input class="form-control" type="text" name="equilibrioEmPe"[(ngModel)]="fisio.equilibrioEmPe">
+                                <input class="form-control" type="text" name="equilibrioEmPe"[(ngModel)]="model.equilibrioEmPe">
                                 <label>Sinal de Rosemberg</label>
-                                <input class="form-control" type="text" name="equilibrioSinalRosemberg"[(ngModel)]="fisio.equilibrioSinalRosemberg">
+                                <input class="form-control" type="text" name="equilibrioSinalRosemberg"[(ngModel)]="model.equilibrioSinalRosemberg">
                             </div>
 
                             <div class="col-md-12">
                                 <h5>Atividade de Vida Diária</h5>
-                                <textarea class="form-control" name="atividadeVidaDiaria" id="" cols="10" [(ngModel)]="fisio.atividadeVidaDiaria"
+                                <textarea class="form-control" name="atividadeVidaDiaria" id="" cols="10" [(ngModel)]="model.atividadeVidaDiaria"
                                     rows="5"></textarea>
                             </div>
 
@@ -680,11 +680,11 @@
                                 <h5>Escala Visual de Dor</h5>
                                 <h6>Digite de 0 a 10</h6>
                                 <div class="example-label-container">
-                                    <input type="text" name="escalaDor" [(ngModel)]="fisio.escalaDor">
+                                    <input type="text" name="escalaDor" [(ngModel)]="model.escalaDor">
                                 </div>
                                     
                                 <label>Região da Dor</label>
-                                <input class="form-control" type="text" name="regiaoDor" [(ngModel)]="fisio.regiaoDor">
+                                <input class="form-control" type="text" name="regiaoDor" [(ngModel)]="model.regiaoDor">
                             </div>
                         </div>
                     </div>
@@ -711,37 +711,37 @@
                                     <tbody>
                                         <tr>
                                             <td>Pé</td>
-                                            <td><input class="form-control" type="text" name="peSagital" id="" [(ngModel)]="fisio.peSagital"></td>
-                                            <td><input class="form-control" type="text" name="peFrontal" id="" [(ngModel)]="fisio.peFrontal"></td>
+                                            <td><input class="form-control" type="text" name="peSagital" id="" [(ngModel)]="model.peSagital"></td>
+                                            <td><input class="form-control" type="text" name="peFrontal" id="" [(ngModel)]="model.peFrontal"></td>
                                         </tr>
                                         <tr>
                                             <td>Joelho</td>
-                                            <td><input class="form-control" type="text" name="joelhoSagital" id=""[(ngModel)]="fisio.joelhoSagital"></td>
-                                            <td><input class="form-control" type="text" name="joelhoFrontal" id=""[(ngModel)]="fisio.joelhoFrontal"></td>
+                                            <td><input class="form-control" type="text" name="joelhoSagital" id=""[(ngModel)]="model.joelhoSagital"></td>
+                                            <td><input class="form-control" type="text" name="joelhoFrontal" id=""[(ngModel)]="model.joelhoFrontal"></td>
                                         </tr>
                                         <tr>
                                             <td>Cintura Pélvica</td>
-                                            <td><input class="form-control" type="text" name="cinturaPelvicaSagital" [(ngModel)]="fisio.cinturaPelvicaSagital"
+                                            <td><input class="form-control" type="text" name="cinturaPelvicaSagital" [(ngModel)]="model.cinturaPelvicaSagital"
                                                     id=""></td>
-                                            <td><input class="form-control" type="text" name="cinturaPelvicaFrontal" [(ngModel)]="fisio.cinturaPelvicaFrontal"
+                                            <td><input class="form-control" type="text" name="cinturaPelvicaFrontal" [(ngModel)]="model.cinturaPelvicaFrontal"
                                                     id=""></td>
                                         </tr>
                                         <tr>
                                             <td>Coluna</td>
-                                            <td><input class="form-control" type="text" name="colunaSagital" id=""[(ngModel)]="fisio.colunaSagital"></td>
-                                            <td><input class="form-control" type="text" name="colunaFrontal" id=""[(ngModel)]="fisio.colunaFrontal"></td>
+                                            <td><input class="form-control" type="text" name="colunaSagital" id=""[(ngModel)]="model.colunaSagital"></td>
+                                            <td><input class="form-control" type="text" name="colunaFrontal" id=""[(ngModel)]="model.colunaFrontal"></td>
                                         </tr>
                                         <tr>
                                             <td>Cintura escapular</td>
-                                            <td><input class="form-control" type="text" name="cinturaEscapularSagital" [(ngModel)]="fisio.cinturaEscapularSagital"
+                                            <td><input class="form-control" type="text" name="cinturaEscapularSagital" [(ngModel)]="model.cinturaEscapularSagital"
                                                     id=""></td>
-                                            <td><input class="form-control" type="text" name="cinturaEscapularFrontal" [(ngModel)]="fisio.cinturaEscapularFrontal"
+                                            <td><input class="form-control" type="text" name="cinturaEscapularFrontal" [(ngModel)]="model.cinturaEscapularFrontal"
                                                     id=""></td>
                                         </tr>
                                         <tr>
                                             <td>Cabeça</td>
-                                            <td><input class="form-control" type="text" name="cabecaSagital" id=""[(ngModel)]="fisio.cabecaSagital"></td>
-                                            <td><input class="form-control" type="text" name="cabecaFrontal" id=""[(ngModel)]="fisio.cabecaFrontal"></td>
+                                            <td><input class="form-control" type="text" name="cabecaSagital" id=""[(ngModel)]="model.cabecaSagital"></td>
+                                            <td><input class="form-control" type="text" name="cabecaFrontal" id=""[(ngModel)]="model.cabecaFrontal"></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -749,25 +749,25 @@
 
                             <div class="col-md-6">
                                 <label class="textSection">Avaliação da Marcha:</label>
-                                <textarea rows="4" class="form-control " name="avaliacaoMarcha"[(ngModel)]="fisio.avaliacaoMarcha"></textarea>
+                                <textarea rows="4" class="form-control " name="avaliacaoMarcha"[(ngModel)]="model.avaliacaoMarcha"></textarea>
                             </div>
                             <div class="col-md-6">
                                 <label class="textSection">Observações:</label>
-                                <textarea rows="4" class="form-control " name="observacoes"[(ngModel)]="fisio.observacoes"></textarea>
+                                <textarea rows="4" class="form-control " name="observacoes"[(ngModel)]="model.observacoes"></textarea>
                             </div>
                             <div class="col-md-6">
                                 <label class="textSection">Diagnóstico Funcional:</label>
-                                <textarea rows="6" class="form-control " name="diagnosticoFuncional"[(ngModel)]="fisio.diagnosticoFuncional"></textarea>
+                                <textarea rows="6" class="form-control " name="diagnosticoFuncional"[(ngModel)]="model.diagnosticoFuncional"></textarea>
                             </div>
                             <div class="col-md-6">
                                 <label class="textSection">Objetivos Fisioterápicos:</label>
-                                <textarea rows="6" class="form-control " name="objetivosFisioterapicos"[(ngModel)]="fisio.objetivosFisioterapicos"></textarea>
+                                <textarea rows="6" class="form-control " name="objetivosFisioterapicos"[(ngModel)]="model.objetivosFisioterapicos"></textarea>
                             </div>
 
                             <div class="container mt-2">
                                 <div class="row g-3">
                                   <div class="btn form-check">
-                                    <input class="enviar btn btn-success" type="submit" value="Enviar" (click)="fisioterapia()">
+                                    <input class="enviar btn btn-success" type="submit" value="Enviar" (click)="routerFisio()">
                                     <input class="limpar btn btn-danger" type="reset" value="Limpar">
                                   </div>
                                 </div>

@@ -8,6 +8,7 @@ import { FisioterapiaRequest } from '../Models/FisioterapiaRequest';
 @Injectable({
   providedIn: 'root'
 })
+
 export class FisioterapiaService {
   onFormSubmit(model: FisioterapiaRequest) {
     throw new Error('Method not implemented.');
@@ -17,16 +18,14 @@ export class FisioterapiaService {
 
   constructor(private http:HttpClient) { }
 
-    listarProntuarios(): Observable<Fisioterapia[]>{
+    listaProntFisio(): Observable<Fisioterapia[]>{
       return this.http.get<Fisioterapia[]>(this.prontuariosUrl);
     }
 
-    salvarProntuarios(fisioterapiaRequest: FisioterapiaRequest): Observable<FisioterapiaRequest>
+    salvaProntFisio(fisioterapiaRequest: FisioterapiaRequest): Observable<FisioterapiaRequest>
     {
       console.log("Services");
       console.log(fisioterapiaRequest);
       return this.http.post<FisioterapiaRequest>(this.prontuariosUrl, fisioterapiaRequest);
     }
-
 }
-

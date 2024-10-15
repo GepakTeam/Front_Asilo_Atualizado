@@ -3,12 +3,13 @@ import { Fisioterapia } from '../Models/fisioterapia';
 import { HttpClient } from '@angular/common/http';
 import { Nutricionista } from '../Models/nutricionista';
 import { Observable } from 'rxjs';
+import { NutricionistaRequest } from '../Models/NutricionistaRequest';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NutricionistaService {
-  onFormSubmit(model: Fisioterapia) {
+  onFormSubmit(model: NutricionistaRequest) {
     throw new Error('Method not implemented.');
   }
 
@@ -16,14 +17,14 @@ export class NutricionistaService {
 
   constructor(private http:HttpClient) { }
 
-    listarProntuarios(): Observable<Nutricionista[]>{
+    listaProntNutri(): Observable<Nutricionista[]>{
       return this.http.get<Nutricionista[]>(this.prontuariosUrl);
     }
 
-    salvarProntuarios(nutricionista: Nutricionista): Observable<Nutricionista>
+    salvaProntNutri(nutricionistaRequest: NutricionistaRequest): Observable<NutricionistaRequest>
     {
       console.log("Services");
-      console.log(nutricionista);
-      return this.http.post<Nutricionista>(this.prontuariosUrl, nutricionista);
+      console.log(nutricionistaRequest);
+      return this.http.post<NutricionistaRequest>(this.prontuariosUrl, nutricionistaRequest);
     }
 }

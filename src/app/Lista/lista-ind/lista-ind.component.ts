@@ -24,12 +24,12 @@ export class ListaIndComponent implements OnInit{
 
   ngOnInit(): void {
     //listarProntuarioIndividual();  
-    this.getListarProntuarios();
+    this.listaProntInd();
     
   }
 
-  getListarProntuarios(){
-    this.individualService.listarProntuarios().subscribe(response => this.individual = response);
+  listaProntInd(){
+    this.individualService.listaProntInd().subscribe(response => this.individual = response);
   }
 }
 

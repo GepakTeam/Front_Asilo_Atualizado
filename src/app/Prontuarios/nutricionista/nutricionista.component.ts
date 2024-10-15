@@ -9,6 +9,7 @@ import { DateAdapter, MatDateFormats, MatNativeDateModule } from '@angular/mater
 import { NutricionistaService } from '../../_services/nutricionista.service';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FormsModule } from '@angular/forms';
+import { NutricionistaRequest } from '../../Models/NutricionistaRequest';
 
 // Configuração dos formatos de data
 export const MY_DATE_FORMATS: MatDateFormats = {
@@ -39,7 +40,7 @@ export const MY_DATE_FORMATS: MatDateFormats = {
 export class NutricionistaComponent {
 
   
-  model: Nutricionista;
+  model: NutricionistaRequest;
 
   constructor(private dateAdapter: DateAdapter<Date>, 
     private nutricionistaService: NutricionistaService, 
@@ -51,16 +52,16 @@ export class NutricionistaComponent {
 
   };
   }
-
-    onFormSubmit(){
+     ProntNutricionista(){
       console.log(this.model)
-      this.nutricionistaService.salvarProntuarios(this.model)
+      this.nutricionistaService.salvaProntNutri(this.model)
       .subscribe({
         next:(response)=>
           this.router.navigateByUrl('')
       });
+    }
 
-      this.router.navigate(['/listaNutricionista']);
-     }
-
+    routerNutri(){
+      //this.router.navigate(['/listaNutricionista']);
+    }
 }

@@ -22,11 +22,11 @@ export class ListaEnfComponent {
   }
 
   ngOnInit(): void {
-    this.getListarProntuarios();
+    this.listaProntEnf();
     
   }
 
-  getListarProntuarios(){
-    this.enfermagemService.listarProntuarios().subscribe(response => this.enfermagem = response);
+  listaProntEnf(){
+    this.enfermagemService.listaProntEnf().subscribe(response => this.enfermagem = response);
   }
 }

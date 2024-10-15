@@ -23,12 +23,12 @@ export class ListaFisioComponent  implements OnInit{
 
   ngOnInit(): void {
     //listarProntuarioIndividual();  
-    this.getListarProntuarios();
+    this.listaProntFisio();
     
   }
 
-  getListarProntuarios(){
-    this.fisioterapiaService.listarProntuarios().subscribe(response => this.fisioterapia = response);
+  listaProntFisio(){
+    this.fisioterapiaService.listaProntFisio().subscribe(response => this.fisioterapia = response);
   }
 
 }

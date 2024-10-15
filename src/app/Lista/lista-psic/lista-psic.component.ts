@@ -23,11 +23,11 @@ export class ListaPsicComponent implements OnInit {
 
   ngOnInit(): void {
     //listarProntuarioIndividual();  
-    this.getListarProntuarios();
+    this.listaProntPsic();
     
   }
 
-  getListarProntuarios(){
-    this.psicologaService.listarProntuarios().subscribe(response => this.psicologa = response);
+  listaProntPsic(){
+    this.psicologaService.listaProntPsic().subscribe(response => this.psicologa = response);
   }
 }

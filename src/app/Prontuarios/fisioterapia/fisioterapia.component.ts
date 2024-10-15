@@ -9,6 +9,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
 import { Fisioterapia } from '../../Models/fisioterapia';
 import { FisioterapiaService } from '../../_services/fisioterapia.service';
+import { FisioterapiaRequest } from '../../Models/FisioterapiaRequest';
 
 @Component({
   selector: 'app-fisioterapia',
@@ -28,13 +29,13 @@ import { FisioterapiaService } from '../../_services/fisioterapia.service';
 })
 export class FisioterapiaComponent {
 
-  fisio: Fisioterapia;
+  model: FisioterapiaRequest;
 
   constructor(
     private fisioterapiaService: FisioterapiaService,
     private router: Router
   ) {
-    this.fisio = {
+    this.model = {
       dataAvaliacao: new Date(),
       nome: '',
       sexo: true, 
@@ -180,20 +181,16 @@ export class FisioterapiaComponent {
     };
   }
 
-  fisioterapia() {
-      this.fisioterapiaService.salvarProntuarios(this.fisio).subscribe({
-      next: (response) => {
-        alert('Idoso Cadastrado');
-        this.router.navigate(['/listaFisioterapia']);
-      },
-      error: (err) => {
-        console.error('Erro ao cadastrar', err);
-        alert('Erro ao cadastrar idoso.');
-      },
+  ProntFisioterapia() {
+    console.log(this.model)
+    this.fisioterapiaService.salvaProntFisio(this.model)
+    .subscribe({
+      next:(response)=>
+        this.router.navigateByUrl('https://localhost:7292/api/Fisioterapeuta')
     });
   }
 
-  fisioterapiaCadastro() {
-    // Código futuro para cadastro específico.
+  routerFisio() {
+    //this.router.navigate(['/listaFisioterapia']);
   }
 }

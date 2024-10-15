@@ -4,19 +4,24 @@ import { Enfermagem } from '../Models/enfermagem';
 import { Observable } from 'rxjs';
 import { EnfermagemRequest } from '../Models/EnfermagemRequest';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class EnfermagemService {
+  onFormSubmit(model: EnfermagemRequest) {
+    throw new Error('Method not implemented.');
+  }
+
   prontuariosUrl = 'https://localhost:7292/api/ProntuarioEnfermagem';
 
   constructor(private http:HttpClient) { }
 
-  listarProntuarios(): Observable<Enfermagem[]>{
-    return this.http.get<Enfermagem[]>(this.prontuariosUrl);
-  }
+    listaProntEnf(): Observable<Enfermagem[]>{
+      return this.http.get<Enfermagem[]>(this.prontuariosUrl);
+    }
 
-    salvarProntuarios(enfermagemRequest: EnfermagemRequest): Observable<EnfermagemRequest>
+    salvaProntEnf(enfermagemRequest: EnfermagemRequest): Observable<EnfermagemRequest>
     {
       console.log("Services");
       console.log(enfermagemRequest);

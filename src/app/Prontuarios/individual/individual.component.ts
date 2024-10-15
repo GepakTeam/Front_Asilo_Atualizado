@@ -46,6 +46,7 @@ export const MY_DATE_FORMATS: MatDateFormats = {
         FormsModule
     ]
 })
+
 export class IndividualComponent {
 
   
@@ -107,18 +108,17 @@ export class IndividualComponent {
   }
 
 
-    onFormSubmit(){
+    ProntIndividual(){
       console.log(this.model)
-      this.individualService.salvarProntuarios(this.model)
+      this.individualService.salvaProntInd(this.model)
       .subscribe({
         next:(response)=>
-          this.router.navigateByUrl('https://localhost:7292/api/Prontuarios')
+          this.router.navigateByUrl('https://localhost:7292/api/ProntuarioIndividual')
       });
+    }
 
-      this.router.navigate(['/listaIndividual']);
-     }
-
-     
+    routerInd(){
+      //this.router.navigate(['/listaIndividual']);
+    }
     
-
 }

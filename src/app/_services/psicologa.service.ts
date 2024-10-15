@@ -8,6 +8,7 @@ import { PsicologaRequest } from '../Models/PsicologaRequest';
 @Injectable({
   providedIn: 'root'
 })
+
 export class PsicologaService {
   onFormSubmit(model: PsicologaRequest) {
     throw new Error('Method not implemented.');
@@ -17,16 +18,15 @@ export class PsicologaService {
 
   constructor(private http:HttpClient) { }
 
-    listarProntuarios(): Observable<Psicologa[]>{
+    listaProntPsic(): Observable<Psicologa[]>{
       return this.http.get<Psicologa[]>(this.prontuariosUrl);
     }
 
-    salvarProntuarios(psicologaRequest: PsicologaRequest): Observable<PsicologaRequest>
+    salvaProntPsic(psicologaRequest: PsicologaRequest): Observable<PsicologaRequest>
     {
       console.log("Services");
       console.log(psicologaRequest);
       return this.http.post<PsicologaRequest>(this.prontuariosUrl, psicologaRequest);
     }
-
 }
 

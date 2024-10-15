@@ -9,6 +9,7 @@ import { PsicologaService } from '../../_services/psicologa.service';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FormsModule } from '@angular/forms';
+import { PsicologaRequest } from '../../Models/PsicologaRequest';
 
 
 @Component({
@@ -27,7 +28,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class PsicologaComponent {
 
-  model: Psicologa;
+  model: PsicologaRequest;
 
   constructor(private psicologaService: PsicologaService, 
     private router: Router){
@@ -49,14 +50,16 @@ export class PsicologaComponent {
       };
       }
     
-        onFormSubmit(){
+         ProntPsicologa(){
           console.log(this.model)
-          this.psicologaService.salvarProntuarios(this.model)
+          this.psicologaService.salvaProntPsic(this.model)
           .subscribe({
             next:(response)=>
               this.router.navigateByUrl('https://localhost:7292/api/ProntuarioPsicologo')
           });
-         }
+        }
     
-
+        routerPsic(){
+          //this.router.navigate(['/listaPsicologa']);
+        }
 }
