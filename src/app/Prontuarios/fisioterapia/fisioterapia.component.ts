@@ -186,7 +186,7 @@ export class FisioterapiaComponent {
     this.fisioterapiaService.salvaProntFisio(this.model)
     .subscribe({
       next:(response)=>
-        this.router.navigateByUrl('https://localhost:7292/api/Fisioterapeuta')
+        this.router.navigateByUrl('https://localhost:7292/api/ProntuarioFisioterapeuta')
     });
   }
 

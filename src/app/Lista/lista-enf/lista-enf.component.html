@@ -1,6 +1,5 @@
 <app-navbar></app-navbar>
-<div class="container">
-    <h1>Lista Idosos</h1>
+<div class="container-fluid">
     <table class="table" *ngIf="enfermagem">
         <thead>
             <tr class="table">
@@ -12,9 +11,9 @@
         </thead>
         <tbody>
             <tr class="table" *ngFor="let enf of enfermagem">
-                <td class="nome">{{ enf.nome }}</td>
-                <td class="nome">{{ enf.dataNascimento }}</td>
-                <td class="nome">{{ enf.dataExame }}</td>
+                <td class="">{{ enf.nome }}</td>
+                <td class="">{{ enf.dataNascimento }}</td>
+                <td class="">{{ enf.dataExame }}</td>
                 <td class="detalhes">
                     <button type="button" class="btn btn-info" value="Detalhes" href="./listaCompleta">Detalhes</button>
                 </td>  

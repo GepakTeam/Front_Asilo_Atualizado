@@ -1,6 +1,5 @@
 import { ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
-
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { IndividualComponent } from './Prontuarios/individual/individual.component';
@@ -16,8 +15,6 @@ import { ListaFisioComponent } from './Lista/lista-fisio/lista-fisio.component';
 import { ListaEnfComponent } from './Lista/lista-enf/lista-enf.component';
 import { NutricionistaComponent } from './Prontuarios/nutricionista/nutricionista.component';
 import { ListaNutriComponent } from './Lista/lista-nutri/lista-nutri.component';
-
-
 
 
 export const appConfig: ApplicationConfig = {

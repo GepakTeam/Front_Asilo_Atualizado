@@ -13,7 +13,7 @@ export class NutricionistaService {
     throw new Error('Method not implemented.');
   }
 
-  prontuariosUrl = '';
+  prontuariosUrl = 'https://localhost:7292/api/ProntuarioNutricionista';
 
   constructor(private http:HttpClient) { }
 

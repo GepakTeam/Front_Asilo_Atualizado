@@ -22,7 +22,6 @@ export class ListaFisioComponent  implements OnInit{
   }
 
   ngOnInit(): void {
-    //listarProntuarioIndividual();  
     this.listaProntFisio();
     
   }

@@ -19,7 +19,20 @@ import { ListaPsicComponent } from './Lista/lista-psic/lista-psic.component';
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, IndividualComponent, LoginComponent, HttpClientModule, ListaIndComponent, NavbarComponent, NutricionistaComponent, ListaNutriComponent, EnfermagemComponent,ListaEnfComponent, FisioterapiaComponent, ListaFisioComponent,PsicologaComponent, ListaPsicComponent]
+    imports: [RouterOutlet, 
+      IndividualComponent, 
+      LoginComponent, 
+      HttpClientModule, 
+      ListaIndComponent, 
+      NavbarComponent, 
+      NutricionistaComponent, 
+      ListaNutriComponent, 
+      EnfermagemComponent,
+      ListaEnfComponent, 
+      FisioterapiaComponent, 
+      ListaFisioComponent,
+      PsicologaComponent, 
+      ListaPsicComponent]
 })
 export class AppComponent {
   title = 'gepak';

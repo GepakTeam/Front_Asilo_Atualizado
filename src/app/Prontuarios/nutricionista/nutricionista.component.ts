@@ -49,6 +49,68 @@ export class NutricionistaComponent {
     // Define o formato de data para o padrão brasileiro
     this.dateAdapter.setLocale('pt-BR'); 
     this.model={
+      nome:   '',
+      dataAvaliacao: new Date,
+      idade: 0,
+      dataNascimento: new Date,
+      motivoConsulta:   '',
+      encaminhadoPor:   '',
+      convenio:   '',
+      telefone:   '',
+      endereco:   '',
+      escolaridade:   '',
+      profissao:  '',
+      numeroPessoasCasa: 0,
+      numeroAdulto: 0,
+      numeroCrianca: 0,
+      estadoCivil:  false,
+      problemaSaude: false,
+      qualProblemaSaude:  '',
+      diabetes: false,
+      hipertensao: false,
+      obesidade: false,
+      dislipidemia: false,
+      outrosProblemas:  '',
+      antecedenteDiabetes: false,
+      antecedenteHipertensao: false,
+      antecedenteObesidade: false,
+      antecedenteDislipidemia: false,
+      outrosAntecedentes:   '',
+      habitoIntestinal:   '',
+      caracteristicaFezes:  '',
+      habitoUrinario:   '',
+      horasSono: 0,
+      atividadeFisica: false,
+      frequenciaAtividadeFisica:  '',
+      fuma: false,
+      quantoFuma:   '',
+      haQuantoTempoFuma:  '',
+      fazUsoBebidaAlcoolica: false,
+      tipoBebida:   '',
+      haQuantoTempoBebida:  '',
+      fazUsoLaxante: false,
+      porQuantoTempoLaxante:  '',
+      fazUsoMedicamento: false,
+      haQuantoTempoMedicamento:   '',
+      quaisMedicamentos:  '',
+      intoleranciaOuAversaoAlimentar: false,
+      qualIntolerancia:   '',
+      haQuantoTempoIntolerancia:  '',
+      controleAlimentacao: false,
+      qualControleAlimentacao:  '',
+      alteracaoPeso: false,
+      emQuantoTempo:  '',
+      consumoAgua:  '',
+      consumoCafe:  '',
+      consumoMensalSal:   '',
+      consumoAcucar:  '',
+      consumoOleoBanha:   '',
+      ondeFazRefeicoes:   '',
+      quemPreparaRefeicoes:   '',
+      velocidadeRefeicao:   false,
+      acompanhamentoRefeicao:   false,
+      preferenciasAlimentares:  '',
+      restricoesAlimentares:  '',
 
   };
   }
@@ -57,7 +119,7 @@ export class NutricionistaComponent {
       this.nutricionistaService.salvaProntNutri(this.model)
       .subscribe({
         next:(response)=>
-          this.router.navigateByUrl('')
+          this.router.navigateByUrl('https://localhost:7292/api/ProntuarioNutricionista')
       });
     }
 
