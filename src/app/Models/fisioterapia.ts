@@ -1,7 +1,6 @@
 export interface Fisioterapia{
 dataAvaliacao : Date;
 nome : string;
-prontuario: string;
 sexo : boolean;
 idade : string;
 dataNascimento : Date;

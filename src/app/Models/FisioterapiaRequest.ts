@@ -2,7 +2,6 @@ export interface FisioterapiaRequest{
     dataAvaliacao : Date;
     nome : string;
     sexo : boolean;
-    prontuario: string;
     idade : string;
     dataNascimento : Date;
     estadoCivil : boolean;
