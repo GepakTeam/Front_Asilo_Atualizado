@@ -4,35 +4,10 @@
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="home">Home</a>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Cadastro de Prontuário
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="individual">Individual</a>
-                    <a class="dropdown-item" href="enfermagem">Enfermagem</a>
-                    <a class="dropdown-item" href="psicologa">Psicólogo</a>
-                    <a class="dropdown-item" href="fisioterapia">Fisioterapia</a>
-                    <a class="dropdown-item" href="nutricionista">Nutricionista</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Listas
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="nav-link" href="listaIndividual">Lista Individual</a>
-                    <a class="nav-link" href="listaEnfermagem">Lista Enfermagem</a>
-                    <a class="nav-link" href="listaFisioterapia">Lista Fisioterapia</a>
-                    <a class="nav-link" href="listaPsicologa">Lista Psicologa</a>
-                    <a class="nav-link" href="listaNutricionista">Lista Nutricionista</a>
-                </div>
-            </li>
+        <div class="navbar-nav ml-auto">
+            <button type="button" class="btn btn-danger" (click)="logout()">Sair</button>
         </div>
     </div>
 </nav>

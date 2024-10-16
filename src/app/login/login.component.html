@@ -9,13 +9,21 @@
       <!--<img src="assets/img/logoasilo_fundo.png" alt="illustration" class="illustration">-->
 
       <h1 class="opacity">Login</h1>
-      <form>
-        <input type="text" placeholder="Usuário" />
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <input
+          type="email"
+          formControlName="email"
+          placeholder="Usuário"
+        />
+        <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+          Email inválido
+        </div>
 
         <div class="example-container">
           <input
             matInput
             [type]="hide ? 'password' : 'text'"
+            formControlName="password"
             placeholder="Senha"
           />
           <button
@@ -28,8 +36,15 @@
             <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
           </button>
         </div>
+        <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+          A senha é obrigatória
+        </div>
 
-        <button class="btn-entrar" routerLink="home">Entrar</button>
+        <button class="btn-entrar" type="submit" [disabled]="loginForm.invalid">Entrar</button>
+
+        <div *ngIf="loginError" class="error">
+          Erro de login: Email ou senha inválidos
+        </div>
       </form>
     </div>
   </div>
