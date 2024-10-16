@@ -124,6 +124,6 @@ export class NutricionistaComponent {
     }
 
     routerNutri(){
-      //this.router.navigate(['/listaNutricionista']);
+      this.router.navigate(['/PerfNutri']);
     }
 }

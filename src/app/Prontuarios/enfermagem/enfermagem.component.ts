@@ -110,7 +110,7 @@ export class EnfermagemComponent {
    }
 
    routerEnf(){
-    //this.router.navigate(['/listaEnfermagem']);
+    this.router.navigate(['/PerfEnf']);
    }
 
 }

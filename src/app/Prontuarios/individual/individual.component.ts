@@ -118,7 +118,7 @@ export class IndividualComponent {
     }
 
     routerInd(){
-      //this.router.navigate(['/listaIndividual']);
+      this.router.navigate(['/adm']);
     }
     
 }

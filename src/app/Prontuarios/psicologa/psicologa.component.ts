@@ -60,6 +60,6 @@ export class PsicologaComponent {
         }
     
         routerPsic(){
-          //this.router.navigate(['/listaPsicologa']);
+          this.router.navigate(['/PerfPsic']);
         }
 }

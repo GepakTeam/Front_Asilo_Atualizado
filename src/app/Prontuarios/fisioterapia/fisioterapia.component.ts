@@ -190,6 +190,6 @@ export class FisioterapiaComponent {
   }
 
   routerFisio() {
-    //this.router.navigate(['/listaFisioterapia']);
+    this.router.navigate(['/PerfFisio']);
   }
 }
