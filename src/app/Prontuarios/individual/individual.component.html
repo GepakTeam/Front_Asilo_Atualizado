@@ -39,18 +39,18 @@
               </div>
 
               <div class="col-md-4">
-                <h6 for="inputSex" class="form-label">Sexo</h6><br />
+                <h6 for="" class="form-label">Sexo</h6><br>
                 <div class="form-check form-check-inline">
                   <label>
-                    <input class="form-check-input radio" type="radio" name="sexo" [(ngModel)]="model.sexo" value="Feminino"
-                       />
+                    <input class="form-check-input radio" type="radio" name="sexo" value="Feminino"
+                      [(ngModel)]="model.sexo" id="sexo" />
                     Feminino
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
                   <label>
-                    <input class="form-check-input radio" type="radio" name="sexo"  [(ngModel)]="model.sexo" value="Masculino"
-                      />
+                    <input class="form-check-input radio" type="radio" name="sexo" value="Masculino"
+                      [(ngModel)]="model.sexo" id="sexo"/>
                     Masculino
                   </label>
                 </div>
@@ -545,7 +545,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="tratamentoPsiquiatrico" value="Sim"
-                      [(ngModel)]="model.localTratamentoPsiquiatrico" />
+                      [(ngModel)]="model.tratamentoPsiquiatrico" />
                     Sim
                   </label>
                 </div>
@@ -554,7 +554,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="tratamentoPsiquiatrico" value="Não"
-                      [(ngModel)]="model.localTratamentoPsiquiatrico" />
+                      [(ngModel)]="model.tratamentoPsiquiatrico" />
                     Não
                   </label>
                 </div>
@@ -582,7 +582,7 @@
           <div class="container mt-2">
             <div class="row g-3">
               <div class="btn form-check">
-                <input class="enviar btn btn-success" type="submit" (click)="routerInd()">
+                <input class="enviar btn btn-success" type="submit"> 
                 <input class="limpar btn btn-danger" type="reset" value="Limpar">
               </div>
             </div>

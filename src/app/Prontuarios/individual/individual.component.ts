@@ -43,7 +43,7 @@ export const MY_DATE_FORMATS: MatDateFormats = {
         MatNativeDateModule,
         RouterLink,
         NavbarComponent,
-        FormsModule
+        FormsModule,
     ]
 })
 
