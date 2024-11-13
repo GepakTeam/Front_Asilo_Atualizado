@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { IndividualComponent } from './Prontuarios/individual/individual.component';
 import { LoginComponent } from './login/login.component';
-import { EnfermagemComponent } from './Prontuarios/enfermagem/enfermagem.component';
 import { PsicologaComponent } from './Prontuarios/psicologa/psicologa.component';
 import { FisioterapiaComponent } from './Prontuarios/fisioterapia/fisioterapia.component';
 import { IndividualListaComponent } from './Lista/individual-lista/individual-lista.component';
@@ -16,6 +15,7 @@ import { PerfilEnferComponent } from './Perfil/perfil-enfer/perfil-enfer.compone
 import { PerfilPsicComponent } from './Perfil/perfil-psic/perfil-psic.component';
 import { PerfilNutriComponent } from './Perfil/perfil-nutri/perfil-nutri.component';
 import { PerfilFisioComponent } from './Perfil/perfil-fisio/perfil-fisio.component';
+import { EnfermagemComponent } from './Prontuarios/enfermagem/enfermagem.component';
 
 export const routes: Routes =[
     {

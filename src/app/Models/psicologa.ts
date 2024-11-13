@@ -7,9 +7,9 @@ export interface Psicologa{
     endereco: string;
     municipio: string;
     saude: string;
-    consciente: boolean;
+    consciente: string;
     religiao: string;
-    filho: boolean;
+    filho: string;
     qntFilho: string;
     acolhimento: string;
     historico: string;

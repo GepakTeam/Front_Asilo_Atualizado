@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavbarComponent } from '../../Core/NavBar/navbar.component';
 
 @Component({
   selector: 'app-perfil-nutri',
   standalone: true,
-  imports: [],
+  imports: [NavbarComponent],
   templateUrl: './perfil-nutri.component.html',
   styleUrl: './perfil-nutri.component.css'
 })

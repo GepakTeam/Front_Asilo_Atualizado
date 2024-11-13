@@ -11,6 +11,7 @@ import { Enfermagem } from '../../Models/enfermagem';
 
 import { response } from 'express';
 import { EnfermagemService } from '../../_services/enfermagem.service';
+import { formatDate } from '@angular/common';
 
 export const MY_DATE_FORMATS: MatDateFormats = {
   parse: {
@@ -40,77 +41,78 @@ export const MY_DATE_FORMATS: MatDateFormats = {
 })
 
 export class EnfermagemComponent {
-  model : Enfermagem;
-
-  constructor(private enfermagemlService: EnfermagemService, private router: Router){
-    this.model={
-      nome: '',
-      dataNascimento: new Date(),
-      dataExame: new Date(),
-      nivelConciencia: true,
-      pupilasSituacao: true,
-      pupilaPD: '',
-      pupilaPE: '',
-      fotorreacao: true,
-      sistemaCardioCirculatorio: true,
-      carotideosEsquerdo: '',
-      carotideosDireito: '',
-      braquiaisEsquerdo: '',
-      braquiaisDireito: '',
-      radiaisEsquerdo: '',
-      radiaisDireito: '',
-      femoraisEsquerdo: '',
-      femoraisDireito: '',
-      pediososEsquerdo: '',
-      pediososDireito: '',
-      popliteosEsquerdo: '',
-      popliteosDireito: '',
-      perfusaoPeriferica: true,
-      edema: true,
-      padrao: true,
-      murmurioVesicular: true,
-      expansaoTorax: true,
-      ruidosAdventicios: true,
-      aceitacaoDieta: true,
-      denticao: true,
-      abdome: true,
-      rha: true,
-      massa: true,
-      evacuacao: true,
-      genito: true,
-      urina: true,
-      vesical: true,
-      cutanea: true,
-      sensorial: true,
-      umidade: true,
-      atividade: true,
-      mobilidade: true,
-      nutricao: true,
-      friccao: true,
-      diagnosticosEnfermagem: true,
-      controleSinaisVitaisData: new Date(),
-      controleSinaisVitaisHorario: new Date(),
-      controleSinaisVitaisPa: '',
-      controleSinaisVitaisFc: '',
-      controleSinaisVitaisFr: '',
-      controleSinaisVitaisTemp: '',
-      controleSinaisVitaisPvc: '',
-      controleSinaisVitaisGlicemia: '',
-      controleSinaisVitaisAnotacoes: '',
-    }
+  ProntuarioEnfermagem={
+    nome: '',
+    dataNascimento: '',
+    dataExame: '',
+    nivelConciencia: '',
+    pupilasSituacao: '',
+    pupilaPD: '',
+    pupilaPE: '',
+    fotorreacao: '',
+    sistemaCardioCirculatorio: '',
+    carotideosEsquerdo: '',
+    carotideosDireito: '',
+    braquiaisEsquerdo: '',
+    braquiaisDireito: '',
+    radiaisEsquerdo: '',
+    radiaisDireito: '',
+    femoraisEsquerdo: '',
+    femoraisDireito: '',
+    pediososEsquerdo: '',
+    pediososDireito: '',
+    popliteosEsquerdo: '',
+    popliteosDireito: '',
+    perfusaoPeriferica: '',
+    edema: '',
+    padrao: '',
+    murmurioVesicular: '',
+    expansaoTorax: '',
+    ruidosAdventicios: '',
+    aceitacaoDieta: '',
+    denticao: '',
+    abdome: '',
+    rha: '',
+    massa: '',
+    evacuacao: '',
+    genito: '',
+    urina: '',
+    vesical: '',
+    cutanea: '',
+    sensorial: '',
+    umidade: '',
+    atividade: '',
+    mobilidade: '',
+    nutricao: '',
+    friccao: '',
+    diagnosticosEnfermagem: '',
+    controleSinaisVitaisData: '',
+    controleSinaisVitaisHorario: '',
+    controleSinaisVitaisPa: '',
+    controleSinaisVitaisFc: '',
+    controleSinaisVitaisFr: '',
+    controleSinaisVitaisTemp: '',
+    controleSinaisVitaisPvc: '',
+    controleSinaisVitaisGlicemia: '',
+    controleSinaisVitaisAnotacoes: '',
   }
+  
+
+  constructor(private enfermagemService: EnfermagemService, private router: Router){ }
 
   ProntEnfermagem(){
-    console.log(this.model)
-    this.enfermagemlService.salvaProntEnf(this.model)
+    
+    console.log(this.ProntuarioEnfermagem)
+    this.enfermagemService.salvaProntEnf(this.ProntuarioEnfermagem)
     .subscribe({
-     next:(response)=>
+     next:()=>
         this.router.navigateByUrl('https://localhost:7292/api/ProntuarioEnfermagem')
     });
    }
+   
 
-   routerEnf(){
-    this.router.navigate(['/PerfEnf']);
-   }
+  //  routerEnf(){
+  //   this.router.navigate(['/PerfEnf']);
+  //  }
 
 }

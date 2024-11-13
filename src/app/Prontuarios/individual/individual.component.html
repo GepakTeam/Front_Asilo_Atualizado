@@ -10,12 +10,12 @@
               <h4>Dados do Idoso</h4>
               <div class="col-md-12">
                 <h6 for="inputEmail4" class="form-label">Nome Completo</h6>
-                <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="model.nome" />
+                <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="ProntuarioIndividual.nome" />
               </div>
 
               <div class="col-md-4">
                 <h6 for="dataNascimento">Data de Nascimento</h6>
-                <input type="date" class="form-control" name="dataNascimento" [(ngModel)]="model.dataNascimento">
+                <input type="date" class="form-control" name="dataNascimento" [(ngModel)]="ProntuarioIndividual.dataNascimento">
               </div>
               <script>
                 $(document).ready(function () {
@@ -30,12 +30,12 @@
 
               <div class="col-md-4">
                 <h6 for="inputAge" class="form-label">Idade</h6>
-                <input type="text" class="form-control" name="idade" [(ngModel)]="model.idade" />
+                <input type="text" class="form-control" name="idade" [(ngModel)]="ProntuarioIndividual.idade" />
               </div>
 
               <div class="col-md-4">
                 <h6 for="inputBirthplace" class="form-label">Local de nascimento</h6>
-                <input type="text" class="form-control" name="localNascimento" [(ngModel)]="model.localNascimento" />
+                <input type="text" class="form-control" name="localNascimento" [(ngModel)]="ProntuarioIndividual.localNascimento" />
               </div>
 
               <div class="col-md-4">
@@ -43,14 +43,14 @@
                 <div class="form-check form-check-inline">
                   <label>
                     <input class="form-check-input radio" type="radio" name="sexo" value="Feminino"
-                      [(ngModel)]="model.sexo" id="sexo" />
+                      [(ngModel)]="ProntuarioIndividual.sexo" id="sexo" />
                     Feminino
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
                   <label>
                     <input class="form-check-input radio" type="radio" name="sexo" value="Masculino"
-                      [(ngModel)]="model.sexo" id="sexo"/>
+                      [(ngModel)]="ProntuarioIndividual.sexo" id="sexo"/>
                     Masculino
                   </label>
                 </div>
@@ -61,28 +61,28 @@
                 <div class="form-check form-check-inline">
                   <label>
                     <input class="form-check-input radio" type="radio" name="raca" value="Branca"
-                      [(ngModel)]="model.raca" />
+                      [(ngModel)]="ProntuarioIndividual.raca" />
                     Branca
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
                   <label>
                     <input class="form-check-input radio" type="radio" name="raca" value="Preta"
-                      [(ngModel)]="model.raca" />
+                      [(ngModel)]="ProntuarioIndividual.raca" />
                     Preta
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
                   <label>
                     <input class="form-check-input radio" type="radio" name="raca" value="Parda"
-                      [(ngModel)]="model.raca" />
+                      [(ngModel)]="ProntuarioIndividual.raca" />
                     Parda
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
                   <label>
                     <input class="form-check-input radio" type="radio" name="raca" value="Amarela"
-                      [(ngModel)]="model.raca" />
+                      [(ngModel)]="ProntuarioIndividual.raca" />
                     Amarela
                   </label>
                 </div>
@@ -91,7 +91,7 @@
               <div class="col-md-4">
                 <h6 for="celular" class="form-label">Telefone</h6>
                 <input type="text" class="form-control" id="celular" placeholder="(xx) xxxxx-xxxx" maxlength="15"
-                  name="telefone" [(ngModel)]="model.telefone" />
+                  name="telefone" [(ngModel)]="ProntuarioIndividual.telefone" />
               </div>
               <script>
                 // Adiciona a máscara ao campo de celular
@@ -112,34 +112,34 @@
 
               <div class="col-md-4">
                 <h6 for="inputMotherName" class="form-label">Nome da mãe</h6>
-                <input type="text" class="form-control" id="nomeMae" name="nomeMae" [(ngModel)]="model.nomeMae" />
+                <input type="text" class="form-control" id="nomeMae" name="nomeMae" [(ngModel)]="ProntuarioIndividual.nomeMae" />
               </div>
 
               <div class="col-md-4">
                 <h6 for="inputFatherName" class="form-label">Nome do pai</h6>
-                <input type="text" class="form-control" id="nomePai" name="nomePai" [(ngModel)]="model.nomePai" />
+                <input type="text" class="form-control" id="nomePai" name="nomePai" [(ngModel)]="ProntuarioIndividual.nomePai" />
               </div>
 
               <div class="col-md-4">
                 <h6 for="inputGuardianName" class="form-label">Nome do responsável</h6>
                 <input type="text" class="form-control" id="nomeResponsavel" name="nomeResponsavel"
-                  [(ngModel)]="model.nomeResponsavel" />
+                  [(ngModel)]="ProntuarioIndividual.nomeResponsavel" />
               </div>
 
               <div class="col-md-6">
                 <h6 for="inputAddress" class="form-label">Endereço</h6>
                 <input type="text" class="form-control" placeholder="Rua Principal, 123" name="endereco"
-                  [(ngModel)]="model.endereco" />
+                  [(ngModel)]="ProntuarioIndividual.endereco" />
               </div>
 
               <div class="col-md-2">
                 <h6 for="inputCEP" class="form-label">CEP</h6>
-                <input type="text" class="form-control" name="cep" [(ngModel)]="model.cep" />
+                <input type="text" class="form-control" name="cep" [(ngModel)]="ProntuarioIndividual.cep" />
               </div>
 
               <div class="col-md-4">
                 <h6 for="inputReference" class="form-label">Ponto de referência</h6>
-                <input type="text" class="form-control" name="pontoReferencia" [(ngModel)]="model.pontoReferencia" />
+                <input type="text" class="form-control" name="pontoReferencia" [(ngModel)]="ProntuarioIndividual.pontoReferencia" />
               </div>
 
 
@@ -147,24 +147,24 @@
               <h4>Documentação do Idoso</h4>
               <div class="col-md-4">
                 <h6 class="form-check-label">RG</h6>
-                <input type="text" class="form-control" name="rg" [(ngModel)]="model.rg" />
+                <input type="text" class="form-control" name="rg" [(ngModel)]="ProntuarioIndividual.rg" />
               </div>
               <div class="col-md-4">
                 <h6 class="form-check-label">CPF</h6>
-                <input type="text" class="form-control" name="cpf" [(ngModel)]="model.cpf" />
+                <input type="text" class="form-control" name="cpf" [(ngModel)]="ProntuarioIndividual.cpf" />
               </div>
               <div class="col-md-4">
                 <h6 class="form-check-label">Carteira de trabalho</h6>
-                <input type="text" class="form-control" name="carteiraTrabalho" [(ngModel)]="model.carteiraTrabalho" />
+                <input type="text" class="form-control" name="carteiraTrabalho" [(ngModel)]="ProntuarioIndividual.carteiraTrabalho" />
               </div>
               <div class="col-md-4">
                 <h6 class="form-check-label">Título eleitoral</h6>
-                <input type="text" class="form-control" name="tituloEleitoral" [(ngModel)]="model.tituloEleitoral" />
+                <input type="text" class="form-control" name="tituloEleitoral" [(ngModel)]="ProntuarioIndividual.tituloEleitoral" />
               </div>
               <div class="col-md-4">
                 <h6 class="form-check-label">Certidão de nascimento</h6>
                 <input type="text" class="form-control" name="certidaoNascimento"
-                  [(ngModel)]="model.certidaoNascimento" />
+                  [(ngModel)]="ProntuarioIndividual.certidaoNascimento" />
               </div>
             </div>
           </div>
@@ -180,25 +180,25 @@
               <div class="col-md-4">
                 <h6 class="form-label" for="amigavelCheckbox">Amigável</h6>
                 <input type="text" class="form-control" placeholder="Com quem" name="relacaoAmigavel"
-                  [(ngModel)]="model.relacaoAmigavel" />
+                  [(ngModel)]="ProntuarioIndividual.relacaoAmigavel" />
               </div>
 
               <div class="col-md-4">
                 <h6 class="form-label"> Distanciados </h6>
                 <input type="text" class="form-control" placeholder="Com quem" name="relacaoDistanciados"
-                  [(ngModel)]="model.relacaoDistanciados" />
+                  [(ngModel)]="ProntuarioIndividual.relacaoDistanciados" />
               </div>
 
               <div class="col-md-4">
                 <h6 class="form-label"> Conflituosa </h6>
                 <input type="text" class="form-control" placeholder="Com quem" name="relacaoConflituosa"
-                  [(ngModel)]="model.relacaoConflituosa" />
+                  [(ngModel)]="ProntuarioIndividual.relacaoConflituosa" />
               </div>
 
               <h5>Residência</h5>
               <div class="col-md-12">
                 <h6 class="form-label"> Quem residiam na casa </h6>
-                <input type="text" class="form-control" name="quemResideCasa" [(ngModel)]="model.quemResideCasa" />
+                <input type="text" class="form-control" name="quemResideCasa" [(ngModel)]="ProntuarioIndividual.quemResideCasa" />
               </div>
 
               <h5>Tem filhos?</h5>
@@ -206,14 +206,14 @@
                 <div class="form-check form-check-inline">
                   <label>
                     <input class="form-check-input radio" type="radio" name="filho" value="Sim"
-                      [(ngModel)]="model.filho" />
+                      [(ngModel)]="ProntuarioIndividual.filho" />
                     Sim
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
                   <label>
                     <input class="form-check-input radio" type="radio" name="filho" value="Não"
-                      [(ngModel)]="model.filho" />
+                      [(ngModel)]="ProntuarioIndividual.filho" />
                     Não
                   </label>
                 </div>
@@ -221,13 +221,13 @@
 
               <div class="col-md-6">
                 <h6>Quantos filhos?</h6>
-                <input type="text" class="form-control" name="qntFilho" [(ngModel)]="model.qntFilho" />
+                <input type="text" class="form-control" name="qntFilho" [(ngModel)]="ProntuarioIndividual.qntFilho" />
               </div>
 
               <div class="col-md-6">
                 <h6>Com quem moram seus filhos?</h6>
                 <input type="text" class="form-control" name="comQuemMoraFilhos"
-                  [(ngModel)]="model.comQuemMoraFilhos" />
+                  [(ngModel)]="ProntuarioIndividual.comQuemMoraFilhos" />
               </div>
 
               <h5>Condições habitacionais</h5>
@@ -235,7 +235,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="moradia" value="CasaPrópria"
-                      [(ngModel)]="model.moradia" />
+                      [(ngModel)]="ProntuarioIndividual.moradia" />
                     Casa própria
                   </label>
                 </div>
@@ -244,7 +244,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="moradia" value="Alugada"
-                      [(ngModel)]="model.moradia" />
+                      [(ngModel)]="ProntuarioIndividual.moradia" />
                     Alugada
                   </label>
                 </div>
@@ -253,7 +253,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="moradia" value="Cedida"
-                      [(ngModel)]="model.moradia" />
+                      [(ngModel)]="ProntuarioIndividual.moradia" />
                     Cedida
                   </label>
                 </div>
@@ -262,7 +262,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="moradia" value="Doada"
-                      [(ngModel)]="model.moradia" />
+                      [(ngModel)]="ProntuarioIndividual.moradia" />
                     Doada
                   </label>
                 </div>
@@ -271,7 +271,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="moradia" value="Sem moradia"
-                      [(ngModel)]="model.moradia" />
+                      [(ngModel)]="ProntuarioIndividual.moradia" />
                     Sem moradia
                   </label>
                 </div>
@@ -288,7 +288,7 @@
               <h4>Saúde</h4>
               <h5>Possui alguma doenças pregresas?</h5>
               <div class="col-md-12">
-                <input type="text" class="form-control" name="doenca" [(ngModel)]="model.doenca" />
+                <input type="text" class="form-control" name="doenca" [(ngModel)]="ProntuarioIndividual.doenca" />
               </div>
 
               <h5>Possui alguma deficiência?</h5><br>
@@ -296,14 +296,14 @@
                 <div class="col-md-1 form-check form-check-inline">
                   <label>
                     <input class="form-check-input radio" type="radio" name="deficiencia" value="Sim"
-                      [(ngModel)]="model.deficiencia" />
+                      [(ngModel)]="ProntuarioIndividual.deficiencia" />
                     Sim
                   </label>
                 </div>
                 <div class="col-md-1 form-check form-check-inline">
                   <label>
                     <input class="form-check-input radio" type="radio" name="deficiencia" value="Não"
-                      [(ngModel)]="model.deficiencia" />
+                      [(ngModel)]="ProntuarioIndividual.deficiencia" />
                     Não
                   </label>
                 </div>
@@ -312,7 +312,7 @@
               <div class="col-md-12">
                 <h6>Se SIM qual deficiência possui? </h6>
                 <input type="text" class="form-control" name="quaisDeficiencias"
-                  [(ngModel)]="model.quaisDeficiencias" />
+                  [(ngModel)]="ProntuarioIndividual.quaisDeficiencias" />
               </div>
 
               <h5>Como você descreve a saúde:</h5>
@@ -320,7 +320,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="saude" value="MuitoBoa"
-                      [(ngModel)]="model.saude" />
+                      [(ngModel)]="ProntuarioIndividual.saude" />
                     Muito boa
                   </label>
                 </div>
@@ -329,7 +329,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="saude" value="Boa"
-                      [(ngModel)]="model.saude" />
+                      [(ngModel)]="ProntuarioIndividual.saude" />
                     Boa
                   </label>
                 </div>
@@ -338,7 +338,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="saude" value="Ruim"
-                      [(ngModel)]="model.saude" />
+                      [(ngModel)]="ProntuarioIndividual.saude" />
                     Ruim
                   </label>
                 </div>
@@ -347,7 +347,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="saude" value="Péssimo"
-                      [(ngModel)]="model.saude" />
+                      [(ngModel)]="ProntuarioIndividual.saude" />
                     Péssimo
                   </label>
                 </div>
@@ -377,7 +377,7 @@
                 <h6>Entre as opções de atividades de lazer apresentadas, você pratica alguma? Caso não pratique nenhuma
                   destas, por favor, informe outras atividades que realiza no campo abaixo.</h6>
                 <input type="text" class="form-control mt-2" id="outrasCondicoes" name="atividadesLazer"
-                  [(ngModel)]="model.atividadesLazer" />
+                  [(ngModel)]="ProntuarioIndividual.atividadesLazer" />
               </div>
 
               <h5>Tem parceira(o)?</h5>
@@ -385,7 +385,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="parceiros" value="Sim"
-                      [(ngModel)]="model.parceiros" />
+                      [(ngModel)]="ProntuarioIndividual.parceiros" />
                     Sim
                   </label>
                 </div>
@@ -394,7 +394,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="parceiros" value="Não"
-                      [(ngModel)]="model.parceiros" />
+                      [(ngModel)]="ProntuarioIndividual.parceiros" />
                     Não
                   </label>
                 </div>
@@ -405,7 +405,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="acompanhamento" value="Sim"
-                      [(ngModel)]="model.acompanhamento" />
+                      [(ngModel)]="ProntuarioIndividual.acompanhamento" />
                     Sim
                   </label>
                 </div>
@@ -414,14 +414,14 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="acompanhamento" value="Não"
-                      [(ngModel)]="model.acompanhamento" />
+                      [(ngModel)]="ProntuarioIndividual.acompanhamento" />
                     Não
                   </label>
                 </div>
               </div>
               <div class="col-md-12">
                 <h6>Qual medicação está sendo usada?</h6>
-                <input type="text" class="form-control" name="qualMedicacao" [(ngModel)]="model.qualMedicacao" />
+                <input type="text" class="form-control" name="qualMedicacao" [(ngModel)]="ProntuarioIndividual.qualMedicacao" />
               </div>
 
               <h5>Você tem algum plano de saúde?</h5>
@@ -429,7 +429,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="planoSaude" value="Sim"
-                      [(ngModel)]="model.planoSaude" />
+                      [(ngModel)]="ProntuarioIndividual.planoSaude" />
                     Sim
                   </label>
                 </div>
@@ -438,14 +438,14 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="planoSaude" value="Não"
-                      [(ngModel)]="model.planoSaude" />
+                      [(ngModel)]="ProntuarioIndividual.planoSaude" />
                     Não
                   </label>
                 </div>
               </div>
               <div class="col-md-12">
                 <h6>Qual o plano de saúde?</h6>
-                <input type="text" class="form-control" name="qualPlanoSaude" [(ngModel)]="model.qualPlanoSaude" />
+                <input type="text" class="form-control" name="qualPlanoSaude" [(ngModel)]="ProntuarioIndividual.qualPlanoSaude" />
               </div>
 
               <h5>Já fez uso de alguma droga?</h5>
@@ -453,7 +453,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="usoDroga" value="Sim"
-                      [(ngModel)]="model.usoDroga" />
+                      [(ngModel)]="ProntuarioIndividual.usoDroga" />
                     Sim
                   </label>
                 </div>
@@ -462,7 +462,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="usoDroga" value="Não"
-                      [(ngModel)]="model.usoDroga" />
+                      [(ngModel)]="ProntuarioIndividual.usoDroga" />
                     Não
                   </label>
                 </div>
@@ -497,13 +497,13 @@
               <div class="col-md-12">
                 <h5>Entre as opções de drogas apresentadas, você já vez uso alguma?</h5>
                 <input type="text" class="form-control mt-2" id="distanciadosComQuem" name="quaisDrogasUsou"
-                  [(ngModel)]="model.quaisDrogasUsou" />
+                  [(ngModel)]="ProntuarioIndividual.quaisDrogasUsou" />
               </div>
 
               <div class="col-md-12">
                 <h5>Histórico de uso:</h5>
                 <input type="text" class="form-control mt-2" id="distanciadosComQuem" name="historicoUso"
-                  [(ngModel)]="model.historicoUso" />
+                  [(ngModel)]="ProntuarioIndividual.historicoUso" />
               </div>
             </div>
           </div>
@@ -520,7 +520,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="atendimentoPsicologico" value="Sim"
-                      [(ngModel)]="model.atendimentoPsicologico" />
+                      [(ngModel)]="ProntuarioIndividual.atendimentoPsicologico" />
                     Sim
                   </label>
                 </div>
@@ -529,7 +529,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="atendimentoPsicologico" value="Não"
-                      [(ngModel)]="model.atendimentoPsicologico" />
+                      [(ngModel)]="ProntuarioIndividual.atendimentoPsicologico" />
                     Não
                   </label>
                 </div>
@@ -537,7 +537,7 @@
               <div class="col-md-12">
                 <h6>Em qual local você recebeu este atendimento?</h6>
                 <input type="text" class="form-control" name="localAtendimentoPsicologico"
-                  [(ngModel)]="model.localAtendimentoPsicologico" />
+                  [(ngModel)]="ProntuarioIndividual.localAtendimentoPsicologico" />
               </div>
 
               <h5>Já recebeu tratamento psiquiátrico?</h5>
@@ -545,7 +545,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="tratamentoPsiquiatrico" value="Sim"
-                      [(ngModel)]="model.tratamentoPsiquiatrico" />
+                      [(ngModel)]="ProntuarioIndividual.tratamentoPsiquiatrico" />
                     Sim
                   </label>
                 </div>
@@ -554,7 +554,7 @@
                 <div class="form-check">
                   <label>
                     <input class="form-check-input radio" type="radio" name="tratamentoPsiquiatrico" value="Não"
-                      [(ngModel)]="model.tratamentoPsiquiatrico" />
+                      [(ngModel)]="ProntuarioIndividual.tratamentoPsiquiatrico" />
                     Não
                   </label>
                 </div>
@@ -562,19 +562,19 @@
               <div class="col-md-12">
                 <h6>Em qual local você recebeu este tratamento?</h6>
                 <input type="text" class="form-control" name="localTratamentoPsiquiatrico"
-                  [(ngModel)]="model.localTratamentoPsiquiatrico" />
+                  [(ngModel)]="ProntuarioIndividual.localTratamentoPsiquiatrico" />
               </div>
 
               <div class="col-md-12">
                 <h5>Toma algum tipo de medicamento?</h5>
                 <input type="text" class="form-control mt-2" name="tomaAlgumTipoMedicamento"
-                  [(ngModel)]="model.tomaAlgumTipoMedicamento" />
+                  [(ngModel)]="ProntuarioIndividual.tomaAlgumTipoMedicamento" />
               </div>
 
               <div class="col-md-12">
                 <h5>Motivo do encaminhamento psicológo?</h5>
                 <input type="text" class="form-control mt-2" name="motivoEncaminhamentoPsicologico"
-                  [(ngModel)]="model.motivoEncaminhamentoPsicologico" />
+                  [(ngModel)]="ProntuarioIndividual.motivoEncaminhamentoPsicologico" />
               </div>
             </div>
           </div><br>
@@ -582,10 +582,11 @@
           <div class="container mt-2">
             <div class="row g-3">
               <div class="btn form-check">
-                <input class="enviar btn btn-success" type="submit"> 
+                <input class="enviar btn btn-success" type="submit" > 
                 <input class="limpar btn btn-danger" type="reset" value="Limpar">
               </div>
             </div>
+            <!-- (click)="routerInd()" -->
           </div>
 
         </fieldset>

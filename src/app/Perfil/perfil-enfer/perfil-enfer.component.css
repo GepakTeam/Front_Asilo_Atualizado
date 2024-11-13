@@ -1,0 +1,62 @@
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -80px;
+    overflow: hidden;
+  
+  }
+  
+  
+  .text-content {
+    max-width: 50%; /* Para limitar a largura do texto */
+    margin-bottom: 60px;
+    
+  }
+  
+  .circle {
+    width: 450px; /* Largura do círculo */
+    height: 450px; /* Altura do círculo */
+    background-color: #dbe2e2; /* Cor de fundo do círculo */
+    border-radius: 50%; /* Forma circular */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .illustration2 {
+    width: 80%; /* Tamanho da imagem dentro do círculo */
+    height: auto;
+  }
+  
+  
+  
+  section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 30%; /* Define a distância entre os botões */
+    margin-top: 60px; /* Espaçamento entre o texto e os botões */
+  }
+  
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  h2 {
+    margin-top: 55px; /* Ajuste o valor conforme necessário */
+  }

@@ -9,12 +9,12 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { ListaIndComponent } from './Lista/lista-ind/lista-ind.component';
 import { PsicologaComponent } from './Prontuarios/psicologa/psicologa.component';
 import { FisioterapiaComponent } from './Prontuarios/fisioterapia/fisioterapia.component';
-import { EnfermagemComponent } from './Prontuarios/enfermagem/enfermagem.component';
 import { ListaPsicComponent } from './Lista/lista-psic/lista-psic.component';
 import { ListaFisioComponent } from './Lista/lista-fisio/lista-fisio.component';
 import { ListaEnfComponent } from './Lista/lista-enf/lista-enf.component';
 import { NutricionistaComponent } from './Prontuarios/nutricionista/nutricionista.component';
 import { ListaNutriComponent } from './Lista/lista-nutri/lista-nutri.component';
+import { EnfermagemComponent } from './Prontuarios/enfermagem/enfermagem.component';
 
 
 export const appConfig: ApplicationConfig = {

@@ -1,10 +1,10 @@
 export interface FisioterapiaRequest{
     dataAvaliacao : Date;
     nome : string;
-    sexo : boolean;
+    sexo : string;
     idade : string;
     dataNascimento : Date;
-    estadoCivil : boolean;
+    estadoCivil : string;
     telefone : string;
     endereco : string;
     examesComplementares : string;
@@ -18,7 +18,7 @@ export interface FisioterapiaRequest{
     aparelhoCardioVascular : string;
     ginecologico : string;
     outros : string;
-    dificuldadeComunicacao :boolean;
+    dificuldadeComunicacao :string;
     tipoMedicamento : string;
     dosagem : string;
     frequencia : string;
@@ -28,8 +28,8 @@ export interface FisioterapiaRequest{
     dietaEspecial : string;
     ingestaoAlcool : string;
     ingestaoHidrica : string;
-    usaProtese : boolean;
-    apetite : boolean;
+    usaProtese : string;
+    apetite : string;
     porqueApetite : string;
     demencia : string;
     escalaDepressao : string;
@@ -46,8 +46,8 @@ export interface FisioterapiaRequest{
     ombroFlexaoAdmDireito : string;
     ombroFlexaoAdmEsquerdo : string;
     ombroExtensaoVR : string;
-    ombroExtensaAdmDireito : string;
-    ombroExtensaAdmEsquerdo : string;
+    ombroExtensaoAdmDireito : string;
+    ombroExtensaoAdmEsquerdo : string;
     ombroAducaoVR : string;
     ombroAducaoAdmDireito : string;
     ombroAducaoAdmEsquerdo : string;
@@ -117,7 +117,7 @@ export interface FisioterapiaRequest{
     tempoQuedas : string;
     frequenciaQuedas : string;
     localQuedas : string;
-    reflexo : boolean;
+    reflexo : string;
     equilibrioSentado : string;
     equilibrioEmPe : string;
     equilibrioSinalRosemberg : string;

@@ -50,21 +50,13 @@ export const MY_DATE_FORMATS: MatDateFormats = {
 export class IndividualComponent {
 
   
-  model: IndividualRequest;
-
-  constructor(private dateAdapter: DateAdapter<Date>, 
-    private individualService: IndividualService, 
-    private router: Router
-  ) {
-    // Define o formato de data para o padrão brasileiro
-    this.dateAdapter.setLocale('pt-BR'); 
-    this.model={
+  ProntuarioIndividual={
     nome: '',
     dataNascimento: new Date(),
     idade: '',
     localNascimento: '',
-    sexo: true,
-    raca: true,
+    sexo: '',
+    raca: '',
     telefone: '',
     nomeMae: '',
     nomePai: '',
@@ -81,36 +73,43 @@ export class IndividualComponent {
     relacaoDistanciados: '',
     relacaoConflituosa: '',
     quemResideCasa: '',
-    filho: true,
+    filho: '',
     qntFilho: '',
     comQuemMoraFilhos: '',
-    moradia: true,
+    moradia: '',
     doenca: '',
-    deficiencia: true,
+    deficiencia: '',
     quaisDeficiencias: '',
-    saude: true,
+    saude: '',
     atividadesLazer: '',
-    parceiros: true,
-    acompanhamento: true,
+    parceiros: '',
+    acompanhamento: '',
     qualMedicacao: '',
-    planoSaude: true,
+    planoSaude: '',
     qualPlanoSaude: '',
-    usoDroga: true,
+    usoDroga: '',
     quaisDrogasUsou: '',
     historicoUso: '',
-    atendimentoPsicologico: true,
+    atendimentoPsicologico: '',
     localAtendimentoPsicologico: '',
-    tratamentoPsiquiatrico: true,
+    tratamentoPsiquiatrico: '',
     localTratamentoPsiquiatrico: '',
     tomaAlgumTipoMedicamento: '',
     motivoEncaminhamentoPsicologico: '',
-  };
+  }
+
+  constructor(private dateAdapter: DateAdapter<Date>, 
+    private individualService: IndividualService, 
+    private router: Router
+  ) {
+    // Define o formato de data para o padrão brasileiro
+    this.dateAdapter.setLocale('pt-BR'); 
   }
 
 
     ProntIndividual(){
-      console.log(this.model)
-      this.individualService.salvaProntInd(this.model)
+      console.log(this.ProntuarioIndividual)
+      this.individualService.salvaProntInd(this.ProntuarioIndividual)
       .subscribe({
         next:(response)=>
           this.router.navigateByUrl('https://localhost:7292/api/ProntuarioIndividual')

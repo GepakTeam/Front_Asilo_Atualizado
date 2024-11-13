@@ -1,2 +1,25 @@
-<button (click)="routerInd()">Cadastrar</button>
-<button (click)="routerIndLista()">Listar</button>
+<app-navbar></app-navbar>
+
+<section>
+  <div class="content">
+      <div class="text-content">
+       <h1>Administração</h1>    
+       <h2>Sejam bem-vindos</h2>
+
+          <p>
+              Esse sistema tem como finalidade auxiliar os agricultores, por meio de uma plataforma
+              contábil, a gerenciar variáveis relacionadas aos seus custos de produção, de forma a apresentar
+              diferenças em suas médias de produção durante o período da safra.
+          </p>
+
+          <div class="button-container">
+          <button type="button" class="btn btn-secondary" (click)="routerInd()">Cadastrar</button>
+          <button type="button" class="btn btn-secondary" (click)="routerIndLista()">Listar</button>
+        </div>
+
+      </div>
+      <div class="circle">
+          <img src="assets/img/Doctor-cuate.png" alt="illustration2" class="illustration2" />
+      </div>
+  </div>
+</section>

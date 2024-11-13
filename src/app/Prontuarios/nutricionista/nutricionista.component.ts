@@ -39,8 +39,70 @@ export const MY_DATE_FORMATS: MatDateFormats = {
 })
 export class NutricionistaComponent {
 
-  
-  model: NutricionistaRequest;
+  ProntuarioNutricionista = {
+    nome:   '',
+    dataAvaliacao: new Date,
+    idade: 0,
+    dataNascimento: new Date,
+    motivoConsulta:   '',
+    encaminhadoPor:   '',
+    convenio:   '',
+    telefone:   '',
+    endereco:   '',
+    escolaridade:   '',
+    profissao:  '',
+    numeroPessoasCasa: 0,
+    numeroAdulto: 0,
+    numeroCrianca: 0,
+    estadoCivil:  '',
+    problemaSaude: '',
+    qualProblemaSaude:  '',
+    diabetes: '',
+    hipertensao: '',
+    obesidade: '',
+    dislipidemia: '',
+    outrosProblemas:  '',
+    antecedenteDiabetes: '',
+    antecedenteHipertensao: '',
+    antecedenteObesidade: '',
+    antecedenteDislipidemia: '',
+    outrosAntecedentes:   '',
+    habitoIntestinal:   '',
+    caracteristicaFezes:  '',
+    habitoUrinario:   '',
+    horasSono: 0,
+    atividadeFisica: '',
+    frequenciaAtividadeFisica:  '',
+    fuma: '',
+    quantoFuma:   '',
+    haQuantoTempoFuma:  '',
+    fazUsoBebidaAlcoolica: '',
+    tipoBebida:   '',
+    haQuantoTempoBebida:  '',
+    fazUsoLaxante: '',
+    porQuantoTempoLaxante:  '',
+    fazUsoMedicamento: '',
+    haQuantoTempoMedicamento:   '',
+    quaisMedicamentos:  '',
+    intoleranciaOuAversaoAlimentar: '',
+    qualIntolerancia:   '',
+    haQuantoTempoIntolerancia:  '',
+    controleAlimentacao: '',
+    qualControleAlimentacao:  '',
+    alteracaoPeso: '',
+    emQuantoTempo:  '',
+    consumoAgua:  '',
+    consumoCafe:  '',
+    consumoMensalSal:   '',
+    consumoAcucar:  '',
+    consumoOleoBanha:   '',
+    ondeFazRefeicoes:   '',
+    quemPreparaRefeicoes:   '',
+    velocidadeRefeicao:   '',
+    acompanhamentoRefeicao:   '',
+    preferenciasAlimentares:  '',
+    restricoesAlimentares:  '',
+  }
 
   constructor(private dateAdapter: DateAdapter<Date>, 
     private nutricionistaService: NutricionistaService, 
@@ -48,82 +110,17 @@ export class NutricionistaComponent {
   ) {
     // Define o formato de data para o padrão brasileiro
     this.dateAdapter.setLocale('pt-BR'); 
-    this.model={
-      nome:   '',
-      dataAvaliacao: new Date,
-      idade: 0,
-      dataNascimento: new Date,
-      motivoConsulta:   '',
-      encaminhadoPor:   '',
-      convenio:   '',
-      telefone:   '',
-      endereco:   '',
-      escolaridade:   '',
-      profissao:  '',
-      numeroPessoasCasa: 0,
-      numeroAdulto: 0,
-      numeroCrianca: 0,
-      estadoCivil:  false,
-      problemaSaude: false,
-      qualProblemaSaude:  '',
-      diabetes: false,
-      hipertensao: false,
-      obesidade: false,
-      dislipidemia: false,
-      outrosProblemas:  '',
-      antecedenteDiabetes: false,
-      antecedenteHipertensao: false,
-      antecedenteObesidade: false,
-      antecedenteDislipidemia: false,
-      outrosAntecedentes:   '',
-      habitoIntestinal:   '',
-      caracteristicaFezes:  '',
-      habitoUrinario:   '',
-      horasSono: 0,
-      atividadeFisica: false,
-      frequenciaAtividadeFisica:  '',
-      fuma: false,
-      quantoFuma:   '',
-      haQuantoTempoFuma:  '',
-      fazUsoBebidaAlcoolica: false,
-      tipoBebida:   '',
-      haQuantoTempoBebida:  '',
-      fazUsoLaxante: false,
-      porQuantoTempoLaxante:  '',
-      fazUsoMedicamento: false,
-      haQuantoTempoMedicamento:   '',
-      quaisMedicamentos:  '',
-      intoleranciaOuAversaoAlimentar: false,
-      qualIntolerancia:   '',
-      haQuantoTempoIntolerancia:  '',
-      controleAlimentacao: false,
-      qualControleAlimentacao:  '',
-      alteracaoPeso: false,
-      emQuantoTempo:  '',
-      consumoAgua:  '',
-      consumoCafe:  '',
-      consumoMensalSal:   '',
-      consumoAcucar:  '',
-      consumoOleoBanha:   '',
-      ondeFazRefeicoes:   '',
-      quemPreparaRefeicoes:   '',
-      velocidadeRefeicao:   false,
-      acompanhamentoRefeicao:   false,
-      preferenciasAlimentares:  '',
-      restricoesAlimentares:  '',
-
-  };
   }
      ProntNutricionista(){
-      console.log(this.model)
-      this.nutricionistaService.salvaProntNutri(this.model)
+      console.log(this.ProntuarioNutricionista)
+      this.nutricionistaService.salvaProntNutri(this.ProntuarioNutricionista)
       .subscribe({
         next:(response)=>
           this.router.navigateByUrl('https://localhost:7292/api/ProntuarioNutricionista')
       });
     }
 
-    routerNutri(){
-      this.router.navigate(['/PerfNutri']);
-    }
+    // routerNutri(){
+    //   this.router.navigate(['/PerfNutri']);
+    // }
 }

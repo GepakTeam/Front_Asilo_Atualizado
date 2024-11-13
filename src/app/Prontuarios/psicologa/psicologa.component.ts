@@ -28,38 +28,37 @@ import { PsicologaRequest } from '../../Models/PsicologaRequest';
 })
 export class PsicologaComponent {
 
-  model: PsicologaRequest;
+  ProntuarioPsicologo={
+    nome:'',
+    dataNascimento: new Date,
+    rg: '',
+    cpf: '',
+    responsavel: '',
+    endereco: '',
+    municipio: '',
+    saude: '',
+    consciente: '',
+    religiao: '',
+    filho: '',
+    qntFilho: '',
+    acolhimento: '',
+    historico: '',
+  };
+
 
   constructor(private psicologaService: PsicologaService, 
-    private router: Router){
-      this.model={
-        nome:'',
-        dataNascimento: new Date,
-        rg: '',
-        cpf: '',
-        responsavel: '',
-        endereco: '',
-        municipio: '',
-        saude: '',
-        consciente: true,
-        religiao: '',
-        filho: true,
-        qntFilho: '',
-        acolhimento: '',
-        historico: '',
-      };
-      }
+    private router: Router){}
     
          ProntPsicologa(){
-          console.log(this.model)
-          this.psicologaService.salvaProntPsic(this.model)
+          console.log(this.ProntuarioPsicologo)
+          this.psicologaService.salvaProntPsic(this.ProntuarioPsicologo)
           .subscribe({
             next:(response)=>
               this.router.navigateByUrl('https://localhost:7292/api/ProntuarioPsicologo')
           });
         }
     
-        routerPsic(){
-          this.router.navigate(['/PerfPsic']);
-        }
+        // routerPsic(){
+        //   this.router.navigate(['/PerfPsic']);
+        // }
 }

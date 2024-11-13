@@ -10,7 +10,8 @@
                             <h4 class=" col-md-12 w-auto">Avaliação Fisioterapeuta</h4>
                             <div class="col-md-6">
                                 <label>Data Avaliação</label>
-                                <input type="date" class="form-control" name="dataAvaliacao" [(ngModel)]="model.dataAvaliacao"/>
+                                <input type="date" class="form-control" name="dataAvaliacao"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.dataAvaliacao" />
                             </div>
                             <script>
                                 $(document).ready(function () {
@@ -29,35 +30,38 @@
 
                             <div class="col-md-6">
                                 <label>Nome</label>
-                                <input type="text" class="form-control" name="nome" [(ngModel)]="model.nome"/>
+                                <input type="text" class="form-control" name="nome"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.nome" />
                             </div>
 
                             <div class="col-md-4">
                                 <h6 for="inputSex" class="form-label">Sexo</h6><br />
                                 <div class="form-check form-check-inline">
-                                  <label>
-                                    <input class="form-check-input radio" type="radio" value="1" name="sexo" value="Feminino"
-                                      [(ngModel)]="model.sexo" />
-                                    Feminino
-                                  </label>
+                                    <label>
+                                        <input class="form-check-input radio" type="radio" name="sexo" value="Feminino"
+                                            [(ngModel)]="ProntuarioFisioterapeuta.sexo" />
+                                        Feminino
+                                    </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                  <label>
-                                    <input class="form-check-input radio" type="radio" value="2" name="sexo" value="Masculino"
-                                      [(ngModel)]="model.sexo" />
-                                    Masculino
-                                  </label>
+                                    <label>
+                                        <input class="form-check-input radio" type="radio" name="sexo" value="Masculino"
+                                            [(ngModel)]="ProntuarioFisioterapeuta.sexo" />
+                                        Masculino
+                                    </label>
                                 </div>
                             </div>
 
                             <div class="col-md-2">
                                 <label>Idade</label>
-                                <input type="text" class="form-control" name="idade" [(ngModel)]="model.idade"/>
+                                <input type="text" class="form-control" name="idade"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.idade" />
                             </div>
 
                             <div class="col-md-2">
                                 <label>Data de Nascimento</label>
-                                <input type="date" class="form-control" name="dataNascimento" [(ngModel)]="model.dataNascimento"/>
+                                <input type="date" class="form-control" name="dataNascimento"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.dataNascimento" />
                             </div>
 
                             <script>
@@ -75,35 +79,43 @@
                                 <h6 for="inputSex" class="form-label">Estado Civil</h6><br />
                                 <div class="form-check form-check-inline">
                                     <label>
-                                        <input class="form-check-input radio" type="radio" value="1" name="estadoCivil" [(ngModel)]="model.estadoCivil"/> Solteiro
+                                        <input class="form-check-input radio" type="radio" name="estadoCivil"
+                                            value="Solteiro" [(ngModel)]="ProntuarioFisioterapeuta.estadoCivil" />
+                                        Solteiro
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <label>
-                                        <input class="form-check-input radio" type="radio" value="2" name="estadoCivil" [(ngModel)]="model.estadoCivil"/> Casado
+                                        <input class="form-check-input radio" type="radio" name="estadoCivil"
+                                            value="Casado" [(ngModel)]="ProntuarioFisioterapeuta.estadoCivil" /> Casado
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <label>
-                                        <input class="form-check-input radio" type="radio" value="3" name="estadoCivil" [(ngModel)]="model.estadoCivil"/> Separado
+                                        <input class="form-check-input radio" type="radio" name="estadoCivil"
+                                            value="Separado" [(ngModel)]="ProntuarioFisioterapeuta.estadoCivil" />
+                                        Separado
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <label>
-                                        <input class="form-check-input radio" type="radio" value="4" name="estadoCivil" [(ngModel)]="model.estadoCivil"/> Divorciado
+                                        <input class="form-check-input radio" type="radio" name="estadoCivil"
+                                            value="Divorciado" [(ngModel)]="ProntuarioFisioterapeuta.estadoCivil" />
+                                        Divorciado
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <label>
-                                        <input class="form-check-input radio" type="radio" value="5" name="estadoCivil" [(ngModel)]="model.estadoCivil"/> Viúvo
+                                        <input class="form-check-input radio" type="radio" name="estadoCivil"
+                                            value="Viúvo" [(ngModel)]="ProntuarioFisioterapeuta.estadoCivil" /> Viúvo
                                     </label>
                                 </div>
                             </div>
 
                             <div class="col-md-3">
                                 <h6 for="celular" class="form-label">Telefone</h6>
-                                <input type="text" class="form-control" placeholder="(xx) xxxxx-xxxx"
-                                    maxlength="15" name="telefone"  [(ngModel)]="model.telefone"/>
+                                <input type="text" class="form-control" placeholder="(xx) xxxxx-xxxx" maxlength="15"
+                                    name="telefone" [(ngModel)]="ProntuarioFisioterapeuta.telefone" />
                             </div>
                             <script>
                                 // Adiciona a máscara ao campo de celular
@@ -124,73 +136,86 @@
 
                             <div class="col-md-12">
                                 <label>Endereço</label>
-                                <input type="text" class="form-control" name="endereco" [(ngModel)]="model.endereco"/>
+                                <input type="text" class="form-control" name="endereco"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.endereco" />
                             </div>
 
                             <div class="col-md-4">
                                 <label>Exames Complementares</label>
-                                <input type="text" class="form-control" name="examesComplementares" [(ngModel)]="model.examesComplementares"/>
+                                <input type="text" class="form-control" name="examesComplementares"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.examesComplementares" />
                             </div>
 
                             <div class="col-md-4">
                                 <label>Medicamentos</label>
-                                <input type="text" class="form-control" name="medicamentos" [(ngModel)]="model.medicamentos"/>
+                                <input type="text" class="form-control" name="medicamentos"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.medicamentos" />
                             </div>
 
                             <div class="col-md-4">
                                 <label>Diagnóstico Clínico-Patológico</label>
-                                <input type="text" class="form-control" name="diagnosticoClinicoPatologico" [(ngModel)]="model.diagnosticoClinicoPatologico"/>
+                                <input type="text" class="form-control" name="diagnosticoClinicoPatologico"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.diagnosticoClinicoPatologico" />
                             </div>
 
                             <div class="col-md-4">
                                 <label>Queixa Principal</label>
-                                <textarea cols="10" rows="4" wrap="hard" class="form-control"
-                                    name="queixaPrincipal" [(ngModel)]="model.queixaPrincipal"></textarea>
+                                <textarea cols="10" rows="4" wrap="hard" class="form-control" name="queixaPrincipal"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.queixaPrincipal"></textarea>
                             </div>
 
                             <div class="col-md-4">
                                 <label>H.M.A</label>
-                                <textarea cols="10" rows="4" wrap="hard" class="form-control" name="hma" [(ngModel)]="model.hma"></textarea>
+                                <textarea cols="10" rows="4" wrap="hard" class="form-control" name="hma"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.hma"></textarea>
                             </div>
 
                             <div class="col-md-4">
                                 <label>A.V.D</label>
-                                <textarea cols="10" rows="4" wrap="hard" class="form-control" name="avd" [(ngModel)]="model.avd"></textarea>
+                                <textarea cols="10" rows="4" wrap="hard" class="form-control" name="avd"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.avd"></textarea>
                             </div>
 
                             <div class="col-md-4">
                                 <label>Aparelho Locomotor</label>
-                                <input type="text" class="form-control" name="aparelhoLocomotor" [(ngModel)]="model.aparelhoLocomotor"/>
+                                <input type="text" class="form-control" name="aparelhoLocomotor"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.aparelhoLocomotor" />
                             </div>
 
                             <div class="col-md-4">
                                 <label>Cardio-respiratório</label>
-                                <input type="text" class="form-control" name="aparelhoCardioRespiratorio" [(ngModel)]="model.aparelhoCardioRespiratorio"/>
+                                <input type="text" class="form-control" name="aparelhoCardioRespiratorio"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.aparelhoCardioRespiratorio" />
                             </div>
 
                             <div class="col-md-4">
                                 <label>Cardio-vascular</label>
-                                <input type="text" class="form-control" name="aparelhoCardioVascular" [(ngModel)]="model.aparelhoCardioVascular"/>
+                                <input type="text" class="form-control" name="aparelhoCardioVascular"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.aparelhoCardioVascular" />
                             </div>
 
                             <div class="col-md-4">
                                 <label>Ginecológico</label>
-                                <input type="text" class="form-control" name="ginecologico" [(ngModel)]="model.ginecologico"/>
+                                <input type="text" class="form-control" name="ginecologico"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.ginecologico" />
                             </div>
 
                             <div class="col-md-4">
                                 <label>Outros</label>
-                                <textarea cols="10" rows="4" wrap="hard" class="form-control" name="outros" [(ngModel)]="model.outros"></textarea>
+                                <textarea cols="10" rows="4" wrap="hard" class="form-control" name="outros"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.outros"></textarea>
                             </div>
 
                             <div class="col-md-4">
                                 <label>Dificuldade De Comunicação</label><br>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input radio" type="radio" value="1" name="dificuldadeComunicacao" [(ngModel)]="model.dificuldadeComunicacao"/>
+                                    <input class="form-check-input radio" type="radio" name="dificuldadeComunicacao"
+                                        value="Sim" [(ngModel)]="ProntuarioFisioterapeuta.dificuldadeComunicacao" />
                                     Sim
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input radio" type="radio" value="2" name="dificuldadeComunicacao" [(ngModel)]="model.dificuldadeComunicacao"/>
+                                    <input class="form-check-input radio" type="radio" name="dificuldadeComunicacao"
+                                        value="Não" [(ngModel)]="ProntuarioFisioterapeuta.dificuldadeComunicacao" />
                                     Não
                                 </div>
                             </div>
@@ -210,27 +235,32 @@
 
                             <div class="col-md-6">
                                 <label>Tipo de medicamento usado</label>
-                                <input type="text" class="form-control" name="tipoMedicamento" [(ngModel)]="model.tipoMedicamento"/>
+                                <input type="text" class="form-control" name="tipoMedicamento"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.tipoMedicamento" />
                             </div>
 
                             <div class="col-md-6">
                                 <label>Dosagem</label>
-                                <input type="text" class="form-control" name="dosagem" [(ngModel)]="model.dosagem"/>
+                                <input type="text" class="form-control" name="dosagem"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.dosagem" />
                             </div>
 
                             <div class="col-md-6">
                                 <label>Frequência</label>
-                                <input type="text" class="form-control" name="frequencia" [(ngModel)]="model.frequencia"/>
+                                <input type="text" class="form-control" name="frequencia"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.frequencia" />
                             </div>
 
                             <div class="col-md-6">
                                 <label>Remédio sem prescrição</label>
-                                <input type="text" class="form-control" name="remedioSemPrescricao" [(ngModel)]="model.remedioSemPrescricao"/>
+                                <input type="text" class="form-control" name="remedioSemPrescricao"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.remedioSemPrescricao" />
                             </div>
 
                             <div class="col-md-12">
                                 <label>Habilidade para manusear o medicamento</label>
-                                <input type="text" class="form-control" name="habilidadeManusear" [(ngModel)]="model.habilidadeManusear"/>
+                                <input type="text" class="form-control" name="habilidadeManusear"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.habilidadeManusear" />
                             </div>
                         </div>
                     </div>
@@ -248,43 +278,52 @@
 
                             <div class="col-md-6">
                                 <label>Frequência das Refeições</label>
-                                <input type="text" class="form-control" name="frequenciaRefeicoes" [(ngModel)]="model.frequenciaRefeicoes"/>
+                                <input type="text" class="form-control" name="frequenciaRefeicoes"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.frequenciaRefeicoes" />
                             </div>
                             <div class="col-md-6">
                                 <label>Dieta especial</label>
-                                <input type="text" class="form-control" name="dietaEspecial" [(ngModel)]="model.dietaEspecial" />
+                                <input type="text" class="form-control" name="dietaEspecial"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.dietaEspecial" />
                             </div>
                             <div class="col-md-6">
                                 <label>Ingestão de ácool</label>
-                                <input type="text" class="form-control" name="ingestaoAlcool" [(ngModel)]="model.ingestaoAlcool"/>
+                                <input type="text" class="form-control" name="ingestaoAlcool"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.ingestaoAlcool" />
                             </div>
                             <div class="col-md-6">
                                 <label>Ingestão hídrica</label>
-                                <input type="text" class="form-control" name="ingestaoHidrica" [(ngModel)]="model.ingestaoHidrica"/>
+                                <input type="text" class="form-control" name="ingestaoHidrica"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.ingestaoHidrica" />
                             </div>
                             <div class="col-md-6">
                                 <label>Problemas Dentários - Usa prótese</label><br>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input radio" type="radio" value="1" name="usaProtese" [(ngModel)]="model.usaProtese"/> Sim
+                                    <input class="form-check-input radio" type="radio" name="usaProtese" value="Sim"
+                                        [(ngModel)]="ProntuarioFisioterapeuta.usaProtese" /> Sim
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input radio" type="radio" value="2" name="usaProtese" [(ngModel)]="model.usaProtese"/> Não
+                                    <input class="form-check-input radio" type="radio" name="usaProtese" value="Não"
+                                        [(ngModel)]="ProntuarioFisioterapeuta.usaProtese" /> Não
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <h6 for="inputSex" class="form-label">Tem apetite</h6><br />
                                 <div class="form-check form-check-inline">
-                                  <label>
-                                    <input class="form-check-input radio" type="radio" value="1" name="apetite" [(ngModel)]="model.apetite"/> Sim
-                                  </label>
+                                    <label>
+                                        <input class="form-check-input radio" type="radio" name="apetite" value="Sim"
+                                            [(ngModel)]="ProntuarioFisioterapeuta.apetite" /> Sim
+                                    </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                  <label>
-                                    <input class="form-check-input radio" type="radio" value="2" name="apetite" [(ngModel)]="model.apetite"/> Não
-                                  </label>
+                                    <label>
+                                        <input class="form-check-input radio" type="radio" name="apetite" value="Não"
+                                            [(ngModel)]="ProntuarioFisioterapeuta.apetite" /> Não
+                                    </label>
                                 </div><br>
                                 <label>Por que</label>
-                                <input type="text" class="form-control" name="porqueApetite" [(ngModel)]="model.porqueApetite"/>
+                                <input type="text" class="form-control" name="porqueApetite"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.porqueApetite" />
                             </div>
                         </div>
                     </div>
@@ -302,15 +341,18 @@
 
                             <div class="col-md-12">
                                 <label>Demência (Mini Teste do Estado Mental)</label>
-                                <input type="text" class="form-control" name="demencia" [(ngModel)]="model.demencia"/>
+                                <input type="text" class="form-control" name="demencia"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.demencia" />
                             </div>
                             <div class="col-md-12">
                                 <label>Escala de depressão em Geriatria</label>
-                                <input type="text" class="form-control" name="escalaDepressao" [(ngModel)]="model.escalaDepressao"/>
+                                <input type="text" class="form-control" name="escalaDepressao"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.escalaDepressao" />
                             </div>
                             <div class="col-md-12">
                                 <label>Estado Emocional</label>
-                                <input type="text" class="form-control" name="estadoEmocional" [(ngModel)]="model.estadoEmocional"/>
+                                <input type="text" class="form-control" name="estadoEmocional"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.estadoEmocional" />
                             </div>
 
                         </div>
@@ -329,39 +371,47 @@
 
                             <div class="col-md-4">
                                 <label>Peso</label>
-                                <input type="text" class="form-control" name="peso" [(ngModel)]="model.peso"/>
+                                <input type="text" class="form-control" name="peso"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.peso" />
                             </div>
                             <div class="col-md-4">
                                 <label>Altura</label>
-                                <input type="text" class="form-control" name="altura" [(ngModel)]="model.altura"/>
+                                <input type="text" class="form-control" name="altura"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.altura" />
                             </div>
                             <div class="col-md-4">
                                 <label>P.A</label><br>
                                 <div class="form-check form-check-inline">
-                                    <input type="text" class="form-control" name="pa" [(ngModel)]="model.pa"/>
+                                    <input type="text" class="form-control" name="pa"
+                                        [(ngModel)]="ProntuarioFisioterapeuta.pa" />
                                     <label for="inputEmail4" class="form-label" style="padding-left: 4px;"> mmHg
                                     </label>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <label>Ausculta Cardíaca</label>
-                                <input type="text" class="form-control" name="auscultaCardiaca" [(ngModel)]="model.auscultaCardiaca"/>
+                                <input type="text" class="form-control" name="auscultaCardiaca"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.auscultaCardiaca" />
                             </div>
                             <div class="col-md-4">
                                 <label>Frequência Cardíaca</label>
-                                <input type="text" class="form-control" name="frequenciaCardiaca" [(ngModel)]="model.frequenciaCardiaca"/>
+                                <input type="text" class="form-control" name="frequenciaCardiaca"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.frequenciaCardiaca" />
                             </div>
                             <div class="col-md-4">
                                 <label>Ausculta Pulmonar</label>
-                                <input type="text" class="form-control" name="auscultaPulmonar" [(ngModel)]="model.auscultaPulmonar"/>
+                                <input type="text" class="form-control" name="auscultaPulmonar"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.auscultaPulmonar" />
                             </div>
                             <div class="col-md-6">
                                 <label>Frequência Respiratória</label>
-                                <input type="text" class="form-control" name="frequenciaRespiratoria" [(ngModel)]="model.frequenciaRespiratoria"/>
+                                <input type="text" class="form-control" name="frequenciaRespiratoria"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.frequenciaRespiratoria" />
                             </div>
                             <div class="col-md-6">
                                 <label>Padrão Respiratório</label>
-                                <input type="text" class="form-control" name="padraoRespiratorio" [(ngModel)]="model.padraoRespiratorio"/>
+                                <input type="text" class="form-control" name="padraoRespiratorio"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.padraoRespiratorio" />
                             </div>
 
                         </div>
@@ -393,53 +443,75 @@
                                         <tr>
                                             <td rowspan="6">Ombro</td>
                                             <td>Flexão</td>
-                                            <td><input class="form-control" type="text" name="ombroFlexaoVR" id="" [(ngModel)]="model.ombroFlexaoVR"></td>
-                                            <td><input class="form-control" type="text" name="ombroFlexaoAdmDireito" [(ngModel)]="model.ombroFlexaoAdmDireito"
-                                                    id=""></td>
-                                            <td><input class="form-control" type="text" name="ombroFlexaoAdmEsquerdo" [(ngModel)]="model.ombroFlexaoAdmEsquerdo"
-                                                    id=""></td>
+                                            <td><input class="form-control" type="text" name="ombroFlexaoVR" id=""
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.ombroFlexaoVR"></td>
+                                            <td><input class="form-control" type="text" name="ombroFlexaoAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.ombroFlexaoAdmDireito" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="ombroFlexaoAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.ombroFlexaoAdmEsquerdo" id="">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Extensão</td>
-                                            <td><input class="form-control" type="text" name="ombroExtensaoVR" [(ngModel)]="model.ombroExtensaoVR" id="">
+                                            <td><input class="form-control" type="text" name="ombroExtensaoVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.ombroExtensaoVR" id="">
                                             </td>
-                                            <td><input class="form-control" type="text" name="ombroExtensaAdmDireito" [(ngModel)]="model.ombroExtensaAdmDireito"
-                                                    id=""></td>
-                                            <td><input class="form-control" type="text" name="ombroExtensaAdmEsquerdo" [(ngModel)]="model.ombroExtensaAdmEsquerdo"
+                                            <td><input class="form-control" type="text" name="ombroExtensaoAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.ombroExtensaoAdmDireito" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="ombroExtensaoAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.ombroExtensaoAdmEsquerdo"
                                                     id=""></td>
                                         </tr>
                                         <tr>
                                             <td>Adução</td>
-                                            <td><input class="form-control" type="text" name="ombroAducaoVR" [(ngModel)]="model.ombroAducaoVR" id=""></td>
-                                            <td><input class="form-control" type="text" name="ombroAducaoAdmDireito" [(ngModel)]="model.ombroAducaoAdmDireito"
-                                                    id=""></td>
-                                            <td><input class="form-control" type="text" name="ombroAducaoAdmEsquerdo" [(ngModel)]="model.ombroAducaoAdmEsquerdo"
-                                                    id=""></td>
+                                            <td><input class="form-control" type="text" name="ombroAducaoVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.ombroAducaoVR" id=""></td>
+                                            <td><input class="form-control" type="text" name="ombroAducaoAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.ombroAducaoAdmDireito" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="ombroAducaoAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.ombroAducaoAdmEsquerdo" id="">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Abdução</td>
-                                            <td><input class="form-control" type="text" name="ombroAbducaoVR" [(ngModel)]="model.ombroAbducaoVR" id="">
+                                            <td><input class="form-control" type="text" name="ombroAbducaoVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.ombroAbducaoVR" id="">
                                             </td>
-                                            <td><input class="form-control" type="text" name="ombroAbducaoAdmDireito" [(ngModel)]="model.ombroAbducaoAdmDireito"
-                                                    id=""></td>
-                                            <td><input class="form-control" type="text" name="ombroAbducaoAdmEsquerdo" [(ngModel)]="model.ombroAbducaoAdmEsquerdo"
+                                            <td><input class="form-control" type="text" name="ombroAbducaoAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.ombroAbducaoAdmDireito" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="ombroAbducaoAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.ombroAbducaoAdmEsquerdo"
                                                     id=""></td>
                                         </tr>
                                         <tr>
                                             <td>Rot. Interna</td>
-                                            <td><input class="form-control" type="text" name="ombroRotInternaVR" [(ngModel)]="model.ombroRotInternaVR" id="">
+                                            <td><input class="form-control" type="text" name="ombroRotInternaVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.ombroRotInternaVR" id="">
                                             </td>
-                                            <td><input class="form-control" type="text" name="ombroRotInternaAdmDireito" [(ngModel)]="model.ombroRotInternaAdmDireito"
+                                            <td><input class="form-control" type="text" name="ombroRotInternaAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.ombroRotInternaAdmDireito"
                                                     id=""></td>
-                                            <td><input class="form-control" type="text" name="ombroRotInternaAdmEsquerdo" [(ngModel)]="model.ombroRotInternaAdmEsquerdo" id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="ombroRotInternaAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.ombroRotInternaAdmEsquerdo"
+                                                    id=""></td>
                                         </tr>
                                         <tr>
                                             <td>Rot. Externa</td>
-                                            <td><input class="form-control" type="text" name="ombroRotExternaVR" [(ngModel)]="model.ombroRotExternaVR" id="">
+                                            <td><input class="form-control" type="text" name="ombroRotExternaVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.ombroRotExternaVR" id="">
                                             </td>
-                                            <td><input class="form-control" type="text" name="ombroRotExternaAdmDireito" [(ngModel)]="model.ombroRotExternaAdmDireito"
+                                            <td><input class="form-control" type="text" name="ombroRotExternaAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.ombroRotExternaAdmDireito"
                                                     id=""></td>
-                                            <td><input class="form-control" type="text" name="ombroRotExternaAdmEsquerdo" [(ngModel)]="model.ombroRotExternaAdmEsquerdo" id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="ombroRotExternaAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.ombroRotExternaAdmEsquerdo"
+                                                    id=""></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -460,133 +532,233 @@
                                         <tr>
                                             <td rowspan="2">Cotovelo</td>
                                             <td>Flexão</td>
-                                            <td><input class="form-control" type="text" name="cotoveloFlexaoVR" [(ngModel)]="model.cotoveloFlexaoVR"id="">
+                                            <td><input class="form-control" type="text" name="cotoveloFlexaoVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.cotoveloFlexaoVR" id="">
                                             </td>
-                                            <td><input class="form-control" type="text" name="cotoveloFlexaoAdmDireito" [(ngModel)]="model.cotoveloFlexaoAdmDireito"
+                                            <td><input class="form-control" type="text" name="cotoveloFlexaoAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.cotoveloFlexaoAdmDireito"
                                                     id=""></td>
-                                            <td><input class="form-control" type="text" name="cotoveloFlexaoAdmEsquerdo" [(ngModel)]="model.cotoveloFlexaoAdmEsquerdo"
+                                            <td><input class="form-control" type="text" name="cotoveloFlexaoAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.cotoveloFlexaoAdmEsquerdo"
                                                     id=""></td>
                                         </tr>
                                         <tr>
                                             <td>Extensão</td>
-                                            <td><input class="form-control" type="text" name="cotoveloExtensaoVR" [(ngModel)]="model.cotoveloExtensaoVR" id="">
+                                            <td><input class="form-control" type="text" name="cotoveloExtensaoVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.cotoveloExtensaoVR" id="">
                                             </td>
-                                            <td><input class="form-control" type="text" name="cotoveloExtensaoAdmDireito" [(ngModel)]="model.cotoveloExtensaoAdmDireito" id=""></td>
-                                            <td><input class="form-control" type="text" name="cotoveloExtensaoAdmEsquerdo"[(ngModel)]="model.cotoveloExtensaoAdmEsquerdo"  id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="cotoveloExtensaoAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.cotoveloExtensaoAdmDireito"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="cotoveloExtensaoAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.cotoveloExtensaoAdmEsquerdo"
+                                                    id=""></td>
                                         </tr>
                                         <tr>
                                             <td rowspan="4">Punho</td>
                                             <td>Extensão</td>
-                                            <td><input class="form-control" type="text" name="punhoExtensaoVR" [(ngModel)]="model.punhoExtensaoVR"id="">
+                                            <td><input class="form-control" type="text" name="punhoExtensaoVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.punhoExtensaoVR" id="">
                                             </td>
-                                            <td><input class="form-control" type="text" name="punhoExtensaoAdmDireito"[(ngModel)]="model.punhoExtensaoAdmDireito"
+                                            <td><input class="form-control" type="text" name="punhoExtensaoAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.punhoExtensaoAdmDireito"
                                                     id=""></td>
-                                            <td><input class="form-control" type="text" name="punhoExtensaoAdmEsquerdo"[(ngModel)]="model.punhoExtensaoAdmEsquerdo"
+                                            <td><input class="form-control" type="text" name="punhoExtensaoAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.punhoExtensaoAdmEsquerdo"
                                                     id=""></td>
                                         </tr>
                                         <tr>
                                             <td>Flexão</td>
-                                            <td><input class="form-control" type="text" name="punhoFlexaoVR"[(ngModel)]="model.punhoFlexaoVR" id=""></td>
-                                            <td><input class="form-control" type="text" name="punhoFlexaoAdmDireito"[(ngModel)]="model.punhoFlexaoAdmDireito"
-                                                    id=""></td>
-                                            <td><input class="form-control" type="text" name="punhoFlexaoAdmEsquerdo"[(ngModel)]="model.punhoFlexaoAdmEsquerdo"
-                                                    id=""></td>
+                                            <td><input class="form-control" type="text" name="punhoFlexaoVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.punhoFlexaoVR" id=""></td>
+                                            <td><input class="form-control" type="text" name="punhoFlexaoAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.punhoFlexaoAdmDireito" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="punhoFlexaoAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.punhoFlexaoAdmEsquerdo" id="">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Desvio Ulnar</td>
-                                            <td><input class="form-control" type="text" name="punhoDesvioUlnarVR" [(ngModel)]="model.punhoDesvioUlnarVR"id="">
+                                            <td><input class="form-control" type="text" name="punhoDesvioUlnarVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.punhoDesvioUlnarVR" id="">
                                             </td>
-                                            <td><input class="form-control" type="text" name="punhoDesvioUlnarAdmDireito" [(ngModel)]="model.punhoDesvioUlnarAdmDireito"id=""></td>
-                                            <td><input class="form-control" type="text" name="punhoDesvioUlnarAdmEsquerdo"[(ngModel)]="model.punhoDesvioUlnarAdmEsquerdo" id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="punhoDesvioUlnarAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.punhoDesvioUlnarAdmDireito"
+                                                    id=""></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="punhoDesvioUlnarAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.punhoDesvioUlnarAdmEsquerdo"
+                                                    id=""></td>
                                         </tr>
                                         <tr>
                                             <td>Desvio Radial</td>
-                                            <td><input class="form-control" type="text" name="punhoDesvioRadialVR" [(ngModel)]="model.punhoDesvioRadialVR"
-                                                    id=""></td>
-                                            <td><input class="form-control" type="text" name="punhoDesvioRadialAdmDireito" [(ngModel)]="model.punhoDesvioRadialAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="punhoDesvioRadialAdmEsquerdo" [(ngModel)]="model.punhoDesvioRadialAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="punhoDesvioRadialVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.punhoDesvioRadialVR" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text"
+                                                    name="punhoDesvioRadialAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.punhoDesvioRadialAdmDireito">
+                                            </td>
+                                            <td><input class="form-control" type="text"
+                                                    name="punhoDesvioRadialAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.punhoDesvioRadialAdmEsquerdo">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td rowspan="6">Quadril</td>
                                             <td>Flexão</td>
-                                            <td><input class="form-control" type="text" name="quadrilFlexaoVR" [(ngModel)]="model.quadrilFlexaoVR">
+                                            <td><input class="form-control" type="text" name="quadrilFlexaoVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.quadrilFlexaoVR">
                                             </td>
-                                            <td><input class="form-control" type="text" name="quadrilFlexaoAdmDireito" [(ngModel)]="model.quadrilFlexaoAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="quadrilFlexaoAdmEsquerdo" [(ngModel)]="model.quadrilFlexaoAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="quadrilFlexaoAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.quadrilFlexaoAdmDireito"></td>
+                                            <td><input class="form-control" type="text" name="quadrilFlexaoAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.quadrilFlexaoAdmEsquerdo">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Extensão</td>
-                                            <td><input class="form-control" type="text" name="quadrilExtensaoVR" [(ngModel)]="model.quadrilExtensaoVR">
+                                            <td><input class="form-control" type="text" name="quadrilExtensaoVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.quadrilExtensaoVR">
                                             </td>
-                                            <td><input class="form-control" type="text" name="quadrilExtensaoAdmDireito" [(ngModel)]="model.quadrilExtensaoAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="quadrilExtensaoAdmEsquerdo" [(ngModel)]="model.quadrilExtensaoAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="quadrilExtensaoAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.quadrilExtensaoAdmDireito">
+                                            </td>
+                                            <td><input class="form-control" type="text"
+                                                    name="quadrilExtensaoAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.quadrilExtensaoAdmEsquerdo">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Adução</td>
-                                            <td><input class="form-control" type="text" name="quadrilAducaoVR" [(ngModel)]="model.quadrilAducaoVR">
+                                            <td><input class="form-control" type="text" name="quadrilAducaoVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.quadrilAducaoVR">
                                             </td>
-                                            <td><input class="form-control" type="text" name="quadrilAducaoAdmDireito" [(ngModel)]="model.quadrilAducaoAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="quadrilAducaoAdmEsquerdo" [(ngModel)]="model.quadrilAducaoAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="quadrilAducaoAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.quadrilAducaoAdmDireito"></td>
+                                            <td><input class="form-control" type="text" name="quadrilAducaoAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.quadrilAducaoAdmEsquerdo">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Abdução</td>
-                                            <td><input class="form-control" type="text" name="quadrilAbducaoVR" [(ngModel)]="model.quadrilAbducaoVR">
+                                            <td><input class="form-control" type="text" name="quadrilAbducaoVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.quadrilAbducaoVR">
                                             </td>
-                                            <td><input class="form-control" type="text" name="quadrilAbducaoAdmDireito" [(ngModel)]="model.quadrilAbducaoAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="quadrilAbducaoAdmEsquerdo" [(ngModel)]="model.quadrilAbducaoAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="quadrilAbducaoAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.quadrilAbducaoAdmDireito">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="quadrilAbducaoAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.quadrilAbducaoAdmEsquerdo">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Rot. Interna</td>
-                                            <td><input class="form-control" type="text" name="quadrilRotInternaVR" [(ngModel)]="model.quadrilRotInternaVR"></td>
-                                            <td><input class="form-control" type="text" name="quadrilRotInternaAdmDireito" [(ngModel)]="model.quadrilRotInternaAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="quadrilRotInternaAdmEsquerdo" [(ngModel)]="model.quadrilRotInternaAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="quadrilRotInternaVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.quadrilRotInternaVR"></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="quadrilRotInternaAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.quadrilRotInternaAdmDireito">
+                                            </td>
+                                            <td><input class="form-control" type="text"
+                                                    name="quadrilRotInternaAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.quadrilRotInternaAdmEsquerdo">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Rot. Externa</td>
-                                            <td><input class="form-control" type="text" name="quadrilRotExternaVR" [(ngModel)]="model.quadrilRotExternaVR"></td>
-                                            <td><input class="form-control" type="text" name="quadrilRotExternaAdmDireito" [(ngModel)]="model.quadrilRotExternaAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="quadrilRotExternaAdmEsquerdo" [(ngModel)]="model.quadrilRotExternaAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="quadrilRotExternaVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.quadrilRotExternaVR"></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="quadrilRotExternaAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.quadrilRotExternaAdmDireito">
+                                            </td>
+                                            <td><input class="form-control" type="text"
+                                                    name="quadrilRotExternaAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.quadrilRotExternaAdmEsquerdo">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td rowspan="2">Joelho</td>
                                             <td>Flexão</td>
-                                            <td><input class="form-control" type="text" name="joelhoFlexaoVR" [(ngModel)]="model.joelhoFlexaoVR">
+                                            <td><input class="form-control" type="text" name="joelhoFlexaoVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.joelhoFlexaoVR">
                                             </td>
-                                            <td><input class="form-control" type="text" name="joelhoFlexaoAdmDireito" [(ngModel)]="model.joelhoFlexaoAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="joelhoFlexaoAdmEsquerdo" [(ngModel)]="model.joelhoFlexaoAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="joelhoFlexaoAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.joelhoFlexaoAdmDireito"></td>
+                                            <td><input class="form-control" type="text" name="joelhoFlexaoAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.joelhoFlexaoAdmEsquerdo"></td>
                                         </tr>
                                         <tr>
                                             <td>Extensão</td>
-                                            <td><input class="form-control" type="text" name="joelhoExtensaoVR" [(ngModel)]="model.joelhoExtensaoVR">
+                                            <td><input class="form-control" type="text" name="joelhoExtensaoVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.joelhoExtensaoVR">
                                             </td>
-                                            <td><input class="form-control" type="text" name="joelhoExtensaoAdmDireito" [(ngModel)]="model.joelhoExtensaoAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="joelhoExtensaoAdmEsquerdo" [(ngModel)]="model.joelhoExtensaoAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="joelhoExtensaoAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.joelhoExtensaoAdmDireito">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="joelhoExtensaoAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.joelhoExtensaoAdmEsquerdo">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td rowspan="4">Tornozelo</td>
                                             <td>Eversão</td>
-                                            <td><input class="form-control" type="text" name="tornozeloEversaoVR" [(ngModel)]="model.tornozeloEversaoVR">
+                                            <td><input class="form-control" type="text" name="tornozeloEversaoVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.tornozeloEversaoVR">
                                             </td>
-                                            <td><input class="form-control" type="text" name="tornozeloEversaoAdmDireito" [(ngModel)]="model.tornozeloEversaoAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="tornozeloEversaoAdmEsquerdo" [(ngModel)]="model.tornozeloEversaoAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="tornozeloEversaoAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.tornozeloEversaoAdmDireito">
+                                            </td>
+                                            <td><input class="form-control" type="text"
+                                                    name="tornozeloEversaoAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.tornozeloEversaoAdmEsquerdo">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Dorsiflexão</td>
-                                            <td><input class="form-control" type="text" name="tornozeloDorsiflexaoVR" [(ngModel)]="model.tornozeloDorsiflexaoVR"></td>
-                                            <td><input class="form-control" type="text" name="tornozeloDorsiflexaoAdmDireito" [(ngModel)]="model.tornozeloDorsiflexaoAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="tornozeloDorsiflexaoAdmEsquerdo" [(ngModel)]="model.tornozeloDorsiflexaoAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="tornozeloDorsiflexaoVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.tornozeloDorsiflexaoVR"></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="tornozeloDorsiflexaoAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.tornozeloDorsiflexaoAdmDireito">
+                                            </td>
+                                            <td><input class="form-control" type="text"
+                                                    name="tornozeloDorsiflexaoAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.tornozeloDorsiflexaoAdmEsquerdo">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Flexão Plantar</td>
-                                            <td><input class="form-control" type="text" name="tornozeloFlexaoPlantarVR" [(ngModel)]="model.tornozeloFlexaoPlantarVR"></td>
-                                            <td><input class="form-control" type="text" name="tornozeloFlexaoPlantarAdmDireito" [(ngModel)]="model.tornozeloFlexaoPlantarAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="tornozeloFlexaoPlantarAdmEsquerdo" [(ngModel)]="model.tornozeloFlexaoPlantarAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="tornozeloFlexaoPlantarVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.tornozeloFlexaoPlantarVR">
+                                            </td>
+                                            <td><input class="form-control" type="text"
+                                                    name="tornozeloFlexaoPlantarAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.tornozeloFlexaoPlantarAdmDireito">
+                                            </td>
+                                            <td><input class="form-control" type="text"
+                                                    name="tornozeloFlexaoPlantarAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.tornozeloFlexaoPlantarAdmEsquerdo">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Inversão</td>
-                                            <td><input class="form-control" type="text" name="tornozeloInversaoVR" [(ngModel)]="model.tornozeloInversaoVR"></td>
-                                            <td><input class="form-control" type="text" name="tornozeloInversaoAdmDireito" [(ngModel)]="model.tornozeloInversaoAdmDireito"></td>
-                                            <td><input class="form-control" type="text" name="tornozeloInversaoAdmEsquerdo" [(ngModel)]="model.tornozeloInversaoAdmEsquerdo"></td>
+                                            <td><input class="form-control" type="text" name="tornozeloInversaoVR"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.tornozeloInversaoVR"></td>
+                                            <td><input class="form-control" type="text"
+                                                    name="tornozeloInversaoAdmDireito"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.tornozeloInversaoAdmDireito">
+                                            </td>
+                                            <td><input class="form-control" type="text"
+                                                    name="tornozeloInversaoAdmEsquerdo"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.tornozeloInversaoAdmEsquerdo">
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -607,15 +779,18 @@
 
                             <div class="col-md-12">
                                 <label>Tempo</label>
-                                <input type="text" class="form-control" name="tempoQuedas" [(ngModel)]="model.tempoQuedas">
+                                <input type="text" class="form-control" name="tempoQuedas"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.tempoQuedas">
                             </div>
                             <div class="col-md-12">
                                 <label>Frequência</label>
-                                <input type="text" class="form-control" name="frequenciaQuedas" [(ngModel)]="model.frequenciaQuedas">
+                                <input type="text" class="form-control" name="frequenciaQuedas"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.frequenciaQuedas">
                             </div>
                             <div class="col-md-12">
                                 <label>Local</label>
-                                <input type="text" class="form-control" name="localQuedas" [(ngModel)]="model.localQuedas">
+                                <input type="text" class="form-control" name="localQuedas"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.localQuedas">
                             </div>
 
 
@@ -635,23 +810,28 @@
                             <div class="col-md-12">
                                 <h6 for="inputSex" class="form-label">Reflexo</h6><br />
                                 <div class="form-check form-check-inline">
-                                  <label>
-                                    <input class="form-check-input radio" type="checkbox" value="1" name="reflexo" [(ngModel)]="model.reflexo"/> Biciptal
-                                  </label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                  <label>
-                                    <input class="form-check-input radio" type="checkbox" value="2" name="reflexo" [(ngModel)]="model.reflexo"/> Triciptal
-                                  </label>
-                                </div>
-                                <div class="form-check form-check-inline">
                                     <label>
-                                    <input class="form-check-input radio" type="checkbox" value="3" name="reflexo" [(ngModel)]="model.reflexo"/> Patelar
+                                        <input class="form-check-input radio" type="radio" name="reflexo"
+                                            value="Biciptal" [(ngModel)]="ProntuarioFisioterapeuta.reflexo" /> Biciptal
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <label>
-                                        <input class="form-check-input radio" type="checkbox" value="4" name="reflexo" [(ngModel)]="model.reflexo"/> Aquileu
+                                        <input class="form-check-input radio" type="radio" name="reflexo"
+                                            value="Triciptal" [(ngModel)]="ProntuarioFisioterapeuta.reflexo" />
+                                        Triciptal
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label>
+                                        <input class="form-check-input radio" type="radio" name="reflexo"
+                                            value="Patelar" [(ngModel)]="ProntuarioFisioterapeuta.reflexo" /> Patelar
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label>
+                                        <input class="form-check-input radio" type="radio" name="reflexo"
+                                            value="Aquileu" [(ngModel)]="ProntuarioFisioterapeuta.reflexo" /> Aquileu
                                     </label>
                                 </div>
                             </div>
@@ -659,28 +839,33 @@
                             <div class="col-md-12">
                                 <label>Equílibrio Corporal</label><br>
                                 <label>Sentado</label>
-                                <input class="form-control" type="text" name="equilibrioSentado"[(ngModel)]="model.equilibrioSentado">
+                                <input class="form-control" type="text" name="equilibrioSentado"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.equilibrioSentado">
                                 <label>Em pé</label>
-                                <input class="form-control" type="text" name="equilibrioEmPe"[(ngModel)]="model.equilibrioEmPe">
+                                <input class="form-control" type="text" name="equilibrioEmPe"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.equilibrioEmPe">
                                 <label>Sinal de Rosemberg</label>
-                                <input class="form-control" type="text" name="equilibrioSinalRosemberg"[(ngModel)]="model.equilibrioSinalRosemberg">
+                                <input class="form-control" type="text" name="equilibrioSinalRosemberg"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.equilibrioSinalRosemberg">
                             </div>
 
                             <div class="col-md-12">
                                 <h5>Atividade de Vida Diária</h5>
-                                <textarea class="form-control" name="atividadeVidaDiaria" id="" cols="10" [(ngModel)]="model.atividadeVidaDiaria"
-                                    rows="5"></textarea>
+                                <textarea class="form-control" name="atividadeVidaDiaria" id="" cols="10"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.atividadeVidaDiaria" rows="5"></textarea>
                             </div>
 
                             <div class="col-md-12">
                                 <h5>Escala Visual de Dor</h5>
                                 <h6>Digite de 0 a 10</h6>
                                 <div class="example-label-container">
-                                    <input type="text" name="escalaDor" [(ngModel)]="model.escalaDor">
+                                    <input type="text" name="escalaDor"
+                                        [(ngModel)]="ProntuarioFisioterapeuta.escalaDor">
                                 </div>
-                                    
+
                                 <label>Região da Dor</label>
-                                <input class="form-control" type="text" name="regiaoDor" [(ngModel)]="model.regiaoDor">
+                                <input class="form-control" type="text" name="regiaoDor"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.regiaoDor">
                             </div>
                         </div>
                     </div>
@@ -707,37 +892,49 @@
                                     <tbody>
                                         <tr>
                                             <td>Pé</td>
-                                            <td><input class="form-control" type="text" name="peSagital" id="" [(ngModel)]="model.peSagital"></td>
-                                            <td><input class="form-control" type="text" name="peFrontal" id="" [(ngModel)]="model.peFrontal"></td>
+                                            <td><input class="form-control" type="text" name="peSagital" id=""
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.peSagital"></td>
+                                            <td><input class="form-control" type="text" name="peFrontal" id=""
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.peFrontal"></td>
                                         </tr>
                                         <tr>
                                             <td>Joelho</td>
-                                            <td><input class="form-control" type="text" name="joelhoSagital" id=""[(ngModel)]="model.joelhoSagital"></td>
-                                            <td><input class="form-control" type="text" name="joelhoFrontal" id=""[(ngModel)]="model.joelhoFrontal"></td>
+                                            <td><input class="form-control" type="text" name="joelhoSagital" id=""
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.joelhoSagital"></td>
+                                            <td><input class="form-control" type="text" name="joelhoFrontal" id=""
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.joelhoFrontal"></td>
                                         </tr>
                                         <tr>
                                             <td>Cintura Pélvica</td>
-                                            <td><input class="form-control" type="text" name="cinturaPelvicaSagital" [(ngModel)]="model.cinturaPelvicaSagital"
-                                                    id=""></td>
-                                            <td><input class="form-control" type="text" name="cinturaPelvicaFrontal" [(ngModel)]="model.cinturaPelvicaFrontal"
-                                                    id=""></td>
+                                            <td><input class="form-control" type="text" name="cinturaPelvicaSagital"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.cinturaPelvicaSagital" id="">
+                                            </td>
+                                            <td><input class="form-control" type="text" name="cinturaPelvicaFrontal"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.cinturaPelvicaFrontal" id="">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Coluna</td>
-                                            <td><input class="form-control" type="text" name="colunaSagital" id=""[(ngModel)]="model.colunaSagital"></td>
-                                            <td><input class="form-control" type="text" name="colunaFrontal" id=""[(ngModel)]="model.colunaFrontal"></td>
+                                            <td><input class="form-control" type="text" name="colunaSagital" id=""
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.colunaSagital"></td>
+                                            <td><input class="form-control" type="text" name="colunaFrontal" id=""
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.colunaFrontal"></td>
                                         </tr>
                                         <tr>
                                             <td>Cintura escapular</td>
-                                            <td><input class="form-control" type="text" name="cinturaEscapularSagital" [(ngModel)]="model.cinturaEscapularSagital"
+                                            <td><input class="form-control" type="text" name="cinturaEscapularSagital"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.cinturaEscapularSagital"
                                                     id=""></td>
-                                            <td><input class="form-control" type="text" name="cinturaEscapularFrontal" [(ngModel)]="model.cinturaEscapularFrontal"
+                                            <td><input class="form-control" type="text" name="cinturaEscapularFrontal"
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.cinturaEscapularFrontal"
                                                     id=""></td>
                                         </tr>
                                         <tr>
                                             <td>Cabeça</td>
-                                            <td><input class="form-control" type="text" name="cabecaSagital" id=""[(ngModel)]="model.cabecaSagital"></td>
-                                            <td><input class="form-control" type="text" name="cabecaFrontal" id=""[(ngModel)]="model.cabecaFrontal"></td>
+                                            <td><input class="form-control" type="text" name="cabecaSagital" id=""
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.cabecaSagital"></td>
+                                            <td><input class="form-control" type="text" name="cabecaFrontal" id=""
+                                                    [(ngModel)]="ProntuarioFisioterapeuta.cabecaFrontal"></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -745,29 +942,34 @@
 
                             <div class="col-md-6">
                                 <label class="textSection">Avaliação da Marcha:</label>
-                                <textarea rows="4" class="form-control " name="avaliacaoMarcha"[(ngModel)]="model.avaliacaoMarcha"></textarea>
+                                <textarea rows="4" class="form-control " name="avaliacaoMarcha"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.avaliacaoMarcha"></textarea>
                             </div>
                             <div class="col-md-6">
                                 <label class="textSection">Observações:</label>
-                                <textarea rows="4" class="form-control " name="observacoes"[(ngModel)]="model.observacoes"></textarea>
+                                <textarea rows="4" class="form-control " name="observacoes"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.observacoes"></textarea>
                             </div>
                             <div class="col-md-6">
                                 <label class="textSection">Diagnóstico Funcional:</label>
-                                <textarea rows="6" class="form-control " name="diagnosticoFuncional"[(ngModel)]="model.diagnosticoFuncional"></textarea>
+                                <textarea rows="6" class="form-control " name="diagnosticoFuncional"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.diagnosticoFuncional"></textarea>
                             </div>
                             <div class="col-md-6">
                                 <label class="textSection">Objetivos Fisioterápicos:</label>
-                                <textarea rows="6" class="form-control " name="objetivosFisioterapicos"[(ngModel)]="model.objetivosFisioterapicos"></textarea>
+                                <textarea rows="6" class="form-control " name="objetivosFisioterapicos"
+                                    [(ngModel)]="ProntuarioFisioterapeuta.objetivosFisioterapicos"></textarea>
                             </div>
 
                             <div class="container mt-2">
                                 <div class="row g-3">
-                                  <div class="btn form-check">
-                                    <input class="enviar btn btn-success" type="submit" value="Enviar" (click)="routerFisio()">
-                                    <input class="limpar btn btn-danger" type="reset" value="Limpar">
-                                  </div>
+                                    <div class="btn form-check">
+                                        <input class="enviar btn btn-success" type="submit" value="Enviar">
+                                        <input class="limpar btn btn-danger" type="reset" value="Limpar">
+                                    </div>
                                 </div>
                             </div>
+                            <!-- (click)="routerFisio()" -->
                         </div>
                     </div>
                 </fieldset>

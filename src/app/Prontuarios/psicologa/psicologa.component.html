@@ -11,87 +11,88 @@
               <h2>Formulário de Registro</h2>
               <div class="col-md-6">
                 <label for="validationCustom01" class="form-label">Nome:</label>
-                <input type="text" class="form-control" value="" name="nome" [(ngModel)]="model.nome">
+                <input type="text" class="form-control" value="" name="nome" [(ngModel)]="ProntuarioPsicologo.nome">
               </div>
               <div class="col-md-6">
                 <label for="validationCustom01" class="form-label">Data Nascimento:</label>
-                <input  type="date" class="form-control" value=""  name="dataNascimento" [(ngModel)]="model.dataNascimento">
+                <input  type="date" class="form-control" value=""  name="dataNascimento" [(ngModel)]="ProntuarioPsicologo.dataNascimento">
               </div>
 
               <div class="col-md-4">
                 <label for="validationCustom01" class="form-label">RG:</label>
-                <input  type="text" class="form-control" value=""  name="rg" [(ngModel)]="model.rg">
+                <input  type="text" class="form-control" value=""  name="rg" [(ngModel)]="ProntuarioPsicologo.rg">
               </div>
 
               <div class="col-md-4">
                 <label for="validationCustom01" class="form-label">CPF:</label>
-                <input  type="text" class="form-control" value=""  name="cpf" [(ngModel)]="model.cpf">
+                <input  type="text" class="form-control" value=""  name="cpf" [(ngModel)]="ProntuarioPsicologo.cpf">
               </div>
 
               <div class="col-md-4">
                 <label for="validationCustom01" class="form-label">Responsável Solidário:</label>
-                <input  type="text" class="form-control" value="" name="responsavel" [(ngModel)]="model.responsavel">
+                <input  type="text" class="form-control" value="" name="responsavel" [(ngModel)]="ProntuarioPsicologo.responsavel">
               </div>
               
               <div class="col-md-6">
                 <label for="validationCustom01" class="form-label">Endereço:</label>
-                <input  type="text" class="form-control" value=""  name="endereco" [(ngModel)]="model.endereco">
+                <input  type="text" class="form-control" value=""  name="endereco" [(ngModel)]="ProntuarioPsicologo.endereco">
               </div>
               
               <div class="col-md-6">
                 <label for="validationCustom01" class="form-label">Município:</label>
-                <input  type="text" class="form-control" value=""  name="municipio" [(ngModel)]="model.municipio">
+                <input  type="text" class="form-control" value=""  name="municipio" [(ngModel)]="ProntuarioPsicologo.municipio">
               </div>
 
               <div class="col-md-4">
                 <label for="validationCustom01" class="form-label">Problemas de Saúde:</label>
-                <input  type="text" class="form-control" value=""  name="saude" [(ngModel)]="model.saude">
+                <input  type="text" class="form-control" value=""  name="saude" [(ngModel)]="ProntuarioPsicologo.saude">
               </div>
 
               <div class="col-md-4">
                   <label>Consciente:</label><br>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" style="margin-left: 100px; margin-top: 6px;" name="consciente" value="sim" [(ngModel)]="model.consciente">Sim
+                  <input class="form-check-input" type="radio" style="margin-left: 100px; margin-top: 6px;" name="consciente" value="Sim" id="consciente" [(ngModel)]="ProntuarioPsicologo.consciente">Sim
                 </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" style="margin-left: 10px; margin-top: 6px;" name="consciente" value="nao"  [(ngModel)]="model.consciente"> Não
+                <div class="form-check form-check-inline"> 
+                  <input class="form-check-input" type="radio" style="margin-left: 10px; margin-top: 6px;" name="consciente" value="Não" id="consciente" [(ngModel)]="ProntuarioPsicologo.consciente"> Não
                 </div>
               </div>
 
               <div class="col-md-4">
                 <label for="validationCustom01" class="form-label">Religião:</label>
-                <input  type="text" class="form-control" value=""  name="religiao" [(ngModel)]="model.religiao" >
+                <input  type="text" class="form-control" value=""  name="religiao" [(ngModel)]="ProntuarioPsicologo.religiao" >
               </div>
 
               <div class="col-md-4">
                   <label>Filho:</label><br>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" style=" margin-top: 6px;" name="filho" value="sim" [(ngModel)]="model.filho">Sim
+                  <input class="form-check-input" type="radio" style=" margin-top: 6px;" name="filho" value="Sim" id="filho" [(ngModel)]="ProntuarioPsicologo.filho">Sim
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" style="margin-left: 10px; margin-top: 6px;" name="filho" value="nao"  [(ngModel)]="model.filho" >Não
+                  <input class="form-check-input" type="radio" style="margin-left: 10px; margin-top: 6px;" name="filho" value="Não" id="filho"  [(ngModel)]="ProntuarioPsicologo.filho" >Não
                 </div>
               </div>
               
               <div class="col-md-4">
                 <label for="" class="form-label">Quantos:</label>
-                <input  type="text" class="form-control" id="" value=""  name="qntFilho" [(ngModel)]="model.qntFilho">
+                <input  type="text" class="form-control" id=""   name="qntFilho" [(ngModel)]="ProntuarioPsicologo.qntFilho">
               </div>
 
               <div class="col-md-4">
                 <label for="" class="form-label">Acolhimento particular ou através do creas:</label>
-                <input  type="text" class="form-control" id="" value=""  name="acolhimento" [(ngModel)]="model.acolhimento">
+                <input  type="text" class="form-control" id=""   name="acolhimento" [(ngModel)]="ProntuarioPsicologo.acolhimento">
               </div>
 
               <div class="col-md-12">
                 <label for="" class="form-label">Histórico de Vida:</label>
-                <textarea name="historico" class="form-control" id="" rows="4" [(ngModel)]="model.historico"></textarea>
+                <textarea name="historico" class="form-control" id="" rows="4" [(ngModel)]="ProntuarioPsicologo.historico"></textarea>
               </div>
 
               <div class="col-md-12">
-                <button type="submit" class="submit-btn" (click)="routerPsic()">Enviar</button>
+                <button type="submit" class="submit-btn" >Enviar</button>
               </div>
             </div>
+            <!-- (click)="routerPsic()" -->
         </div>
       </fieldset>
     </mat-tab>

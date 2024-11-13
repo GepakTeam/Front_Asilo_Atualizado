@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavbarComponent } from '../../Core/NavBar/navbar.component';
 
 @Component({
   selector: 'app-perfil-fisio',
   standalone: true,
-  imports: [],
+  imports: [NavbarComponent],
   templateUrl: './perfil-fisio.component.html',
   styleUrl: './perfil-fisio.component.css'
 })
