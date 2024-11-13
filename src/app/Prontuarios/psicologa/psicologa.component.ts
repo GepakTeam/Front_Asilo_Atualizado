@@ -10,6 +10,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FormsModule } from '@angular/forms';
 import { PsicologaRequest } from '../../Models/PsicologaRequest';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
@@ -22,7 +23,8 @@ import { PsicologaRequest } from '../../Models/PsicologaRequest';
     MatNativeDateModule,
     RouterLink,
     NavbarComponent,
-    FormsModule],
+    FormsModule,
+    CommonModule],
   templateUrl: './psicologa.component.html',
   styleUrl: './psicologa.component.css'
 })
